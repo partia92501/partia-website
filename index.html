@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Partia 🏔️</title>
+  <title>Partia — Trouve tes partenaires de sport</title>
   <style>
     :root {
       --primary: #FF6035;
@@ -20,7 +20,8 @@
 
     /* LANG SWITCHER */
     .lang-bar { position: sticky; top: 0; z-index: 100; background: rgba(26,26,46,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: space-between; padding: 10px 24px; }
-    .lang-logo { color: var(--primary); font-weight: 900; font-size: 18px; letter-spacing: -0.5px; }
+    .lang-logo { color: var(--primary); font-weight: 900; font-size: 18px; letter-spacing: -0.5px; display:flex; align-items:center; gap:8px; }
+    .brand-icon { width:34px; height:34px; object-fit:contain; }
     .lang-btns { display: flex; gap: 6px; }
     .lang-btn { background: none; border: 1px solid rgba(255,255,255,0.15); color: var(--gray); padding: 6px 14px; border-radius: 999px; font-size: 13px; font-weight: 700; cursor: pointer; transition: all 0.2s; }
     .lang-btn.active { background: var(--primary); border-color: var(--primary); color: #fff; }
@@ -29,7 +30,7 @@
     /* HERO */
     .hero { background: linear-gradient(160deg, #1A1A2E 0%, #0F3460 55%, #1A1A2E 100%); padding: 72px 24px 64px; text-align: center; border-bottom: 2px solid var(--primary); position: relative; overflow: hidden; }
     .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(255,96,53,0.18) 0%, transparent 65%); }
-    .hero-emoji { font-size: 80px; display: block; margin-bottom: 16px; position: relative; }
+    .hero-emoji { width:112px; height:112px; object-fit:contain; display:block; margin:0 auto 16px; position:relative; }
     .hero-title { font-size: 64px; font-weight: 900; color: var(--primary); position: relative; letter-spacing: -2px; }
     .hero-tagline { font-size: 22px; color: #fff; margin-top: 14px; position: relative; font-weight: 700; }
     .hero-sub { font-size: 15px; color: var(--gray); margin-top: 8px; position: relative; max-width: 500px; margin-left: auto; margin-right: auto; }
@@ -121,7 +122,7 @@
 
 <!-- LANG BAR -->
 <nav class="lang-bar">
-  <div class="lang-logo">🏔️ Partia</div>
+  <div class="lang-logo"><img class="brand-icon" src="assets/partia-sport-icon-v1.png" alt="">Partia</div>
   <div class="lang-btns">
     <button class="lang-btn active" data-lang-btn="fr" onclick="setLang('fr')">🇫🇷 FR</button>
     <button class="lang-btn" data-lang-btn="sk" onclick="setLang('sk')">🇸🇰 SK</button>
@@ -136,7 +137,7 @@
 
   <!-- HERO -->
   <div class="hero">
-    <span class="hero-emoji">🏔️</span>
+    <img class="hero-emoji" src="assets/partia-sport-icon-v1.png" alt="Logo Partia">
     <h1 class="hero-title">Partia</h1>
     <p class="hero-tagline">Trouve des coéquipiers &amp; adversaires près de toi</p>
     <p class="hero-sub">L'app sport qui remplace les groupes WhatsApp. Crée un créneau, quelqu'un rejoint, tu joues.</p>
@@ -181,7 +182,7 @@
         <div class="screen-mock">
           <div class="mock-status"><span>9:41</span><span>●●●</span></div>
           <div class="mock-body">
-            <div style="text-align:center;padding:8px 0 4px;"><span style="font-size:28px;">🏔️</span><div style="color:var(--primary);font-weight:900;font-size:16px;">Partia</div></div>
+            <div style="text-align:center;padding:8px 0 4px;"><span style="font-size:28px;">🤝</span><div style="color:var(--primary);font-weight:900;font-size:16px;">Partia</div></div>
             <div class="mock-input">📧 Email</div>
             <div class="mock-input">🔒 Mot de passe</div>
             <div class="mock-btn">Se connecter</div>
@@ -193,7 +194,7 @@
           <ul class="feature-list">
             <li><span class="fi">→</span><span><strong>Inscription</strong> : prénom, email, mdp, sexe, date de naissance</span></li>
             <li><span class="fi">→</span><span><strong>Vérification email</strong> : clique sur le lien reçu par mail pour activer ton compte</span></li>
-            <li><span class="fi">→</span><span><strong>Connexion</strong> : email + mot de passe, session de 7 jours</span></li>
+            <li><span class="fi">→</span><span><strong>Connexion</strong> : email + mot de passe</span></li>
             <li><span class="fi">→</span><span><strong>Mot de passe oublié</strong> : code à 6 chiffres envoyé par email, valable 15 min</span></li>
           </ul>
           <div class="tip-box">💡 <strong>Conseil :</strong> Vérifie ton dossier spam si tu ne reçois pas l'email de confirmation — les expéditeurs sans domaine vérifié peuvent y atterrir.</div>
@@ -233,7 +234,7 @@
           <ul class="feature-list">
             <li><span class="fi">→</span><span><strong>Grille de sports</strong> : 18 sports affichés avec emoji — tape pour sélectionner / désélectionner</span></li>
             <li><span class="fi">→</span><span><strong>Multi-sélection</strong> : tu peux pratiquer autant de sports que tu veux</span></li>
-            <li><span class="fi">→</span><span><strong>Ville</strong> : saisie libre ou recherche Google Places — utilisée comme fallback si GPS désactivé</span></li>
+            <li><span class="fi">→</span><span><strong>Ville</strong> : suggestions Photon/OpenStreetMap via le serveur Partia — utilisées si le GPS est désactivé</span></li>
             <li><span class="fi">→</span><span><strong>Photo</strong> : optionnelle, uploadable depuis la galerie (recadrée 400×400)</span></li>
             <li><span class="fi">→</span><span><strong>Modifiable à tout moment</strong> : reviens dans l'onglet Profil pour changer tes sports ou ta ville</span></li>
           </ul>
@@ -253,7 +254,7 @@
         <div class="screen-mock">
           <div class="mock-status"><span>9:41</span><span>●●●</span></div>
           <div class="mock-body">
-            <div class="mock-topbar">🏔️ Partia <span style="float:right;color:var(--gray);font-weight:400;">📍 12 km</span></div>
+            <div class="mock-topbar">🤝 Partia <span style="float:right;color:var(--gray);font-weight:400;">📍 12 km</span></div>
             <div class="mock-chips">
               <div class="mock-chip active">∞</div><div class="mock-chip">5</div><div class="mock-chip">10</div><div class="mock-chip">25</div><div class="mock-chip">50</div>
             </div>
@@ -468,7 +469,7 @@
           <ul class="feature-list">
             <li><span class="fi">→</span><span><strong>Photo</strong> : upload depuis la galerie, recadrée automatiquement en 400×400</span></li>
             <li><span class="fi">→</span><span><strong>Sports</strong> : sélectionne jusqu'à tous les sports que tu pratiques</span></li>
-            <li><span class="fi">→</span><span><strong>Ville</strong> : recherche via Google Places — utilisée si GPS désactivé</span></li>
+            <li><span class="fi">→</span><span><strong>Ville</strong> : recherche Photon/OpenStreetMap via le serveur — utilisée si le GPS est désactivé</span></li>
             <li><span class="fi">→</span><span><strong>Profils enfants</strong> : ajoute tes enfants (prénom, sexe, âge) pour créer des créneaux à leur nom</span></li>
             <li><span class="fi">→</span><span><strong>Badges positifs</strong> : ⏰ Ponctuel · ✅ Fiable · 🏅 Bon joueur · 😊 Cool · 💛 Fairplay</span></li>
             <li><span class="fi">⚠️</span><span><strong>Badge automatique</strong> : 🤪 Tête en l'air — déclenché si 2+ créneaux non confirmés sous 7 jours</span></li>
@@ -609,7 +610,7 @@
     <p class="section-title">Questions fréquentes</p>
     <h2 class="section-h2">FAQ</h2>
     <p class="section-sub"></p>
-    <div class="faq-item"><div class="faq-q">L'app est-elle gratuite ?</div><div class="faq-a">Oui, Partia est entièrement gratuite en bêta. Un plan Premium sera proposé ultérieurement avec des fonctionnalités supplémentaires (créneaux illimités, boost visibilité, stats avancées...). Le compte de base reste gratuit pour toujours.</div></div>
+    <div class="faq-item"><div class="faq-q">L'app est-elle gratuite ?</div><div class="faq-a">Le compte Free reste gratuit. Pendant la bêta, certains testeurs peuvent recevoir Premium ou Premium+ gratuitement afin de valider les fonctions avancées. Le paiement intégré n'est pas encore actif.</div></div>
     <div class="faq-item"><div class="faq-q">Pourquoi je dois confirmer ma présence après un créneau ?</div><div class="faq-a">La confirmation débloque les notations mutuelles entre participants. Sans confirmation, personne ne peut noter l'autre. Ça évite aussi les créneaux "fantômes" où personne ne s'est présenté.</div></div>
     <div class="faq-item"><div class="faq-q">Puis-je créer des créneaux pour mes enfants ?</div><div class="faq-a">Oui ! Ajoute un profil enfant dans l'onglet Profil (prénom, sexe, date de naissance). Tu peux ensuite créer des créneaux à leur nom. Les règles d'âge s'appliquent automatiquement — un enfant de 7-14 ans ne verra pas les créneaux adultes.</div></div>
     <div class="faq-item"><div class="faq-q">Pourquoi je vois peu de créneaux autour de moi ?</div><div class="faq-a">Partia est en phase bêta avec peu d'utilisateurs. Plus la communauté grandira, plus le feed sera rempli. En attendant, essaie d'élargir le filtre distance (∞) ou d'être toi-même créateur pour attirer d'autres joueurs dans ta ville.</div></div>
@@ -618,14 +619,14 @@
 
   <!-- CTA -->
   <div class="cta-section">
-    <h2 class="cta-title">Prêt à jouer ? 🏔️</h2>
+    <h2 class="cta-title">Prêt à jouer ? 🤝</h2>
     <p class="cta-sub">Télécharge l'APK, crée un compte et trouve ton premier partenaire de sport.</p>
     
     
   </div>
 
   <footer>
-    <strong>🏔️ Partia</strong> — Bêta v1.1 · Confidentiel · Ne pas diffuser<br/>
+    <strong>🤝 Partia</strong> — Bêta v1.1 · Confidentiel · Ne pas diffuser<br/>
     Fait avec ❤️ par Manu · Matúškovo / SK
   </footer>
 
@@ -638,7 +639,7 @@
 <div data-lang="sk">
 
   <div class="hero">
-    <span class="hero-emoji">🏔️</span>
+    <img class="hero-emoji" src="assets/partia-sport-icon-v1.png" alt="Logo Partia">
     <h1 class="hero-title">Partia</h1>
     <p class="hero-tagline">Nájdi spoluhráčov &amp; súperov blízko teba</p>
     <p class="hero-sub">Appka pre šport, ktorá nahradí WhatsApp skupiny. Vytvor termín, niekto sa pridá, ty hráš.</p>
@@ -673,13 +674,13 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">1</div><div class="screen-title">Registrácia &amp; Prihlásenie</div><div class="screen-tag">Solo · 5 min</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div style="text-align:center;padding:8px 0 4px;"><span style="font-size:28px;">🏔️</span><div style="color:var(--primary);font-weight:900;font-size:16px;">Partia</div></div><div class="mock-input">📧 Email</div><div class="mock-input">🔒 Heslo</div><div class="mock-btn">Prihlásiť sa</div><div style="text-align:center;margin-top:8px;font-size:10px;color:var(--gray);">Nemáš účet? <span style="color:var(--primary);">Registrovať sa</span></div></div></div>
+        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div style="text-align:center;padding:8px 0 4px;"><span style="font-size:28px;">🤝</span><div style="color:var(--primary);font-weight:900;font-size:16px;">Partia</div></div><div class="mock-input">📧 Email</div><div class="mock-input">🔒 Heslo</div><div class="mock-btn">Prihlásiť sa</div><div style="text-align:center;margin-top:8px;font-size:10px;color:var(--gray);">Nemáš účet? <span style="color:var(--primary);">Registrovať sa</span></div></div></div>
         <div class="screen-content">
           <p class="screen-desc">Vytvor účet za 2 minúty. Zadaj meno, email, heslo, pohlavie a dátum narodenia (min. 18 rokov). Potvrdzovací email sa odošle automaticky.</p>
           <ul class="feature-list">
             <li><span class="fi">→</span><span><strong>Registrácia</strong> : meno, email, heslo, pohlavie, dátum narodenia</span></li>
             <li><span class="fi">→</span><span><strong>Overenie emailu</strong> : klikni na odkaz v emaili pre aktiváciu účtu</span></li>
-            <li><span class="fi">→</span><span><strong>Prihlásenie</strong> : email + heslo, session na 7 dní</span></li>
+            <li><span class="fi">→</span><span><strong>Prihlásenie</strong> : email + heslo</span></li>
             <li><span class="fi">→</span><span><strong>Zabudnuté heslo</strong> : 6-miestny kód emailom, platný 15 min</span></li>
           </ul>
           <div class="tip-box">💡 <strong>Tip:</strong> Skontroluj priečinok Spam ak nepríde potvrdzovací email.</div>
@@ -696,7 +697,7 @@
           <ul class="feature-list">
             <li><span class="fi">→</span><span><strong>Mriežka športov</strong> : 18 športov s emoji — ťukni pre výber / zrušenie výberu</span></li>
             <li><span class="fi">→</span><span><strong>Viacnásobný výber</strong> : môžeš praktizovať koľko chceš športov</span></li>
-            <li><span class="fi">→</span><span><strong>Mesto</strong> : voľný text alebo vyhľadávanie Google Places — fallback keď GPS vypnuté</span></li>
+            <li><span class="fi">→</span><span><strong>Mesto</strong> : návrhy Photon/OpenStreetMap cez server Partia — použijú sa, keď je GPS vypnuté</span></li>
             <li><span class="fi">→</span><span><strong>Fotka</strong> : voliteľná, nahranie z galérie (orezané 400×400)</span></li>
             <li><span class="fi">→</span><span><strong>Kedykoľvek upraviteľné</strong> : vráť sa do záložky Profil pre zmenu športov alebo mesta</span></li>
           </ul>
@@ -708,7 +709,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">3</div><div class="screen-title">Objaviť — Feed</div><div class="screen-tag">Hlavná obrazovka</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">🏔️ Partia <span style="float:right;color:var(--gray);font-weight:400;">📍 12 km</span></div><div class="mock-chips"><div class="mock-chip active">∞</div><div class="mock-chip">5</div><div class="mock-chip">10</div><div class="mock-chip">25</div><div class="mock-chip">50</div></div><div class="mock-card"><div class="mock-card-title">🏐 Beach Volleyball</div><div class="mock-card-sub">📍 Matúškovo · 3 km</div><div class="mock-card-sub">📅 Sob 5 júl · 10:00</div><div class="mock-badge">2/4 miest</div></div><div class="mock-card"><div class="mock-card-title">🎾 Tenis</div><div class="mock-card-sub">📍 Bratislava · 8 km</div><div class="mock-card-sub">📅 Ned 6 júl · 14:00</div><div class="mock-badge">0/2 miest</div></div></div></div>
+        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">🤝 Partia <span style="float:right;color:var(--gray);font-weight:400;">📍 12 km</span></div><div class="mock-chips"><div class="mock-chip active">∞</div><div class="mock-chip">5</div><div class="mock-chip">10</div><div class="mock-chip">25</div><div class="mock-chip">50</div></div><div class="mock-card"><div class="mock-card-title">🏐 Beach Volleyball</div><div class="mock-card-sub">📍 Matúškovo · 3 km</div><div class="mock-card-sub">📅 Sob 5 júl · 10:00</div><div class="mock-badge">2/4 miest</div></div><div class="mock-card"><div class="mock-card-title">🎾 Tenis</div><div class="mock-card-sub">📍 Bratislava · 8 km</div><div class="mock-card-sub">📅 Ned 6 júl · 14:00</div><div class="mock-badge">0/2 miest</div></div></div></div>
         <div class="screen-content">
           <p class="screen-desc">Hlavná obrazovka zobrazuje všetky dostupné termíny v tvojom okolí. Filtruj podľa vzdialenosti, trieď podľa dátumu alebo blízkosti.</p>
           <ul class="feature-list">
@@ -798,7 +799,7 @@
           <ul class="feature-list">
             <li><span class="fi">→</span><span><strong>Fotka</strong> : nahranie z galérie, automatické orezanie 400×400</span></li>
             <li><span class="fi">→</span><span><strong>Športy</strong> : vyber všetky športy, ktoré praktizuješ</span></li>
-            <li><span class="fi">→</span><span><strong>Mesto</strong> : vyhľadávanie cez Google Places</span></li>
+            <li><span class="fi">→</span><span><strong>Mesto</strong> : vyhľadávanie Photon/OpenStreetMap cez server Partia</span></li>
             <li><span class="fi">→</span><span><strong>Profily detí</strong> : pridaj deti (meno, pohlavie, vek)</span></li>
             <li><span class="fi">→</span><span><strong>Pozitívne odznaky</strong> : ⏰ Dochvíľny · ✅ Spoľahlivý · 🏅 Dobrý hráč · 😊 Cool · 💛 Fairplay</span></li>
             <li><span class="fi">⚠️</span><span><strong>Automatický odznak</strong> : 🤪 Zábudlivec — 2+ termíny nepotvrdené do 7 dní</span></li>
@@ -861,21 +862,21 @@
     <p class="section-title">Časté otázky</p>
     <h2 class="section-h2">FAQ</h2>
     <p class="section-sub"></p>
-    <div class="faq-item"><div class="faq-q">Je appka zadarmo?</div><div class="faq-a">Áno, Partia je počas bety úplne zadarmo. Neskôr bude dostupný Premium plán s ďalšími funkciami (neobmedzené termíny, boost viditeľnosti, pokročilé štatistiky...). Základný účet zostáva vždy zadarmo.</div></div>
+    <div class="faq-item"><div class="faq-q">Je appka zadarmo?</div><div class="faq-a">Účet Free zostáva zadarmo. Počas bety môžu vybraní testeri dostať Premium alebo Premium+ bezplatne na overenie pokročilých funkcií. Integrované platby zatiaľ nie sú aktívne.</div></div>
     <div class="faq-item"><div class="faq-q">Prečo musím potvrdiť účasť po termíne?</div><div class="faq-a">Potvrdenie odomkne vzájomné hodnotenia medzi účastníkmi. Bez potvrdenia nikto nemôže hodnotiť druhého. Zabraňuje to tiež "duchom" termínom kde sa nikto neobjavil.</div></div>
     <div class="faq-item"><div class="faq-q">Môžem vytvárať termíny pre moje deti?</div><div class="faq-a">Áno! Pridaj profil dieťaťa v záložke Profil (meno, pohlavie, dátum narodenia). Potom môžeš vytvárať termíny v jeho mene. Vekové pravidlá sa aplikujú automaticky.</div></div>
     <div class="faq-item"><div class="faq-q">Prečo vidím málo termínov vo svojom okolí?</div><div class="faq-a">Partia je v beta fáze s malým počtom používateľov. Čím viac komunita porastie, tým viac bude vo feede. Skús rozšíriť filter vzdialenosti (∞) alebo buď sám tvorcom.</div></div>
   </div>
 
   <div class="cta-section">
-    <h2 class="cta-title">Pripravený hrať? 🏔️</h2>
+    <h2 class="cta-title">Pripravený hrať? 🤝</h2>
     <p class="cta-sub">Stiahni APK, vytvor účet a nájdi svojho prvého športového partnera.</p>
     
     
   </div>
 
   <footer>
-    <strong>🏔️ Partia</strong> — Beta v1.1 · Dôverné · Nezdieľaj<br/>
+    <strong>🤝 Partia</strong> — Beta v1.1 · Dôverné · Nezdieľaj<br/>
     Vytvorené s ❤️ od Manu · Bratislava / Francúzsko
   </footer>
 
@@ -888,7 +889,7 @@
 <div data-lang="en">
 
   <div class="hero">
-    <span class="hero-emoji">🏔️</span>
+    <img class="hero-emoji" src="assets/partia-sport-icon-v1.png" alt="Partia logo">
     <h1 class="hero-title">Partia</h1>
     <p class="hero-tagline">Find teammates &amp; opponents near you</p>
     <p class="hero-sub">The sports app that replaces WhatsApp groups. Create a slot, someone joins, you play.</p>
@@ -923,13 +924,13 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">1</div><div class="screen-title">Sign Up &amp; Login</div><div class="screen-tag">Solo · 5 min</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div style="text-align:center;padding:8px 0 4px;"><span style="font-size:28px;">🏔️</span><div style="color:var(--primary);font-weight:900;font-size:16px;">Partia</div></div><div class="mock-input">📧 Email</div><div class="mock-input">🔒 Password</div><div class="mock-btn">Log in</div><div style="text-align:center;margin-top:8px;font-size:10px;color:var(--gray);">No account? <span style="color:var(--primary);">Sign up</span></div></div></div>
+        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div style="text-align:center;padding:8px 0 4px;"><span style="font-size:28px;">🤝</span><div style="color:var(--primary);font-weight:900;font-size:16px;">Partia</div></div><div class="mock-input">📧 Email</div><div class="mock-input">🔒 Password</div><div class="mock-btn">Log in</div><div style="text-align:center;margin-top:8px;font-size:10px;color:var(--gray);">No account? <span style="color:var(--primary);">Sign up</span></div></div></div>
         <div class="screen-content">
           <p class="screen-desc">Create your account in 2 minutes. Enter your first name, email, password, gender and date of birth (18+ only). A verification email is sent automatically.</p>
           <ul class="feature-list">
             <li><span class="fi">→</span><span><strong>Sign up</strong>: first name, email, password, gender, date of birth</span></li>
             <li><span class="fi">→</span><span><strong>Email verification</strong>: click the link in the email to activate your account</span></li>
-            <li><span class="fi">→</span><span><strong>Login</strong>: email + password, 7-day session</span></li>
+            <li><span class="fi">→</span><span><strong>Login</strong>: email + password</span></li>
             <li><span class="fi">→</span><span><strong>Forgot password</strong>: 6-digit code by email, valid 15 min</span></li>
           </ul>
           <div class="tip-box">💡 <strong>Tip:</strong> Check your spam folder if you don't receive the confirmation email.</div>
@@ -946,7 +947,7 @@
           <ul class="feature-list">
             <li><span class="fi">→</span><span><strong>Sports grid</strong>: 18 sports with emoji — tap to select / deselect</span></li>
             <li><span class="fi">→</span><span><strong>Multi-select</strong>: pick as many sports as you want</span></li>
-            <li><span class="fi">→</span><span><strong>City</strong>: free text or Google Places search — used as fallback when GPS is off</span></li>
+            <li><span class="fi">→</span><span><strong>City</strong>: Photon/OpenStreetMap suggestions through the Partia server — used when GPS is off</span></li>
             <li><span class="fi">→</span><span><strong>Photo</strong>: optional, upload from gallery (auto-cropped 400×400)</span></li>
             <li><span class="fi">→</span><span><strong>Always editable</strong>: return to the Profile tab anytime to update your sports or city</span></li>
           </ul>
@@ -958,7 +959,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">3</div><div class="screen-title">Explore — The Feed</div><div class="screen-tag">Main screen</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">🏔️ Partia <span style="float:right;color:var(--gray);font-weight:400;">📍 12 km</span></div><div class="mock-chips"><div class="mock-chip active">∞</div><div class="mock-chip">5</div><div class="mock-chip">10</div><div class="mock-chip">25</div><div class="mock-chip">50</div></div><div class="mock-card"><div class="mock-card-title">🏐 Beach Volleyball</div><div class="mock-card-sub">📍 Matúškovo · 3 km</div><div class="mock-card-sub">📅 Sat Jul 5 · 10:00</div><div class="mock-badge">2/4 spots</div></div><div class="mock-card"><div class="mock-card-title">🎾 Tennis</div><div class="mock-card-sub">📍 Bratislava · 8 km</div><div class="mock-card-sub">📅 Sun Jul 6 · 14:00</div><div class="mock-badge">0/2 spots</div></div></div></div>
+        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">🤝 Partia <span style="float:right;color:var(--gray);font-weight:400;">📍 12 km</span></div><div class="mock-chips"><div class="mock-chip active">∞</div><div class="mock-chip">5</div><div class="mock-chip">10</div><div class="mock-chip">25</div><div class="mock-chip">50</div></div><div class="mock-card"><div class="mock-card-title">🏐 Beach Volleyball</div><div class="mock-card-sub">📍 Matúškovo · 3 km</div><div class="mock-card-sub">📅 Sat Jul 5 · 10:00</div><div class="mock-badge">2/4 spots</div></div><div class="mock-card"><div class="mock-card-title">🎾 Tennis</div><div class="mock-card-sub">📍 Bratislava · 8 km</div><div class="mock-card-sub">📅 Sun Jul 6 · 14:00</div><div class="mock-badge">0/2 spots</div></div></div></div>
         <div class="screen-content">
           <p class="screen-desc">The main screen lists all available slots near you. Filter by distance, sort by date or proximity, and see remaining spots at a glance.</p>
           <ul class="feature-list">
@@ -1050,7 +1051,7 @@
           <ul class="feature-list">
             <li><span class="fi">→</span><span><strong>Photo</strong>: upload from gallery, auto-cropped to 400×400</span></li>
             <li><span class="fi">→</span><span><strong>Sports</strong>: select all the sports you practise</span></li>
-            <li><span class="fi">→</span><span><strong>City</strong>: search via Google Places — used if GPS is off</span></li>
+            <li><span class="fi">→</span><span><strong>City</strong>: Photon/OpenStreetMap search through the server — used if GPS is off</span></li>
             <li><span class="fi">→</span><span><strong>Child profiles</strong>: add your children (name, gender, age)</span></li>
             <li><span class="fi">→</span><span><strong>Positive badges</strong>: ⏰ Punctual · ✅ Reliable · 🏅 Good player · 😊 Cool · 💛 Fairplay</span></li>
             <li><span class="fi">⚠️</span><span><strong>Automatic badge</strong>: 🤪 Head in the clouds — 2+ sessions unconfirmed within 7 days</span></li>
@@ -1117,7 +1118,7 @@
     <p class="section-title">FAQ</p>
     <h2 class="section-h2">Frequently Asked Questions</h2>
     <p class="section-sub"></p>
-    <div class="faq-item"><div class="faq-q">Is the app free?</div><div class="faq-a">Yes, Partia is completely free during beta. A Premium plan will be offered later with additional features (unlimited slots, visibility boost, advanced stats...). The basic account stays free forever.</div></div>
+    <div class="faq-item"><div class="faq-q">Is the app free?</div><div class="faq-a">The Free account remains free. During beta, selected testers may receive Premium or Premium+ at no charge to validate advanced features. Integrated payments are not active yet.</div></div>
     <div class="faq-item"><div class="faq-q">Why do I need to confirm attendance after a slot?</div><div class="faq-a">Confirmation unlocks mutual ratings between participants. Without it, nobody can rate the others. It also avoids "ghost" slots where nobody showed up.</div></div>
     <div class="faq-item"><div class="faq-q">Can I create slots for my children?</div><div class="faq-a">Yes! Add a child profile in the Profile tab (name, gender, date of birth). You can then create slots in their name. Age rules apply automatically — a child aged 7–14 won't see adult slots.</div></div>
     <div class="faq-item"><div class="faq-q">Why do I see few slots near me?</div><div class="faq-a">Partia is in beta with a small user base. The more the community grows, the more the feed will fill up. Try widening the distance filter (∞) or be a creator yourself to attract other players in your city.</div></div>
@@ -1125,14 +1126,14 @@
   </div>
 
   <div class="cta-section">
-    <h2 class="cta-title">Ready to play? 🏔️</h2>
+    <h2 class="cta-title">Ready to play? 🤝</h2>
     <p class="cta-sub">Download the APK, create an account and find your first sports partner.</p>
     
     
   </div>
 
   <footer>
-    <strong>🏔️ Partia</strong> — Beta v1.1 · Confidential · Do not share<br/>
+    <strong>🤝 Partia</strong> — Beta v1.1 · Confidential · Do not share<br/>
     Made with ❤️ by Manu · Matúškovo / SK
   </footer>
 
