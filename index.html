@@ -102,6 +102,9 @@
     /* FOOTER */
     footer { background: var(--card); text-align: center; padding: 32px 24px; color: var(--gray); font-size: 13px; border-top: 1px solid rgba(255,255,255,0.06); }
     footer strong { color: var(--primary); }
+    .legal-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 18px; margin-top: 12px; }
+    .legal-links a { color: #FF9A7F; font-weight: 700; }
+    .legal-links a:hover { color: #fff; }
 
     /* DIVIDER */
     .hr { border: none; border-top: 1px solid rgba(255,255,255,0.06); margin: 0; }
@@ -614,7 +617,7 @@
     <div class="faq-item"><div class="faq-q">Pourquoi je dois confirmer ma présence après un créneau ?</div><div class="faq-a">La confirmation débloque les notations mutuelles entre participants. Sans confirmation, personne ne peut noter l'autre. Ça évite aussi les créneaux "fantômes" où personne ne s'est présenté.</div></div>
     <div class="faq-item"><div class="faq-q">Puis-je créer des créneaux pour mes enfants ?</div><div class="faq-a">Oui ! Ajoute un profil enfant dans l'onglet Profil (prénom, sexe, date de naissance). Tu peux ensuite créer des créneaux à leur nom. Les règles d'âge s'appliquent automatiquement — un enfant de 7-14 ans ne verra pas les créneaux adultes.</div></div>
     <div class="faq-item"><div class="faq-q">Pourquoi je vois peu de créneaux autour de moi ?</div><div class="faq-a">Partia est en phase bêta avec peu d'utilisateurs. Plus la communauté grandira, plus le feed sera rempli. En attendant, essaie d'élargir le filtre distance (∞) ou d'être toi-même créateur pour attirer d'autres joueurs dans ta ville.</div></div>
-    <div class="faq-item"><div class="faq-q">Mes données sont-elles sécurisées ?</div><div class="faq-a">Oui. Les mots de passe sont chiffrés (bcrypt). Les emails ne sont jamais affichés publiquement. Les données sont hébergées en Europe sur Railway. Consulte la politique de confidentialité pour les détails.</div></div>
+    <div class="faq-item"><div class="faq-q">Mes données sont-elles sécurisées ?</div><div class="faq-a">Oui. Les mots de passe sont hachés avec bcrypt et les e-mails ne sont jamais affichés publiquement. Consulte notre <a href="privacy.html?lang=fr">politique de confidentialité</a> pour les détails.</div></div>
   </div>
 
   <!-- CTA -->
@@ -628,6 +631,7 @@
   <footer>
     <strong>🤝 Partia</strong> — Bêta v1.1 · Confidentiel · Ne pas diffuser<br/>
     Fait avec ❤️ par Manu · Matúškovo / SK
+    <div class="legal-links"><a href="privacy.html?lang=fr">Confidentialité</a><a href="delete-account.html?lang=fr">Supprimer un compte</a></div>
   </footer>
 
 </div><!-- /fr -->
@@ -878,6 +882,7 @@
   <footer>
     <strong>🤝 Partia</strong> — Beta v1.1 · Dôverné · Nezdieľaj<br/>
     Vytvorené s ❤️ od Manu · Bratislava / Francúzsko
+    <div class="legal-links"><a href="privacy.html?lang=sk">Ochrana osobných údajov</a><a href="delete-account.html?lang=sk">Vymazať účet</a></div>
   </footer>
 
 </div><!-- /sk -->
@@ -1122,7 +1127,7 @@
     <div class="faq-item"><div class="faq-q">Why do I need to confirm attendance after a slot?</div><div class="faq-a">Confirmation unlocks mutual ratings between participants. Without it, nobody can rate the others. It also avoids "ghost" slots where nobody showed up.</div></div>
     <div class="faq-item"><div class="faq-q">Can I create slots for my children?</div><div class="faq-a">Yes! Add a child profile in the Profile tab (name, gender, date of birth). You can then create slots in their name. Age rules apply automatically — a child aged 7–14 won't see adult slots.</div></div>
     <div class="faq-item"><div class="faq-q">Why do I see few slots near me?</div><div class="faq-a">Partia is in beta with a small user base. The more the community grows, the more the feed will fill up. Try widening the distance filter (∞) or be a creator yourself to attract other players in your city.</div></div>
-    <div class="faq-item"><div class="faq-q">Is my data secure?</div><div class="faq-a">Yes. Passwords are encrypted (bcrypt). Emails are never displayed publicly. Data is hosted in Europe on Railway. See the privacy policy for details.</div></div>
+    <div class="faq-item"><div class="faq-q">Is my data secure?</div><div class="faq-a">Yes. Passwords are hashed with bcrypt and email addresses are never displayed publicly. See our <a href="privacy.html?lang=en">privacy policy</a> for details.</div></div>
   </div>
 
   <div class="cta-section">
@@ -1135,6 +1140,7 @@
   <footer>
     <strong>🤝 Partia</strong> — Beta v1.1 · Confidential · Do not share<br/>
     Made with ❤️ by Manu · Matúškovo / SK
+    <div class="legal-links"><a href="privacy.html?lang=en">Privacy</a><a href="delete-account.html?lang=en">Delete an account</a></div>
   </footer>
 
 </div><!-- /en -->
@@ -1152,14 +1158,18 @@
       }
     });
     document.documentElement.lang = lang;
+    var nextUrl = new URL(window.location.href);
+    nextUrl.searchParams.set('lang', lang);
+    if (window.location.protocol !== 'file:') {
+      window.history.replaceState({}, '', nextUrl);
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   // Init on load
   document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('[data-lang]').forEach(function(el) {
-      el.style.display = (el.getAttribute('data-lang') === 'fr') ? 'block' : 'none';
-    });
+    var requested = new URLSearchParams(window.location.search).get('lang');
+    setLang(['fr', 'sk', 'en'].indexOf(requested) >= 0 ? requested : 'fr');
   });
 </script>
 
