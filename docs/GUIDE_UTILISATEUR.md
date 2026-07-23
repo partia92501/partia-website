@@ -1,6 +1,6 @@
 # 📱 Guide Utilisateur — Partia
 
-> Application mobile de mise en relation sportive · Mise à jour : 14 juillet 2026
+> Application mobile de mise en relation sportive · Mise à jour : 23 juillet 2026
 
 ## 1. Créer et vérifier son compte
 
@@ -34,12 +34,15 @@ Appuyer sur **＋**, choisir le profil concerné, puis renseigner sport, lieu, d
 
 Le profil permet de modifier photo, ville, introduction, langue et sports, ainsi que de gérer les profils enfants. L’historique distingue les créneaux créés, rejoints et annulés. La profondeur d’historique dépend du niveau de compte.
 
-## 7. Chat, présence, notation et signalement
+## 7. Chat, présence, notation, signalement et blocage
 
 - Le chat est réservé au créateur et aux participants ; il ferme quand le créneau est annulé ou passé.
+- Appuyer sur le message d’un autre joueur permet de signaler ce message précis ou de bloquer son auteur.
 - Après un créneau, chaque participant confirme sa présence.
 - La notation est possible uniquement après la fin, entre participants confirmés, une fois par personne et par créneau.
-- Un comportement problématique peut être signalé depuis le détail ; la modération admin traite le dossier.
+- Un comportement problématique peut être signalé après le créneau ; la modération admin traite le dossier et voit le contenu d’un message lorsqu’il est concerné.
+- Le blocage est aussi disponible depuis le profil public et le détail du créneau. Il masque réciproquement les messages et créneaux Explorer et empêche une nouvelle participation entre les deux comptes.
+- Pour débloquer : **Profil → Utilisateurs bloqués → Débloquer**.
 
 ## 8. Notifications
 
