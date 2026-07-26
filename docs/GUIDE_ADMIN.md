@@ -43,6 +43,7 @@ Vue complète de tous les comptes inscrits.
 **Changer le niveau :**
 - Depuis le modal de détail → bouton Free, Premium ou Premium+
 - Le badge ⭐ apparaît sur le profil de l'utilisateur dans l'app au prochain chargement
+- Au lancement Google Play, Premium et Premium+ ne sont pas vendus : cette action constitue une attribution gratuite et manuelle réservée aux tests, démonstrations ou décisions administratives.
 
 ---
 
