@@ -51,11 +51,13 @@ Vue complète de tous les comptes inscrits.
 
 Vue de tous les créneaux (200 derniers).
 
-**Colonnes :** ID · Sport · Titre/Zone · Date · Créateur · Places · Statut · Signalements · Créé le
+**Colonnes :** ID · Sport · Titre/Zone · Date · Créateur · Participants (profils) · Places · Statut · Signalements · Créé le
 
 **Filtres :** recherche libre + dropdown (Tous / À venir / Passés / Complets / Signalés)
 
-**Détail créneau** (clic sur une ligne) : sport, zone, date, durée, places, mode, créateur, signalements
+**Détail créneau** (clic sur une ligne) : sport, zone, date, durée, places, mode, créateur, participants et signalements.
+
+Un enfant est affiché sous la forme `Prénom (enfant de Parent)`. Si un parent et son enfant de 15–17 ans autorisé rejoignent le même créneau adulte tiers, ils occupent deux places et apparaissent séparément. Les enfants de 3–14 ans restent limités aux créneaux de leur tranche d’âge. Les présences, désinscriptions, notations et badges restent propres à chaque profil, mais le parent demeure l’unique titulaire responsable du compte. Toute sanction administrative vise donc le compte adulte.
 
 ---
 
@@ -196,7 +198,7 @@ partia-backend/
 
 ---
 
-*Dernière mise à jour : 23 juillet 2026*
+*Dernière mise à jour : 28 juillet 2026*
 ---
 
 ## Monitoring Sentry (Production)
