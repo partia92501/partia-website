@@ -36,11 +36,11 @@ Appuyer sur **＋**, choisir le profil concerné, puis renseigner sport, lieu, d
 
 Le profil permet de modifier photo, ville, introduction, langue et sports, ainsi que de gérer les profils enfants. Le parent est l’unique titulaire du compte : il effectue les inscriptions, utilise le chat et supervise les rencontres. Pour les 15–17 ans, l’accès aux créneaux adultes exige le consentement parental enregistré côté serveur.
 
-L’historique distingue les créneaux créés, rejoints et annulés pour le profil actif. La profondeur d’historique dépend du niveau de compte.
+L’historique propose en haut le même sélecteur Parent / enfants que « À venir ». Il distingue les créneaux créés, rejoints et annulés pour le profil choisi ; la confirmation et la notation restent rattachées à ce profil. La profondeur d’historique dépend du niveau de compte.
 
 ## 7. Chat, présence, notation, signalement et blocage
 
-- Le chat est réservé au créateur et aux participants ; il ferme quand le créneau est annulé ou passé.
+- Le chat est réservé au profil créateur ou participant actif ; il ferme quand le créneau est annulé ou passé. L’inscription de l’enfant n’ouvre pas le chat au profil adulte non inscrit, et inversement.
 - Appuyer sur le message d’un autre joueur permet de signaler ce message précis ou de bloquer son auteur.
 - Après un créneau, chaque participant confirme sa présence.
 - La notation est possible uniquement après la fin, entre participants confirmés, une fois par profil et par créneau.
