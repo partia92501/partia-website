@@ -57,7 +57,7 @@ Sur un appareil réel, autoriser les notifications. Elles annoncent notamment le
 
 | Fonction | Free | Premium | Premium+ |
 |---|---:|---:|---:|
-| Distance | 5 km | 50 km | illimitée |
+| Distance | 5 km | 25 km | illimitée |
 | Créations/7 jours pour tout le compte | 3 | illimitées | illimitées |
 | Historique | 30 jours | 90 jours | complet |
 | Créneau privé | non | non | oui |
