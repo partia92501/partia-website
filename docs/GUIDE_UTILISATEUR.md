@@ -18,7 +18,7 @@ Dans le profil, saisir au moins deux caractères du nom de la ville puis sélect
 
 ## 3. Trouver un créneau
 
-Depuis **Explorer**, les créneaux publics compatibles s’affichent selon le sport, l’âge et la distance. Les distances disponibles dépendent du niveau Free, Premium ou Premium+.
+Depuis **Explorer**, les créneaux publics compatibles s’affichent selon le sport, l’âge et la distance. Un nouveau compte bénéficie de Premium Découverte pendant 30 jours avec un rayon de 25 km, puis passe automatiquement en Free à 5 km. Si aucun créneau compatible n'est disponible à 5 km, un aperçu anonyme et verrouillé peut signaler les créneaux réels entre 5 et 25 km sans en ouvrir le détail.
 
 ## 4. Rejoindre ou quitter
 
@@ -58,6 +58,7 @@ Sur un appareil réel, autoriser les notifications. Elles annoncent notamment le
 | Fonction | Free | Premium | Premium+ |
 |---|---:|---:|---:|
 | Distance | 5 km | 25 km | illimitée |
+| Démarrage | Après l'essai | 30 jours offerts aux nouveaux comptes | Attribution/plan Premium+ |
 | Créations/7 jours pour tout le compte | 3 | illimitées | illimitées |
 | Historique | 30 jours | 90 jours | complet |
 | Créneau privé | non | non | oui |

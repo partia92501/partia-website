@@ -45,6 +45,10 @@ Vue complète de tous les comptes inscrits.
 - Le badge ⭐ apparaît sur le profil de l'utilisateur dans l'app au prochain chargement
 - Au lancement Google Play, Premium et Premium+ ne sont pas vendus : cette action constitue une attribution gratuite et manuelle réservée aux tests, démonstrations ou décisions administratives.
 
+**Premium Découverte :** chaque nouveau compte public reçoit automatiquement les droits Premium pendant 30 jours. Le plan enregistré reste Free tant qu'aucun plan n'est attribué manuellement. À l'expiration, les droits repassent automatiquement en Free. Une attribution admin Premium ou Premium+ reste prioritaire et persiste après cette date. En Free, le rayon réel reste limité à 5 km ; l'aperçu 5–25 km est verrouillé et ne transmet ni identité, ni adresse précise, ni coordonnées.
+
+L'admin affiche le badge Premium Découverte et sa date de fin dans la liste. La fiche utilisateur distingue le plan administré des droits effectifs afin qu'un compte en essai n'apparaisse pas simplement comme Free. Les boutons Free/Premium/Premium+ continuent à piloter uniquement le plan administré.
+
 ---
 
 ## Onglet 📅 Créneaux
