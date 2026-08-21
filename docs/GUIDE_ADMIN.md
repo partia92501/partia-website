@@ -31,7 +31,7 @@ Vue complète de tous les comptes inscrits.
 - **Badges reçus** : compteurs par badge (⏰ Ponctuel, ✅ Fiable, 🏅 Bon joueur, 😊 Cool, 🤝 Fairplay)
 - Signalements reçus / émis
 - Statut (Actif / Banni)
-- Niveau Free / Premium / Premium+
+- Plan administré, abonnement Google Play, Premium Découverte, droits effectifs et crédits boost achetés
 - **Bouton Bannir / Débannir**
 - **Boutons 🆓 Free / ⭐ Premium / 🚀 Premium+**
 - **Bouton 🗑️ Supprimer définitivement** avec confirmation par l’adresse e-mail exacte
@@ -43,11 +43,13 @@ Vue complète de tous les comptes inscrits.
 **Changer le niveau :**
 - Depuis le modal de détail → bouton Free, Premium ou Premium+
 - Le badge ⭐ apparaît sur le profil de l'utilisateur dans l'app au prochain chargement
-- Au lancement Google Play, Premium et Premium+ ne sont pas vendus : cette action constitue une attribution gratuite et manuelle réservée aux tests, démonstrations ou décisions administratives.
+- Cette action constitue toujours une attribution administrative gratuite. Elle ne crée, ne modifie et ne résilie jamais un abonnement Google Play.
 
 **Premium Découverte :** chaque nouveau compte public reçoit automatiquement les droits Premium pendant 30 jours. Le plan enregistré reste Free tant qu'aucun plan n'est attribué manuellement. À l'expiration, les droits repassent automatiquement en Free. Une attribution admin Premium ou Premium+ reste prioritaire et persiste après cette date. En Free, le rayon réel reste limité à 5 km ; l'aperçu 5–25 km est verrouillé et ne transmet ni identité, ni adresse précise, ni coordonnées.
 
-L'admin affiche le badge Premium Découverte et sa date de fin dans la liste. La fiche utilisateur distingue le plan administré des droits effectifs afin qu'un compte en essai n'apparaisse pas simplement comme Free. Les boutons Free/Premium/Premium+ continuent à piloter uniquement le plan administré.
+L'admin affiche la source des droits : Premium Découverte, achat Google Play ou attribution administrative. La fiche utilisateur indique la date d'expiration de l'abonnement et les crédits boost achetés, sans afficher le jeton d'achat ni l'identifiant Google. Les boutons Free/Premium/Premium+ continuent à piloter uniquement le plan administré, qui reste prioritaire.
+
+Le bloc **Maintenance des tests**, en bas de la section Utilisateurs, propose une remise à zéro globale des badges après double confirmation et saisie exacte de `REINITIALISER BADGES`. Les évaluations sont supprimées et les participants confirmés des créneaux déjà passés sont considérés présents afin que ces anciens créneaux ne recréent pas « Tête en l'air ». Les créneaux futurs restent intacts ; comptes, créneaux, inscriptions, messages et signalements sont conservés.
 
 ---
 

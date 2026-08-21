@@ -58,13 +58,15 @@ Sur un appareil réel, autoriser les notifications. Elles annoncent notamment le
 | Fonction | Free | Premium | Premium+ |
 |---|---:|---:|---:|
 | Distance | 5 km | 25 km | illimitée |
-| Démarrage | Après l'essai | 30 jours offerts aux nouveaux comptes | Attribution/plan Premium+ |
+| Démarrage | Après l'essai | 30 jours offerts, puis abonnement facultatif | Abonnement facultatif ou attribution Partia |
 | Créations/7 jours pour tout le compte | 3 | illimitées | illimitées |
 | Historique | 30 jours | 90 jours | complet |
 | Créneau privé | non | non | oui |
 | Boost/mois | 0 | 1 | 3 |
 
 Pendant une bêta explicitement configurée, un sélecteur gratuit peut être affiché dans l’app preview. Il est masqué en production.
+
+Après Premium Découverte, aucun abonnement ne démarre automatiquement. Depuis **Profil → Plans et boosts**, l'utilisateur peut choisir Premium (prix de référence 2,99 €/mois) ou Premium+ (4,99 €/mois), restaurer un achat et ouvrir la gestion de son abonnement. Un boost supplémentaire peut être acheté à l'unité (0,99 €) ; il est consommé seulement après le quota mensuel inclus. L'application affiche toujours le prix localisé fourni par Google Play. Pendant le test fermé, les comptes testeurs Premium+ attribués par Partia n'ont aucun achat à effectuer.
 
 ## 10. Langues et aide
 
