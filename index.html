@@ -66,6 +66,12 @@
     .pitch-name { color: #fff; font-weight: 800; font-size: 15px; margin-bottom: 6px; }
     .pitch-desc { color: var(--gray); font-size: 13px; line-height: 1.5; }
 
+    /* DEMO VIDEOS */
+    .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-top: 8px; }
+    .video-card { background: var(--card); border-radius: 18px; border: 1px solid rgba(255,255,255,0.06); overflow: hidden; }
+    .video-card video { width: 100%; aspect-ratio: 9 / 20; object-fit: contain; display: block; background: #000; }
+    .video-card-label { padding: 12px 14px; color: #fff; font-weight: 800; font-size: 13px; }
+
     /* FUTURE PLANS */
     .plan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
     .plan-card { background: var(--card); border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; padding: 22px 18px; }
@@ -197,6 +203,22 @@
       <div class="pitch-card"><span class="pitch-icon">👨‍👩‍👧‍👦</span><div class="pitch-name">Adultes et parents</div><div class="pitch-desc">L’adulte utilise Partia. Un parent peut organiser une activité au nom de son enfant et reste responsable des inscriptions, du chat et de la supervision.</div></div>
       <div class="pitch-card"><span class="pitch-icon">💬</span><div class="pitch-name">Chat par créneau</div><div class="pitch-desc">Chaque créneau actif a son groupe de discussion. Coordination sans quitter l'app.</div></div>
       <div class="pitch-card"><span class="pitch-icon">⭐</span><div class="pitch-name">Réputation</div><div class="pitch-desc">Après chaque session, note tes partenaires. Ponctuel, Fiable, Fairplay, Cool...</div></div>
+    </div>
+  </div>
+
+  <hr class="hr" />
+
+  <!-- DEMO VIDEOS -->
+  <div class="section">
+    <p class="section-title">En vidéo</p>
+    <h2 class="section-h2">Partia en action</h2>
+    <p class="section-sub">Quelques captures d'écran filmées pour voir concrètement à quoi ça ressemble. (Vidéos en français pour l'instant.)</p>
+    <div class="video-grid">
+      <div class="video-card"><video controls preload="none" playsinline src="assets/videos/create_account.mp4"></video><div class="video-card-label">📝 Créer un compte</div></div>
+      <div class="video-card"><video controls preload="none" playsinline src="assets/videos/create_slot.mp4"></video><div class="video-card-label">➕ Créer un créneau</div></div>
+      <div class="video-card"><video controls preload="none" playsinline src="assets/videos/join_slot.mp4"></video><div class="video-card-label">🤝 Rejoindre un créneau</div></div>
+      <div class="video-card"><video controls preload="none" playsinline src="assets/videos/notifications.mp4"></video><div class="video-card-label">🔔 Notifications</div></div>
+      <div class="video-card"><video controls preload="none" playsinline src="assets/videos/profil_nav.mp4"></video><div class="video-card-label">👤 Profil &amp; navigation</div></div>
     </div>
   </div>
 
@@ -744,6 +766,22 @@
 
   <hr class="hr" />
 
+  <!-- DEMO VIDEÁ -->
+  <div class="section">
+    <p class="section-title">Vo videu</p>
+    <h2 class="section-h2">Partia v akcii</h2>
+    <p class="section-sub">Pár nahraných obrazoviek, aby si presne videl/a, ako appka vyzerá. (Zatiaľ len po francúzsky.)</p>
+    <div class="video-grid">
+      <div class="video-card"><video controls preload="none" playsinline src="assets/videos/create_account.mp4"></video><div class="video-card-label">📝 Vytvorenie účtu</div></div>
+      <div class="video-card"><video controls preload="none" playsinline src="assets/videos/create_slot.mp4"></video><div class="video-card-label">➕ Vytvorenie termínu</div></div>
+      <div class="video-card"><video controls preload="none" playsinline src="assets/videos/join_slot.mp4"></video><div class="video-card-label">🤝 Pripojenie k termínu</div></div>
+      <div class="video-card"><video controls preload="none" playsinline src="assets/videos/notifications.mp4"></video><div class="video-card-label">🔔 Notifikácie</div></div>
+      <div class="video-card"><video controls preload="none" playsinline src="assets/videos/profil_nav.mp4"></video><div class="video-card-label">👤 Profil a navigácia</div></div>
+    </div>
+  </div>
+
+  <hr class="hr" />
+
   <div class="section">
     <p class="section-title">Plány a uvádzacie ceny</p>
     <h2 class="section-h2">30 dní Premium na vyskúšanie, potom si vyberieš</h2>
@@ -1031,6 +1069,22 @@
       <div class="pitch-card"><span class="pitch-icon">👨‍👩‍👧‍👦</span><div class="pitch-name">Adults and parents</div><div class="pitch-desc">The adult uses Partia. A parent may organize an activity on behalf of a child and remains responsible for registration, chat and supervision.</div></div>
       <div class="pitch-card"><span class="pitch-icon">💬</span><div class="pitch-name">Chat per slot</div><div class="pitch-desc">Every active slot has its own group chat. Coordinate without leaving the app.</div></div>
       <div class="pitch-card"><span class="pitch-icon">⭐</span><div class="pitch-name">Reputation</div><div class="pitch-desc">Rate your partners after each session. Punctual, Reliable, Fairplay, Cool...</div></div>
+    </div>
+  </div>
+
+  <hr class="hr" />
+
+  <!-- DEMO VIDEOS -->
+  <div class="section">
+    <p class="section-title">In video</p>
+    <h2 class="section-h2">Partia in action</h2>
+    <p class="section-sub">A few screen recordings so you can see exactly what it looks like. (Videos are in French for now.)</p>
+    <div class="video-grid">
+      <div class="video-card"><video controls preload="none" playsinline src="assets/videos/create_account.mp4"></video><div class="video-card-label">📝 Create an account</div></div>
+      <div class="video-card"><video controls preload="none" playsinline src="assets/videos/create_slot.mp4"></video><div class="video-card-label">➕ Create a slot</div></div>
+      <div class="video-card"><video controls preload="none" playsinline src="assets/videos/join_slot.mp4"></video><div class="video-card-label">🤝 Join a slot</div></div>
+      <div class="video-card"><video controls preload="none" playsinline src="assets/videos/notifications.mp4"></video><div class="video-card-label">🔔 Notifications</div></div>
+      <div class="video-card"><video controls preload="none" playsinline src="assets/videos/profil_nav.mp4"></video><div class="video-card-label">👤 Profile &amp; navigation</div></div>
     </div>
   </div>
 
