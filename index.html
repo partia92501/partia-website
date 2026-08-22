@@ -45,7 +45,8 @@
     /* DEMO VIDEO */
     .demo-video { max-width: 640px; margin: 36px auto 0; position: relative; }
     .demo-video video { width: 100%; display: block; border-radius: 20px; box-shadow: 0 8px 48px rgba(0,0,0,0.5); }
-    .demo-placeholder { max-width: 640px; margin: 36px auto 0; position: relative; aspect-ratio: 16/9; background: rgba(255,255,255,0.04); border: 2px dashed rgba(255,255,255,0.15); border-radius: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; }
+    .demo-placeholder { max-width: 640px; margin: 36px auto 0; position: relative; aspect-ratio: 16/9; background: rgba(255,255,255,0.04); border: 2px dashed rgba(255,255,255,0.15); border-radius: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; text-decoration: none; cursor: pointer; transition: background 0.2s, border-color 0.2s; }
+    .demo-placeholder:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,96,53,0.4); }
     .demo-placeholder-icon { font-size: 40px; }
     .demo-placeholder-text { color: var(--gray); font-size: 14px; font-weight: 700; }
 
@@ -187,10 +188,10 @@
       <div class="hero-badge">Chat intégré</div>
       <div class="hero-badge">Réservée aux <span>adultes</span></div>
     </div>
-    <div class="demo-placeholder">
+    <a class="demo-placeholder" href="#demo-fr">
       <span class="demo-placeholder-icon">🎥</span>
-      <span class="demo-placeholder-text">Vidéo de démo bientôt disponible</span>
-    </div>
+      <span class="demo-placeholder-text">Voir Partia en action ⬇</span>
+    </a>
   </div>
 
   <!-- PITCH -->
@@ -209,7 +210,7 @@
   <hr class="hr" />
 
   <!-- DEMO VIDEOS -->
-  <div class="section">
+  <div class="section" id="demo-fr">
     <p class="section-title">En vidéo</p>
     <h2 class="section-h2">Partia en action</h2>
     <p class="section-sub">Quelques captures d'écran filmées pour voir concrètement à quoi ça ressemble. (Vidéos en français pour l'instant.)</p>
@@ -716,13 +717,13 @@
   <!-- CTA -->
   <div class="cta-section">
     <h2 class="cta-title">Prêt à jouer ? 🤝</h2>
-    <p class="cta-sub">Partia est actuellement accessible sur Google Play aux testeurs autorisés. Rejoins le test avec ton invitation, installe l’application depuis Google Play et trouve ton premier partenaire de sport.</p>
+    <p class="cta-sub">Partia est disponible sur Google Play. Installe l'application et trouve ton premier partenaire de sport.</p>
     
     
   </div>
 
   <footer>
-    <strong>🤝 Partia</strong> — Test fermé Google Play · Version 1.0.1<br/>
+    <strong>🤝 Partia</strong> — Disponible sur Google Play · Version 1.0.1<br/>
     Fait avec ❤️ par Manu · Matúškovo / SK
     <div class="legal-links"><a href="privacy.html?lang=fr">Confidentialité</a><a href="child-safety.html?lang=fr">Sécurité des enfants</a><a href="delete-account.html?lang=fr">Supprimer un compte</a></div>
   </footer>
@@ -746,10 +747,10 @@
       <div class="hero-badge">Zabudovaný chat</div>
       <div class="hero-badge">Len pre <span>dospelých</span></div>
     </div>
-    <div class="demo-placeholder">
+    <a class="demo-placeholder" href="#demo-sk">
       <span class="demo-placeholder-icon">🎥</span>
-      <span class="demo-placeholder-text">Ukážkové video už čoskoro</span>
-    </div>
+      <span class="demo-placeholder-text">Pozri si Partiu v akcii ⬇</span>
+    </a>
   </div>
 
   <div class="section">
@@ -767,7 +768,7 @@
   <hr class="hr" />
 
   <!-- DEMO VIDEÁ -->
-  <div class="section">
+  <div class="section" id="demo-sk">
     <p class="section-title">Vo videu</p>
     <h2 class="section-h2">Partia v akcii</h2>
     <p class="section-sub">Pár nahraných obrazoviek, aby si presne videl/a, ako appka vyzerá. (Zatiaľ len po francúzsky.)</p>
@@ -1024,13 +1025,13 @@
 
   <div class="cta-section">
     <h2 class="cta-title">Pripravený hrať? 🤝</h2>
-    <p class="cta-sub">Partia je momentálne dostupná na Google Play oprávneným testerom. Pripoj sa k testu pomocou pozvánky, nainštaluj aplikáciu z Google Play a nájdi svojho prvého športového partnera.</p>
+    <p class="cta-sub">Partia je dostupná na Google Play. Nainštaluj si aplikáciu a nájdi svojho prvého športového partnera.</p>
     
     
   </div>
 
   <footer>
-    <strong>🤝 Partia</strong> — Uzavretý test Google Play · Verzia 1.0.1<br/>
+    <strong>🤝 Partia</strong> — Dostupné na Google Play · Verzia 1.0.1<br/>
     Vytvorené s ❤️ od Manu · Bratislava / Francúzsko
     <div class="legal-links"><a href="privacy.html?lang=sk">Ochrana osobných údajov</a><a href="child-safety.html?lang=sk">Bezpečnosť detí</a><a href="delete-account.html?lang=sk">Vymazať účet</a></div>
   </footer>
@@ -1054,10 +1055,10 @@
       <div class="hero-badge">Built-in chat</div>
       <div class="hero-badge"><span>Adults</span> only</div>
     </div>
-    <div class="demo-placeholder">
+    <a class="demo-placeholder" href="#demo-en">
       <span class="demo-placeholder-icon">🎥</span>
-      <span class="demo-placeholder-text">Demo video coming soon</span>
-    </div>
+      <span class="demo-placeholder-text">See Partia in action ⬇</span>
+    </a>
   </div>
 
   <div class="section">
@@ -1075,7 +1076,7 @@
   <hr class="hr" />
 
   <!-- DEMO VIDEOS -->
-  <div class="section">
+  <div class="section" id="demo-en">
     <p class="section-title">In video</p>
     <h2 class="section-h2">Partia in action</h2>
     <p class="section-sub">A few screen recordings so you can see exactly what it looks like. (Videos are in French for now.)</p>
@@ -1338,20 +1339,41 @@
 
   <div class="cta-section">
     <h2 class="cta-title">Ready to play? 🤝</h2>
-    <p class="cta-sub">Partia is currently available on Google Play to authorized testers. Join the test with your invitation, install the app from Google Play and find your first sports partner.</p>
+    <p class="cta-sub">Partia is available on Google Play. Install the app and find your first sports partner.</p>
     
     
   </div>
 
   <footer>
-    <strong>🤝 Partia</strong> — Closed Google Play test · Version 1.0.1<br/>
+    <strong>🤝 Partia</strong> — Available on Google Play · Version 1.0.1<br/>
     Made with ❤️ by Manu · Matúškovo / SK
     <div class="legal-links"><a href="privacy.html?lang=en">Privacy</a><a href="child-safety.html?lang=en">Child safety</a><a href="delete-account.html?lang=en">Delete an account</a></div>
   </footer>
 
 </div><!-- /en -->
 
+<audio id="demo-bgm" src="assets/audio/demo-bgm.mp3" preload="none"></audio>
+
 <script>
+  // Musique de fond synchronisée sur les vidéos démo — un seul fichier audio
+  // partagé, redémarré à chaque lecture, sans jamais retoucher les .mp4.
+  (function () {
+    document.addEventListener('DOMContentLoaded', function () {
+      var bgm = document.getElementById('demo-bgm');
+      if (!bgm) return;
+      var videos = document.querySelectorAll('.video-card video');
+      videos.forEach(function (v) {
+        v.addEventListener('play', function () {
+          videos.forEach(function (other) { if (other !== v) other.pause(); });
+          bgm.currentTime = 0;
+          bgm.play().catch(function () {});
+        });
+        v.addEventListener('pause', function () { bgm.pause(); });
+        v.addEventListener('ended', function () { bgm.pause(); });
+      });
+    });
+  })();
+
   function setLang(lang) {
     document.querySelectorAll('[data-lang]').forEach(function(el) {
       el.style.display = (el.getAttribute('data-lang') === lang) ? 'block' : 'none';
