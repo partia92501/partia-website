@@ -89,38 +89,6 @@
     .plan-notice { margin-top: 18px; padding: 14px 16px; border-radius: 12px; background: rgba(255,96,53,0.08); border: 1px solid rgba(255,96,53,0.25); color: var(--gray); font-size: 13px; }
     .plan-notice strong { color: #fff; }
 
-    /* SCREEN GUIDE */
-    .screen-guide { border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 48px; margin-bottom: 48px; }
-    .screen-guide:last-child { border-bottom: none; }
-    .screen-header { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
-    .screen-num { background: var(--primary); color: #fff; width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 900; flex-shrink: 0; }
-    .screen-title { font-size: 22px; font-weight: 900; color: #fff; }
-    .screen-tag { margin-left: auto; background: rgba(255,96,53,0.12); color: var(--primary); border-radius: 999px; padding: 4px 12px; font-size: 12px; font-weight: 700; }
-    .screen-layout { display: grid; grid-template-columns: 200px 1fr; gap: 28px; align-items: start; }
-    .screen-mock { background: var(--card); border-radius: 24px; border: 2px solid rgba(255,255,255,0.1); overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,0.5); }
-    .mock-status { background: #0F3460; padding: 8px 14px; display: flex; justify-content: space-between; font-size: 10px; color: rgba(255,255,255,0.5); }
-    .mock-body { padding: 12px; min-height: 280px; }
-    .mock-topbar { background: rgba(255,255,255,0.05); border-radius: 10px; padding: 10px 12px; margin-bottom: 10px; font-size: 11px; color: var(--primary); font-weight: 800; }
-    .mock-card { background: rgba(255,255,255,0.04); border-radius: 10px; padding: 10px; margin-bottom: 8px; border: 1px solid rgba(255,255,255,0.06); }
-    .mock-card-title { font-size: 11px; font-weight: 700; color: #fff; margin-bottom: 4px; }
-    .mock-card-sub { font-size: 10px; color: var(--gray); }
-    .mock-badge { display: inline-block; background: rgba(255,96,53,0.2); color: var(--primary); border-radius: 999px; padding: 2px 8px; font-size: 9px; font-weight: 700; margin-top: 4px; }
-    .mock-btn { background: var(--primary); border-radius: 8px; padding: 8px; text-align: center; font-size: 11px; font-weight: 800; color: #fff; margin-top: 10px; }
-    .mock-input { background: rgba(255,255,255,0.06); border-radius: 8px; padding: 8px 10px; font-size: 10px; color: var(--gray); margin-bottom: 6px; border: 1px solid rgba(255,255,255,0.08); }
-    .mock-avatar { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg,#FF6035,#FF8C5A); display: flex; align-items: center; justify-content: center; font-size: 18px; margin: 0 auto 8px; }
-    .mock-chips { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 8px; }
-    .mock-chip { background: rgba(255,255,255,0.08); border-radius: 999px; padding: 3px 8px; font-size: 9px; color: var(--gray); }
-    .mock-chip.active { background: rgba(255,96,53,0.25); color: var(--primary); }
-    .screen-content { flex: 1; }
-    .screen-desc { color: var(--gray); font-size: 15px; line-height: 1.7; margin-bottom: 18px; }
-    .feature-list { list-style: none; padding: 0; }
-    .feature-list li { display: flex; gap: 10px; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 14px; color: var(--gray); align-items: flex-start; }
-    .feature-list li:last-child { border-bottom: none; }
-    .feature-list .fi { color: var(--primary); font-weight: 900; flex-shrink: 0; margin-top: 2px; }
-    .feature-list strong { color: #fff; }
-    .tip-box { background: rgba(255,96,53,0.08); border: 1px solid rgba(255,96,53,0.25); border-radius: 12px; padding: 12px 16px; margin-top: 16px; font-size: 13px; color: var(--secondary); }
-    .tip-box strong { color: var(--primary); }
-
     /* SPORTS GRID */
     .sports-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
     .sport-chip { background: var(--card); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 7px 16px; font-size: 13px; color: var(--text); font-weight: 600; display: inline-flex; align-items: center; gap: 6px; }
@@ -153,9 +121,6 @@
 
     @media (max-width: 640px) {
       .hero-title { font-size: 48px; }
-      .screen-layout { grid-template-columns: 1fr; }
-      .screen-mock { max-width: 240px; margin: 0 auto; }
-      .screen-tag { display: none; }
     }
   </style>
 </head>
@@ -164,9 +129,9 @@
 <!-- LANG BAR -->
 <nav class="lang-bar">
   <div class="lang-logo"><img class="brand-icon" src="assets/partia-sport-icon-v1.png" alt="">Partia</div>
-  <div class="top-nav" data-lang="fr" style="display:flex"><a class="current" href="index.html">Accueil</a><a href="sports.html">Sports</a><a href="offres.html">Offres</a><a href="faq.html">FAQ</a></div>
-  <div class="top-nav" data-lang="sk" style="display:none"><a class="current" href="index.html">Domov</a><a href="sports.html">Športy</a><a href="offres.html">Ponuky</a><a href="faq.html">FAQ</a></div>
-  <div class="top-nav" data-lang="en" style="display:none"><a class="current" href="index.html">Home</a><a href="sports.html">Sports</a><a href="offres.html">Plans</a><a href="faq.html">FAQ</a></div>
+  <div class="top-nav" data-lang="fr" style="display:flex"><a class="current" href="index.html">Accueil</a><a href="sports.html">Sports</a><a href="guide.html">Guide</a><a href="offres.html">Offres</a><a href="faq.html">FAQ</a></div>
+  <div class="top-nav" data-lang="sk" style="display:none"><a class="current" href="index.html">Domov</a><a href="sports.html">Športy</a><a href="guide.html">Príručka</a><a href="offres.html">Ponuky</a><a href="faq.html">FAQ</a></div>
+  <div class="top-nav" data-lang="en" style="display:none"><a class="current" href="index.html">Home</a><a href="sports.html">Sports</a><a href="guide.html">Guide</a><a href="offres.html">Plans</a><a href="faq.html">FAQ</a></div>
   <div class="lang-btns">
     <button class="lang-btn active" data-lang-btn="fr" onclick="setLang('fr')">🇫🇷 FR</button>
     <button class="lang-btn" data-lang-btn="sk" onclick="setLang('sk')">🇸🇰 SK</button>
@@ -186,7 +151,7 @@
     <p class="hero-tagline">Trouve des coéquipiers &amp; adversaires près de toi</p>
     <p class="hero-sub">L'app qui t'aide à faire les sports que t'aimes.</p>
     <div class="hero-badges">
-      <div class="hero-badge"><span>36</span> sports disponibles</div>
+      <a class="hero-badge" href="sports.html" style="text-decoration:none;"><span>36</span> sports disponibles</a>
       <div class="hero-badge">GPS <span>+</span> filtre distance</div>
       <div class="hero-badge">Chat intégré</div>
       <div class="hero-badge">Réservée aux <span>adultes</span></div>
@@ -209,7 +174,8 @@
       <div class="pitch-card"><span class="pitch-icon">🔒</span><div class="pitch-name">Créneaux privés</div><div class="pitch-desc">Crée un créneau réservé à tes amis via un code à partager — il n'apparaît pas dans les résultats publics.</div></div>
       <div class="pitch-card"><span class="pitch-icon">👨‍👩‍👧‍👦</span><div class="pitch-name">Adultes et parents</div><div class="pitch-desc">L’adulte utilise Partia. Un parent peut organiser une activité au nom de son enfant et reste responsable des inscriptions, du chat et de la supervision.</div></div>
       <div class="pitch-card"><span class="pitch-icon">💬</span><div class="pitch-name">Chat par créneau</div><div class="pitch-desc">Chaque créneau actif a son groupe de discussion. Coordination sans quitter l'app.</div></div>
-      <div class="pitch-card"><span class="pitch-icon">⭐</span><div class="pitch-name">Réputation</div><div class="pitch-desc">Après chaque session, note tes partenaires. Ponctuel, Fiable, Fairplay, Cool...</div></div>
+      <div class="pitch-card"><span class="pitch-icon">⭐</span><div class="pitch-name">Réputation</div><div class="pitch-desc">Après chaque session, attribue jusqu'à 5 badges — tous positifs, aucune note négative : Ponctuel, Fiable, Bon joueur, Cool, Fair-play.</div></div>
+      <div class="pitch-card"><span class="pitch-icon">🛡️</span><div class="pitch-name">Signalement &amp; blocage</div><div class="pitch-desc">Un comportement qui cloche ? Signale-le en un tap ou bloque la personne direct — elle ne pourra plus te voir ni te contacter.</div></div>
     </div>
   </div>
 
@@ -234,7 +200,7 @@
   <div class="section">
     <p class="section-title">Plans et tarifs de lancement</p>
     <h2 class="section-h2">30 jours Premium Découverte, puis le choix</h2>
-    <p class="section-sub">Chaque nouveau compte profite de Premium Découverte pendant 30 jours, sans carte bancaire. Ensuite, il peut rester en Free ou choisir un abonnement Premium géré par Google Play.</p>
+    <p class="section-sub">Chaque nouveau compte profite de Premium Découverte pendant 30 jours, sans carte bancaire. Ensuite, il peut rester en Free ou choisir un abonnement <a href="offres.html?lang=fr#premium-fr" style="color:var(--primary);font-weight:700;">Premium</a> géré par Google Play.</p>
     <div class="plan-grid">
       <div class="plan-card"><div class="plan-name">🆓 Free</div><div class="plan-kicker">Après les 30 jours offerts</div></div>
       <div class="plan-card premium"><div class="plan-name">⭐ Premium</div><div class="plan-kicker">2,99 €/mois</div></div>
@@ -245,438 +211,13 @@
 
   <hr class="hr" />
 
-  <!-- SCREENS -->
+  <!-- GUIDE -->
   <div class="section">
     <p class="section-title">Guide utilisateur</p>
     <h2 class="section-h2">L'app, écran par écran</h2>
-    <p class="section-sub">Voici comment fonctionne Partia, de la création de compte jusqu'à la notation post-match.</p>
-
-    <!-- SCREEN 1 — INSCRIPTION -->
-    <div class="screen-guide">
-      <div class="screen-header">
-        <div class="screen-num">1</div>
-        <div class="screen-title">Inscription &amp; Connexion</div>
-        <div class="screen-tag">Solo · 5 min</div>
-      </div>
-      <div class="screen-layout">
-        <div class="screen-mock">
-          <div class="mock-status"><span>9:41</span><span>●●●</span></div>
-          <div class="mock-body">
-            <div style="text-align:center;padding:8px 0 4px;"><span style="font-size:28px;">🤝</span><div style="color:var(--primary);font-weight:900;font-size:16px;">Partia</div></div>
-            <div class="mock-input">📧 Email</div>
-            <div class="mock-input">🔒 Mot de passe</div>
-            <div class="mock-btn">Se connecter</div>
-            <div style="text-align:center;margin-top:8px;font-size:10px;color:var(--gray);">Pas encore de compte ? <span style="color:var(--primary);">S'inscrire</span></div>
-          </div>
-        </div>
-        <div class="screen-content">
-          <p class="screen-desc">Crée ton compte en 2 minutes. Renseigne ton prénom, email, mot de passe, sexe et date de naissance (18 ans minimum). Un email de vérification est envoyé automatiquement.</p>
-          <ul class="feature-list">
-            <li><span class="fi">→</span><span><strong>Inscription</strong> : prénom, email, mdp, sexe, date de naissance</span></li>
-            <li><span class="fi">→</span><span><strong>Vérification email</strong> : clique sur le lien reçu par mail pour activer ton compte</span></li>
-            <li><span class="fi">→</span><span><strong>Connexion</strong> : email + mot de passe</span></li>
-            <li><span class="fi">→</span><span><strong>Mot de passe oublié</strong> : code à 6 chiffres envoyé par email, valable 15 min</span></li>
-          </ul>
-          <div class="tip-box">💡 <strong>Conseil :</strong> Vérifie ton dossier spam si tu ne reçois pas l'email de confirmation — les expéditeurs sans domaine vérifié peuvent y atterrir.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SCREEN 2 — PROFIL SETUP -->
-    <div class="screen-guide">
-      <div class="screen-header">
-        <div class="screen-num">2</div>
-        <div class="screen-title">Configuration du Profil</div>
-        <div class="screen-tag">Après inscription</div>
-      </div>
-      <div class="screen-layout">
-        <div class="screen-mock">
-          <div class="mock-status"><span>9:41</span><span>●●●</span></div>
-          <div class="mock-body">
-            <div class="mock-topbar">Mes sports 🏅</div>
-            <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px;">
-              <div style="background:rgba(255,96,53,0.3);border:1px solid var(--primary);border-radius:8px;padding:4px 8px;font-size:10px;color:#fff;">⚽ Football</div>
-              <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:4px 8px;font-size:10px;color:var(--gray);">🏀 Basket</div>
-              <div style="background:rgba(255,96,53,0.3);border:1px solid var(--primary);border-radius:8px;padding:4px 8px;font-size:10px;color:#fff;">🎾 Tennis</div>
-              <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:4px 8px;font-size:10px;color:var(--gray);">🏐 Volley</div>
-              <div style="background:rgba(255,96,53,0.3);border:1px solid var(--primary);border-radius:8px;padding:4px 8px;font-size:10px;color:#fff;">🚴 Vélo</div>
-              <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:4px 8px;font-size:10px;color:var(--gray);">🏃 Course</div>
-              <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:4px 8px;font-size:10px;color:var(--gray);">🏊 Natation</div>
-              <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:4px 8px;font-size:10px;color:var(--gray);">🧘 Yoga</div>
-            </div>
-            <div style="font-size:9px;color:var(--gray);margin-bottom:6px;">📍 Ville (optionnel)</div>
-            <div class="mock-input">Bratislava</div>
-            <div class="mock-btn">Sauvegarder</div>
-          </div>
-        </div>
-        <div class="screen-content">
-          <p class="screen-desc">Dès la connexion, complète ton profil en sélectionnant les sports que tu pratiques. C'est ce qui permet aux autres joueurs de te trouver et de voir si vous êtes compatibles.</p>
-          <ul class="feature-list">
-            <li><span class="fi">→</span><span><strong>Grille de sports</strong> : 36 sports affichés avec emoji — tape pour sélectionner / désélectionner</span></li>
-            <li><span class="fi">→</span><span><strong>Multi-sélection</strong> : tu peux pratiquer autant de sports que tu veux</span></li>
-            <li><span class="fi">→</span><span><strong>Ville</strong> : suggestions Photon/OpenStreetMap via le serveur Partia — utilisées si le GPS est désactivé</span></li>
-            <li><span class="fi">→</span><span><strong>Photo</strong> : optionnelle, uploadable depuis la galerie (recadrée 400×400)</span></li>
-            <li><span class="fi">→</span><span><strong>Modifiable à tout moment</strong> : reviens dans l'onglet Profil pour changer tes sports ou ta ville</span></li>
-          </ul>
-          <div class="tip-box">💡 <strong>Conseil :</strong> sélectionne tous les sports que tu pratiques, même occasionnellement — ça augmente tes chances d'apparaître dans les recherches.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SCREEN 3 — HOME (was 2) -->
-    <div class="screen-guide">
-      <div class="screen-header">
-        <div class="screen-num">3</div>
-        <div class="screen-title">Explorer — Le Feed</div>
-        <div class="screen-tag">Écran principal</div>
-      </div>
-      <div class="screen-layout">
-        <div class="screen-mock">
-          <div class="mock-status"><span>9:41</span><span>●●●</span></div>
-          <div class="mock-body">
-            <div class="mock-topbar">🤝 Partia <span style="float:right;color:var(--gray);font-weight:400;">📍 12 km</span></div>
-            <div class="mock-chips">
-              <div class="mock-chip active">5</div><div class="mock-chip">25</div><div class="mock-chip">∞</div>
-            </div>
-            <div class="mock-card">
-              <div class="mock-card-title">🏐 Beach Volley</div>
-              <div class="mock-card-sub">📍 Matúškovo · 3 km</div>
-              <div class="mock-card-sub">📅 Sam 5 juil · 10h00</div>
-              <div class="mock-badge">2/4 places</div>
-            </div>
-            <div class="mock-card">
-              <div class="mock-card-title">🎾 Tennis</div>
-              <div class="mock-card-sub">📍 Bratislava · 8 km</div>
-              <div class="mock-card-sub">📅 Dim 6 juil · 14h00</div>
-              <div class="mock-badge">0/2 places</div>
-            </div>
-          </div>
-        </div>
-        <div class="screen-content">
-          <p class="screen-desc">L'écran principal liste tous les créneaux disponibles autour de toi. Filtre par distance, trie par date ou proximité, et vois d'un coup d'œil les places restantes.</p>
-          <ul class="feature-list">
-            <li><span class="fi">→</span><span><strong>GPS automatique</strong> : position en temps réel pour calculer la distance</span></li>
-            <li><span class="fi">→</span><span><strong>Filtre distance</strong> : trois choix lisibles, 5 km / 25 km / ∞ — Free jusqu’à 5 km avec un aperçu anonyme et verrouillé des créneaux entre 5 et 25 km, Premium jusqu’à 25 km et Premium+ sans limite. <strong>Appui long</strong> sur une chip pour afficher son explication.</span></li>
-            <li><span class="fi">→</span><span><strong>Tri</strong> : par distance ou par date — <strong>appui long</strong> sur le bouton de tri → tooltip indiquant le mode actif et comment basculer</span></li>
-            <li><span class="fi">→</span><span><strong>Pull to refresh</strong> : tire vers le bas pour actualiser</span></li>
-            <li><span class="fi">→</span><span><strong>État vide</strong> : message "Aucun créneau trouvé" si rien dans ton rayon</span></li>
-          </ul>
-          <div class="tip-box">💡 <strong>GPS désactivé ?</strong> L'app utilise la ville de ton profil comme fallback. Sans ville ni GPS, tous les créneaux s'affichent (filtre ∞).</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SCREEN 4 — CRÉER -->
-    <div class="screen-guide">
-      <div class="screen-header">
-        <div class="screen-num">4</div>
-        <div class="screen-title">Créer un Créneau</div>
-        <div class="screen-tag">Bouton + en bas</div>
-      </div>
-      <div class="screen-layout">
-        <div class="screen-mock">
-          <div class="mock-status"><span>9:41</span><span>●●●</span></div>
-          <div class="mock-body">
-            <div class="mock-topbar">Nouveau créneau</div>
-            <div class="mock-input">⚽ Sport</div>
-            <div class="mock-input">📍 Lieu / Zone</div>
-            <div class="mock-input">📅 Date &amp; Heure</div>
-            <div class="mock-input">👥 Nombre de places</div>
-            <div class="mock-input">📝 Description (optionnel)</div>
-            <div class="mock-btn">✅ Créer le créneau</div>
-          </div>
-        </div>
-        <div class="screen-content">
-          <p class="screen-desc">Crée un créneau en quelques secondes. Choisis le sport, le lieu, la date et le nombre de places. Un créneau public apparaît ensuite dans le fil des joueurs compatibles.</p>
-          <ul class="feature-list">
-            <li><span class="fi">→</span><span><strong>Sport</strong> : 36 sports disponibles avec emoji</span></li>
-            <li><span class="fi">→</span><span><strong>Lieu</strong> : saisis au moins 2 lettres puis sélectionne un parc, stade, salle ou une adresse dans les suggestions Photon/OpenStreetMap</span></li>
-            <li><span class="fi">→</span><span><strong>Date &amp; heure</strong> : sélecteur Android ; une heure déjà passée aujourd’hui est déplacée au prochain quart d’heure disponible</span></li>
-            <li><span class="fi">→</span><span><strong>Places</strong> : nombre de participants recherchés, hors organisateur</span></li>
-            <li><span class="fi">→</span><span><strong>Limite</strong> : 5 créneaux sur 30 jours pour tout le compte Free, profils enfants compris (Premium et Premium+ sans limite)</span></li>
-            <li><span class="fi">→</span><span><strong>Profil enfant</strong> : tu peux créer un créneau pour ton fils/ta fille depuis son profil</span></li>
-            <li><span class="fi">→</span><span><strong>Profil 15-17 ans</strong> : dans Explorer, touche le cadenas <code>🔒/🔓</code> pour comprendre ou contrôler l'accès aux créneaux adultes</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- SCREEN 5 — DÉTAIL -->
-    <div class="screen-guide">
-      <div class="screen-header">
-        <div class="screen-num">5</div>
-        <div class="screen-title">Détail d'un Créneau</div>
-        <div class="screen-tag">Tap sur une carte</div>
-      </div>
-      <div class="screen-layout">
-        <div class="screen-mock">
-          <div class="mock-status"><span>9:41</span><span>●●●</span></div>
-          <div class="mock-body">
-            <div style="text-align:center;font-size:28px;padding:6px 0;">🏐</div>
-            <div class="mock-card">
-              <div class="mock-card-title">Beach Volley</div>
-              <div class="mock-card-sub">📍 Matúškovo, Slovaquie</div>
-              <div class="mock-card-sub">📅 Sam 5 juil 10:00</div>
-              <div class="mock-card-sub">👥 2/4 participants</div>
-            </div>
-            <div style="font-size:10px;color:var(--gray);margin:6px 0 4px;">Participants</div>
-            <div style="display:flex;gap:6px;">
-              <div style="background:rgba(255,96,53,0.2);border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:13px;">M</div>
-              <div style="background:rgba(255,96,53,0.2);border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:13px;">A</div>
-            </div>
-            <div class="mock-btn" style="margin-top:10px;">Rejoindre</div>
-          </div>
-        </div>
-        <div class="screen-content">
-          <p class="screen-desc">Vois tous les détails d'un créneau avant de rejoindre : sport, lieu, date, organisateur, participants inscrits. Rejoins en un tap si des places sont disponibles.</p>
-          <ul class="feature-list">
-            <li><span class="fi">→</span><span><strong>Rejoindre</strong> : le profil actif (parent ou enfant autorisé) peut prendre une place s'il n'est pas encore inscrit</span></li>
-            <li><span class="fi">→</span><span><strong>Parent + enfant 15–17 autorisé</strong> : ils peuvent rejoindre séparément le même créneau adulte tiers ; chacun occupe une place. Cette possibilité ne concerne pas les 3–14 ans</span></li>
-            <li><span class="fi">→</span><span><strong>Se désinscrire</strong> : avant le début, uniquement pour le profil actif sans retirer l'autre profil du compte</span></li>
-            <li><span class="fi">→</span><span><strong>Participants</strong> : liste avec avatars et prénoms, tap pour voir le profil public</span></li>
-            <li><span class="fi">→</span><span><strong>Annuler</strong> : le créateur peut annuler son créneau (notification envoyée aux participants)</span></li>
-            <li><span class="fi">→</span><span><strong>Chat</strong> : accès direct au groupe de discussion du créneau</span></li>
-            <li><span class="fi">→</span><span><strong>Signalement</strong> : bouton discret pour signaler un contenu inapproprié</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- SCREEN 6 — CHAT -->
-    <div class="screen-guide">
-      <div class="screen-header">
-        <div class="screen-num">6</div>
-        <div class="screen-title">Chat de Groupe</div>
-        <div class="screen-tag">Par créneau</div>
-      </div>
-      <div class="screen-layout">
-        <div class="screen-mock">
-          <div class="mock-status"><span>9:41</span><span>●●●</span></div>
-          <div class="mock-body">
-            <div class="mock-topbar">💬 Beach Volley · Sam 5 juil</div>
-            <div style="margin-bottom:6px;">
-              <div style="background:rgba(255,255,255,0.06);border-radius:12px 12px 12px 2px;padding:7px 10px;font-size:10px;color:var(--gray);max-width:80%;margin-bottom:4px;"><span style="color:var(--primary);font-weight:700;">Manu</span> — Quelqu'un peut apporter un filet ?</div>
-              <div style="background:rgba(255,96,53,0.15);border-radius:12px 12px 2px 12px;padding:7px 10px;font-size:10px;color:#fff;max-width:80%;margin-left:auto;margin-bottom:4px;">Oui j'en ai un !</div>
-              <div style="background:rgba(255,255,255,0.06);border-radius:12px 12px 12px 2px;padding:7px 10px;font-size:10px;color:var(--gray);max-width:80%;"><span style="color:var(--primary);font-weight:700;">Alex</span> — 👍 à tout à l'heure</div>
-            </div>
-            <div style="display:flex;gap:6px;margin-top:8px;">
-              <div class="mock-input" style="flex:1;margin:0;">Votre message...</div>
-              <div style="background:var(--primary);border-radius:8px;padding:8px;font-size:12px;">➤</div>
-            </div>
-          </div>
-        </div>
-        <div class="screen-content">
-          <p class="screen-desc">Chaque créneau a son propre groupe de chat. Seuls les participants inscrits y ont accès. Coordonne-toi directement dans l'app : matériel, horaires, point de rendez-vous.</p>
-          <ul class="feature-list">
-            <li><span class="fi">→</span><span><strong>Accès par profil</strong> : seul le profil actif inscrit voit le chat ; l’inscription de l’enfant ne l’ouvre pas au profil adulte non inscrit</span></li>
-            <li><span class="fi">→</span><span><strong>Rafraîchissement</strong> : les nouveaux messages apparaissent toutes les 5 secondes automatiquement</span></li>
-            <li><span class="fi">→</span><span><strong>Historique</strong> : tous les messages du créneau sont conservés</span></li>
-            <li><span class="fi">→</span><span><strong>Notification</strong> : tu reçois une notif push quand un nouveau message arrive</span></li>
-            <li><span class="fi">→</span><span><strong>Signaler ou bloquer</strong> : touche le message d'un autre joueur pour le signaler ou bloquer son auteur</span></li>
-          </ul>
-          <div class="tip-box">💡 Le chat ferme lorsque le créneau est annulé ou passé. Les messages d'un utilisateur bloqué sont masqués dans les deux sens.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SCREEN 7 — HISTORIQUE -->
-    <div class="screen-guide">
-      <div class="screen-header">
-        <div class="screen-num">7</div>
-        <div class="screen-title">Historique</div>
-        <div class="screen-tag">Onglet 📋</div>
-      </div>
-      <div class="screen-layout">
-        <div class="screen-mock">
-          <div class="mock-status"><span>9:41</span><span>●●●</span></div>
-          <div class="mock-body">
-            <div class="mock-topbar">Historique</div>
-            <div style="font-size:10px;color:var(--primary);font-weight:700;margin-bottom:6px;">MES CRÉNEAUX</div>
-            <div class="mock-card">
-              <div class="mock-card-title">🏐 Beach Volley</div>
-              <div class="mock-card-sub">30 juin · Passé</div>
-              <div style="display:flex;gap:4px;margin-top:4px;">
-                <div style="background:rgba(76,175,80,0.2);color:#81C784;border-radius:6px;padding:3px 7px;font-size:9px;">✅ Confirmé</div>
-              </div>
-            </div>
-            <div style="font-size:10px;color:var(--primary);font-weight:700;margin:8px 0 6px;">REJOINTS</div>
-            <div class="mock-card">
-              <div class="mock-card-title">🎾 Tennis</div>
-              <div class="mock-card-sub">28 juin · Passé</div>
-              <div style="background:rgba(255,193,7,0.15);color:#FFD54F;border-radius:6px;padding:3px 7px;font-size:9px;display:inline-block;margin-top:4px;">⏳ À confirmer</div>
-            </div>
-          </div>
-        </div>
-        <div class="screen-content">
-          <p class="screen-desc">Retrouve tous tes créneaux passés et à venir : ceux que tu as créés, ceux que tu as rejoints, et ceux qui ont été annulés. Confirme ta présence après chaque session.</p>
-          <ul class="feature-list">
-            <li><span class="fi">→</span><span><strong>Mes créneaux</strong> : tous les créneaux que tu as créés (actifs + passés)</span></li>
-            <li><span class="fi">→</span><span><strong>Profils</strong> : choisis directement Parent ou un enfant en haut de l’écran ; créneaux, confirmations et notations suivent ce choix</span></li>
-            <li><span class="fi">→</span><span><strong>Rejoints</strong> : créneaux auxquels le profil choisi participe ou a participé</span></li>
-            <li><span class="fi">→</span><span><strong>Annulés</strong> : créneaux annulés par toi ou l'organisateur</span></li>
-            <li><span class="fi">→</span><span><strong>Confirmer la présence</strong> : bouton "C'était bien ?" après la date — active les notations</span></li>
-            <li><span class="fi">→</span><span><strong>Bloquer la création</strong> : si tu as un créneau passé non confirmé, il faut d'abord le confirmer</span></li>
-          </ul>
-          <div class="tip-box">💡 <strong>Important :</strong> confirme ta présence après chaque session pour débloquer la notation des autres joueurs.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SCREEN 8 — PROFIL -->
-    <div class="screen-guide">
-      <div class="screen-header">
-        <div class="screen-num">8</div>
-        <div class="screen-title">Mon Profil</div>
-        <div class="screen-tag">Onglet 👤</div>
-      </div>
-      <div class="screen-layout">
-        <div class="screen-mock">
-          <div class="mock-status"><span>9:41</span><span>●●●</span></div>
-          <div class="mock-body">
-            <div class="mock-avatar">👤</div>
-            <div style="text-align:center;font-size:13px;font-weight:800;color:#fff;">Manu</div>
-            <div style="text-align:center;font-size:10px;color:var(--gray);margin-bottom:8px;">Bratislava</div>
-            <div style="font-size:10px;color:var(--primary);font-weight:700;margin-bottom:4px;">MES SPORTS</div>
-            <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px;">
-              <div style="background:rgba(255,96,53,0.15);border-radius:8px;padding:3px 8px;font-size:10px;">🏐 Volley</div>
-              <div style="background:rgba(255,96,53,0.15);border-radius:8px;padding:3px 8px;font-size:10px;">🎾 Tennis</div>
-            </div>
-            <div style="font-size:10px;color:var(--primary);font-weight:700;margin-bottom:4px;">BADGES</div>
-            <div style="display:flex;gap:4px;flex-wrap:wrap;">
-              <div style="font-size:16px;">✅🏅😊</div>
-            </div>
-          </div>
-        </div>
-        <div class="screen-content">
-          <p class="screen-desc">Ton profil centralise toutes tes informations : photo, sports pratiqués, ville, badges reçus et profils enfants. C'est la vitrine que les autres joueurs voient quand ils consultent ta fiche.</p>
-          <ul class="feature-list">
-            <li><span class="fi">→</span><span><strong>Photo</strong> : upload depuis la galerie, recadrée automatiquement en 400×400</span></li>
-            <li><span class="fi">→</span><span><strong>Sports</strong> : sélectionne jusqu'à tous les sports que tu pratiques</span></li>
-            <li><span class="fi">→</span><span><strong>Ville</strong> : recherche Photon/OpenStreetMap via le serveur — utilisée si le GPS est désactivé</span></li>
-            <li><span class="fi">→</span><span><strong>Profils enfants</strong> : le parent, seul titulaire du compte, crée et gère les profils, effectue les inscriptions et supervise les rencontres</span></li>
-            <li><span class="fi">→</span><span><strong>15–17 ans</strong> : l'accès aux créneaux adultes exige le consentement parental enregistré dans Mes enfants</span></li>
-            <li><span class="fi">→</span><span><strong>Badges positifs</strong> : ⏰ Ponctuel · ✅ Fiable · 🏅 Bon joueur · 😊 Cool · 💛 Fairplay</span></li>
-            <li><span class="fi">⚠️</span><span><strong>Badge automatique</strong> : 🤪 Tête en l'air — déclenché si 2+ créneaux non confirmés sous 7 jours</span></li>
-            <li><span class="fi">→</span><span><strong>Langue</strong> : bascule l'app en Français / Slovenčina / English</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- SCREEN 9 — NOTATION -->
-    <div class="screen-guide">
-      <div class="screen-header">
-        <div class="screen-num">9</div>
-        <div class="screen-title">Notation Post-Match</div>
-        <div class="screen-tag">Après confirmation</div>
-      </div>
-      <div class="screen-layout">
-        <div class="screen-mock">
-          <div class="mock-status"><span>9:41</span><span>●●●</span></div>
-          <div class="mock-body">
-            <div class="mock-topbar">Noter les joueurs</div>
-            <div class="mock-card">
-              <div class="mock-avatar" style="width:32px;height:32px;font-size:14px;margin:0 0 6px;">A</div>
-              <div class="mock-card-title">Alex</div>
-              <div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:6px;">
-                <div style="background:rgba(255,96,53,0.15);border-radius:8px;padding:4px 8px;font-size:10px;border:1px solid rgba(255,96,53,0.3);">⏰ Ponctuel</div>
-                <div style="background:rgba(255,96,53,0.3);border-radius:8px;padding:4px 8px;font-size:10px;border:1px solid var(--primary);color:#fff;">✅ Fiable</div>
-                <div style="background:rgba(255,96,53,0.15);border-radius:8px;padding:4px 8px;font-size:10px;border:1px solid rgba(255,96,53,0.3);">😊 Cool</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="screen-content">
-          <p class="screen-desc">Après chaque session confirmée, note tes partenaires de jeu en attribuant des badges. Ces badges s'accumulent sur leur profil et construisent leur réputation sur Partia.</p>
-          <ul class="feature-list">
-            <li><span class="fi">→</span><span><strong>5 badges positifs</strong> : ⏰ Ponctuel · ✅ Fiable · 🏅 Bon joueur · 😊 Cool · 💛 Fairplay</span></li>
-            <li><span class="fi">⚠️</span><span><strong>1 badge automatique</strong> : 🤪 Tête en l'air — apparaît <em>automatiquement</em> si 2 créneaux ou plus des 30 derniers jours restent non confirmés après 7 jours. Appuie sur "J'y étais" dans la semaine suivant chaque session pour l'éviter</span></li>
-            <li><span class="fi">→</span><span><strong>Multi-sélection</strong> : attribue autant de badges que tu veux à chaque joueur</span></li>
-            <li><span class="fi">→</span><span><strong>Une notation par profil</strong> : si un parent et son enfant 15–17 autorisé participent ensemble, ils sont confirmés et notés séparément</span></li>
-            <li><span class="fi">→</span><span><strong>Badges distincts</strong> : chaque badge va au profil concerné ; le parent reste responsable du compte et du profil enfant</span></li>
-            <li><span class="fi">→</span><span><strong>Visible sur le profil</strong> : les badges s'affichent avec leur compteur sur le profil public</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- SCREEN 10 — PROFIL PUBLIC -->
-    <div class="screen-guide">
-      <div class="screen-header">
-        <div class="screen-num">10</div>
-        <div class="screen-title">Profil Public d'un Joueur</div>
-        <div class="screen-tag">Tap sur un participant</div>
-      </div>
-      <div class="screen-layout">
-        <div class="screen-mock">
-          <div class="mock-status"><span>9:41</span><span>●●●</span></div>
-          <div class="mock-body">
-            <div class="mock-avatar">🧑</div>
-            <div style="text-align:center;font-size:13px;font-weight:800;color:#fff;">Alex</div>
-            <div style="text-align:center;font-size:10px;color:var(--gray);margin-bottom:8px;">Bratislava · Homme</div>
-            <div style="font-size:10px;color:var(--primary);font-weight:700;margin-bottom:4px;">SPORTS</div>
-            <div style="display:flex;gap:4px;margin-bottom:8px;flex-wrap:wrap;">
-              <div style="background:rgba(255,96,53,0.15);border-radius:8px;padding:3px 8px;font-size:9px;">🎾 Tennis</div>
-              <div style="background:rgba(255,96,53,0.15);border-radius:8px;padding:3px 8px;font-size:9px;">🏸 Badminton</div>
-            </div>
-            <div style="font-size:10px;color:var(--primary);font-weight:700;margin-bottom:4px;">BADGES (12)</div>
-            <div style="font-size:18px;">✅✅✅ 😊😊 💛</div>
-          </div>
-        </div>
-        <div class="screen-content">
-          <p class="screen-desc">Clique sur n'importe quel participant d'un créneau pour voir son profil public : sports pratiqués, ville, tranche d'âge et badges accumulés. Vérifie la réputation d'un joueur avant de rejoindre son créneau.</p>
-          <ul class="feature-list">
-            <li><span class="fi">→</span><span><strong>Infos visibles</strong> : prénom, ville, sexe, tranche d'âge, sports, badges</span></li>
-            <li><span class="fi">→</span><span><strong>Badges avec compteurs</strong> : nombre total de chaque badge reçu</span></li>
-            <li><span class="fi">→</span><span><strong>Protection vie privée</strong> : email et détails personnels jamais affichés</span></li>
-            <li><span class="fi">→</span><span><strong>Blocage</strong> : bouton disponible depuis le profil public ; les signalements se font depuis un créneau terminé ou directement sur un message du chat</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- SCREEN 11 — SIGNALEMENT -->
-    <div class="screen-guide">
-      <div class="screen-header">
-        <div class="screen-num">11</div>
-        <div class="screen-title">Signalement</div>
-        <div class="screen-tag">Sécurité communauté</div>
-      </div>
-      <div class="screen-layout">
-        <div class="screen-mock">
-          <div class="mock-status"><span>9:41</span><span>●●●</span></div>
-          <div class="mock-body">
-            <div class="mock-topbar">⚠️ Signaler un utilisateur</div>
-            <div class="mock-card">
-              <div class="mock-card-title" style="color:var(--primary);">Pourquoi signalez-vous ?</div>
-              <div style="display:flex;flex-direction:column;gap:6px;margin-top:8px;">
-                <div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:7px 10px;font-size:10px;color:var(--gray);border:1px solid rgba(255,255,255,0.08);">🚫 Comportement inapproprié</div>
-                <div style="background:rgba(255,96,53,0.2);border-radius:8px;padding:7px 10px;font-size:10px;color:#fff;border:1px solid var(--primary);">💬 Propos offensants</div>
-                <div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:7px 10px;font-size:10px;color:var(--gray);border:1px solid rgba(255,255,255,0.08);">👻 No-show répété</div>
-                <div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:7px 10px;font-size:10px;color:var(--gray);border:1px solid rgba(255,255,255,0.08);">🔞 Contenu interdit</div>
-              </div>
-            </div>
-            <div class="mock-btn" style="margin-top:10px;background:#c0392b;">Envoyer le signalement</div>
-          </div>
-        </div>
-        <div class="screen-content">
-          <p class="screen-desc">Si tu rencontres un comportement problématique, tu peux signaler un participant après le créneau ou signaler directement un message depuis le chat. Chaque signalement est examiné par l'équipe Partia.</p>
-          <ul class="feature-list">
-            <li><span class="fi">→</span><span><strong>Message</strong> : touche le message concerné dans le chat puis choisis "Signaler ce message"</span></li>
-            <li><span class="fi">→</span><span><strong>Motifs</strong> : comportement inapproprié, propos offensants, no-show répété, contenu interdit</span></li>
-            <li><span class="fi">→</span><span><strong>Anonymat</strong> : la personne signalée ne sait pas qui l'a signalée</span></li>
-            <li><span class="fi">→</span><span><strong>Suivi admin</strong> : tous les signalements ouverts sont visibles dans le panel admin</span></li>
-            <li><span class="fi">→</span><span><strong>Conséquences</strong> : après vérification, l'admin peut désactiver un compte abusif</span></li>
-            <li><span class="fi">→</span><span><strong>Blocage immédiat</strong> : bloque un joueur depuis le chat, son profil ou le détail ; ses messages et créneaux Explorer sont masqués réciproquement</span></li>
-            <li><span class="fi">→</span><span><strong>Déblocage</strong> : Profil → Utilisateurs bloqués</span></li>
-          </ul>
-          <div class="tip-box">💡 Signaler déclenche une revue manuelle. Bloquer agit immédiatement sur tes interactions dans l'app et reste réversible depuis ton profil.</div>
-        </div>
-      </div>
-    </div>
-
-  </div><!-- /section screens -->
+    <p class="section-sub">De la création de compte à la notation post-match, 11 écrans expliqués en détail.</p>
+    <a class="teaser-link" href="guide.html">Voir le guide complet →</a>
+  </div>
 
   <hr class="hr" />
 
@@ -728,7 +269,7 @@
     <p class="hero-tagline">Nájdi spoluhráčov &amp; súperov blízko teba</p>
     <p class="hero-sub">Appka, ktorá ti pomôže robiť šport, ktorý miluješ.</p>
     <div class="hero-badges">
-      <div class="hero-badge"><span>36</span> dostupných športov</div>
+      <a class="hero-badge" href="sports.html" style="text-decoration:none;"><span>36</span> dostupných športov</a>
       <div class="hero-badge">GPS <span>+</span> filter vzdialenosti</div>
       <div class="hero-badge">Zabudovaný chat</div>
       <div class="hero-badge">Len pre <span>dospelých</span></div>
@@ -750,7 +291,8 @@
       <div class="pitch-card"><span class="pitch-icon">🔒</span><div class="pitch-name">Súkromné termíny</div><div class="pitch-desc">Vytvor termín len pre tvojich kamarátov cez kód na zdieľanie — nezobrazí sa vo verejných výsledkoch.</div></div>
       <div class="pitch-card"><span class="pitch-icon">👨‍👩‍👧‍👦</span><div class="pitch-name">Dospelí a rodičia</div><div class="pitch-desc">Partiu používa dospelý. Rodič môže organizovať aktivitu v mene dieťaťa a zodpovedá za prihlásenie, chat aj dohľad.</div></div>
       <div class="pitch-card"><span class="pitch-icon">💬</span><div class="pitch-name">Chat na termín</div><div class="pitch-desc">Každý aktívny termín má vlastnú skupinu. Koordinácia bez opustenia appky.</div></div>
-      <div class="pitch-card"><span class="pitch-icon">⭐</span><div class="pitch-name">Reputácia</div><div class="pitch-desc">Po každej session ohodnoť partnerov. Dochvíľny, Spoľahlivý, Fairplay, Cool...</div></div>
+      <div class="pitch-card"><span class="pitch-icon">⭐</span><div class="pitch-name">Reputácia</div><div class="pitch-desc">Po každej session udeľ až 5 odznakov — všetky pozitívne, žiadne záporné hodnotenie: Dochvíľny, Spoľahlivý, Dobrý hráč, Cool, Fair play.</div></div>
+      <div class="pitch-card"><span class="pitch-icon">🛡️</span><div class="pitch-name">Nahlásenie a blokovanie</div><div class="pitch-desc">Niečo ti nesedí? Nahlás to na jeden ťuk alebo rovno zablokuj danú osobu — už ťa nebude vidieť ani kontaktovať.</div></div>
     </div>
   </div>
 
@@ -775,7 +317,7 @@
   <div class="section">
     <p class="section-title">Plány a uvádzacie ceny</p>
     <h2 class="section-h2">30 dní Premium na vyskúšanie, potom si vyberieš</h2>
-    <p class="section-sub">Každý nový účet získa Premium na vyskúšanie na 30 dní bez platobnej karty. Potom môže zostať na Free alebo si zvoliť predplatné Premium spravované cez Google Play.</p>
+    <p class="section-sub">Každý nový účet získa Premium na vyskúšanie na 30 dní bez platobnej karty. Potom môže zostať na Free alebo si zvoliť predplatné <a href="offres.html?lang=sk#premium-sk" style="color:var(--primary);font-weight:700;">Premium</a> spravované cez Google Play.</p>
     <div class="plan-grid">
       <div class="plan-card"><div class="plan-name">🆓 Free</div><div class="plan-kicker">Po 30 bezplatných dňoch</div></div>
       <div class="plan-card premium"><div class="plan-name">⭐ Premium</div><div class="plan-kicker">2,99 €/mesiac</div></div>
@@ -789,188 +331,8 @@
   <div class="section">
     <p class="section-title">Používateľská príručka</p>
     <h2 class="section-h2">Appka, obrazovka po obrazovke</h2>
-    <p class="section-sub">Takto funguje Partia, od vytvorenia účtu až po hodnotenie po zápase.</p>
-
-    <div class="screen-guide">
-      <div class="screen-header"><div class="screen-num">1</div><div class="screen-title">Registrácia &amp; Prihlásenie</div><div class="screen-tag">Solo · 5 min</div></div>
-      <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div style="text-align:center;padding:8px 0 4px;"><span style="font-size:28px;">🤝</span><div style="color:var(--primary);font-weight:900;font-size:16px;">Partia</div></div><div class="mock-input">📧 Email</div><div class="mock-input">🔒 Heslo</div><div class="mock-btn">Prihlásiť sa</div><div style="text-align:center;margin-top:8px;font-size:10px;color:var(--gray);">Nemáš účet? <span style="color:var(--primary);">Registrovať sa</span></div></div></div>
-        <div class="screen-content">
-          <p class="screen-desc">Vytvor účet za 2 minúty. Zadaj meno, email, heslo, pohlavie a dátum narodenia (min. 18 rokov). Potvrdzovací email sa odošle automaticky.</p>
-          <ul class="feature-list">
-            <li><span class="fi">→</span><span><strong>Registrácia</strong> : meno, email, heslo, pohlavie, dátum narodenia</span></li>
-            <li><span class="fi">→</span><span><strong>Overenie emailu</strong> : klikni na odkaz v emaili pre aktiváciu účtu</span></li>
-            <li><span class="fi">→</span><span><strong>Prihlásenie</strong> : email + heslo</span></li>
-            <li><span class="fi">→</span><span><strong>Zabudnuté heslo</strong> : 6-miestny kód emailom, platný 15 min</span></li>
-          </ul>
-          <div class="tip-box">💡 <strong>Tip:</strong> Skontroluj priečinok Spam ak nepríde potvrdzovací email.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="screen-guide">
-      <div class="screen-header"><div class="screen-num">2</div><div class="screen-title">Nastavenie profilu</div><div class="screen-tag">Po registrácii</div></div>
-      <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">Moje športy 🏅</div><div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px;"><div style="background:rgba(255,96,53,0.3);border:1px solid var(--primary);border-radius:8px;padding:4px 8px;font-size:10px;color:#fff;">⚽ Futbal</div><div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:4px 8px;font-size:10px;color:var(--gray);">🏀 Basketbal</div><div style="background:rgba(255,96,53,0.3);border:1px solid var(--primary);border-radius:8px;padding:4px 8px;font-size:10px;color:#fff;">🎾 Tenis</div><div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:4px 8px;font-size:10px;color:var(--gray);">🏐 Volejbal</div><div style="background:rgba(255,96,53,0.3);border:1px solid var(--primary);border-radius:8px;padding:4px 8px;font-size:10px;color:#fff;">🚴 Cyklo</div><div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:4px 8px;font-size:10px;color:var(--gray);">🏃 Beh</div></div><div style="font-size:9px;color:var(--gray);margin-bottom:6px;">📍 Mesto (voliteľné)</div><div class="mock-input">Bratislava</div><div class="mock-btn">Uložiť</div></div></div>
-        <div class="screen-content">
-          <p class="screen-desc">Po prvom prihlásení si nastav profil — vyber športy, ktoré praktizuješ. To umožní ostatným hráčom nájsť ťa a vidieť, či ste kompatibilní.</p>
-          <ul class="feature-list">
-            <li><span class="fi">→</span><span><strong>Mriežka športov</strong> : 36 športov s emoji — ťukni pre výber / zrušenie výberu</span></li>
-            <li><span class="fi">→</span><span><strong>Viacnásobný výber</strong> : môžeš praktizovať koľko chceš športov</span></li>
-            <li><span class="fi">→</span><span><strong>Mesto</strong> : návrhy Photon/OpenStreetMap cez server Partia — použijú sa, keď je GPS vypnuté</span></li>
-            <li><span class="fi">→</span><span><strong>Fotka</strong> : voliteľná, nahranie z galérie (orezané 400×400)</span></li>
-            <li><span class="fi">→</span><span><strong>Kedykoľvek upraviteľné</strong> : vráť sa do záložky Profil pre zmenu športov alebo mesta</span></li>
-          </ul>
-          <div class="tip-box">💡 <strong>Tip:</strong> vyber všetky športy, ktoré praktizuješ, aj príležitostne — zvyšuje to šancu, že ťa nájdu.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="screen-guide">
-      <div class="screen-header"><div class="screen-num">3</div><div class="screen-title">Objaviť — Feed</div><div class="screen-tag">Hlavná obrazovka</div></div>
-      <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">🤝 Partia <span style="float:right;color:var(--gray);font-weight:400;">📍 12 km</span></div><div class="mock-chips"><div class="mock-chip active">5</div><div class="mock-chip">25</div><div class="mock-chip">∞</div></div><div class="mock-card"><div class="mock-card-title">🏐 Beach Volleyball</div><div class="mock-card-sub">📍 Matúškovo · 3 km</div><div class="mock-card-sub">📅 Sob 5 júl · 10:00</div><div class="mock-badge">2/4 miest</div></div><div class="mock-card"><div class="mock-card-title">🎾 Tenis</div><div class="mock-card-sub">📍 Bratislava · 8 km</div><div class="mock-card-sub">📅 Ned 6 júl · 14:00</div><div class="mock-badge">0/2 miest</div></div></div></div>
-        <div class="screen-content">
-          <p class="screen-desc">Hlavná obrazovka zobrazuje všetky dostupné termíny v tvojom okolí. Filtruj podľa vzdialenosti, trieď podľa dátumu alebo blízkosti.</p>
-          <ul class="feature-list">
-            <li><span class="fi">→</span><span><strong>GPS automaticky</strong> : poloha v reálnom čase pre výpočet vzdialenosti</span></li>
-            <li><span class="fi">→</span><span><strong>Filter vzdialenosti</strong>: tri prehľadné možnosti 5 km / 25 km / ∞ — Free do 5 km s anonymným uzamknutým náhľadom termínov od 5 do 25 km, Premium do 25 km a Premium+ bez obmedzenia. <strong>Dlhým stlačením</strong> čipu zobrazíš vysvetlenie.</span></li>
-            <li><span class="fi">→</span><span><strong>Triedenie</strong> : podľa vzdialenosti alebo dátumu — <strong>dlhé stlačenie</strong> tlačidla triedenia → tooltip ukazujúci aktívny režim a ako prepnúť</span></li>
-            <li><span class="fi">→</span><span><strong>Potiahnuť na obnovenie</strong> : potlač nadol pre aktualizáciu</span></li>
-          </ul>
-          <div class="tip-box">💡 <strong>GPS vypnuté?</strong> Appka použije mesto z profilu. Bez mesta ani GPS sa zobrazia všetky termíny (filter ∞).</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="screen-guide">
-      <div class="screen-header"><div class="screen-num">4</div><div class="screen-title">Vytvoriť termín</div><div class="screen-tag">Tlačidlo + dole</div></div>
-      <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">Nový termín</div><div class="mock-input">⚽ Šport</div><div class="mock-input">📍 Miesto / Zóna</div><div class="mock-input">📅 Dátum &amp; Čas</div><div class="mock-input">👥 Počet miest</div><div class="mock-input">📝 Popis (voliteľné)</div><div class="mock-btn">✅ Vytvoriť termín</div></div></div>
-        <div class="screen-content">
-          <p class="screen-desc">Vytvor termín za pár sekúnd. Vyber šport, miesto, dátum a počet miest. Verejný termín sa potom zobrazí vo feede kompatibilných hráčov.</p>
-          <ul class="feature-list">
-            <li><span class="fi">→</span><span><strong>Šport</strong> : 36 dostupných športov s emoji</span></li>
-            <li><span class="fi">→</span><span><strong>Miesto</strong> : napíš aspoň 2 znaky a vyber park, štadión, halu alebo adresu z návrhov Photon/OpenStreetMap</span></li>
-            <li><span class="fi">→</span><span><strong>Dátum &amp; čas</strong> : Android selektor; dnešný čas, ktorý už uplynul, sa posunie na najbližšiu dostupnú štvrťhodinu</span></li>
-            <li><span class="fi">→</span><span><strong>Počet miest</strong> : počet hľadaných účastníkov bez organizátora</span></li>
-            <li><span class="fi">→</span><span><strong>Limit</strong> : 3 termíny za 7 dní pre celý Free účet vrátane detských profilov (Premium a Premium+ bez limitu)</span></li>
-            <li><span class="fi">→</span><span><strong>Profil dieťaťa</strong> : môžeš vytvoriť termín v mene svojho dieťaťa</span></li>
-            <li><span class="fi">→</span><span><strong>Profil vo veku 15-17 rokov</strong> : v časti Objavovať ťukni na zámok <code>🔒/🔓</code>, aby si zobrazil vysvetlenie alebo upravil prístup k termínom pre dospelých</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="screen-guide">
-      <div class="screen-header"><div class="screen-num">5</div><div class="screen-title">Detail termínu</div><div class="screen-tag">Tap na kartu</div></div>
-      <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div style="text-align:center;font-size:28px;padding:6px 0;">🏐</div><div class="mock-card"><div class="mock-card-title">Beach Volleyball</div><div class="mock-card-sub">📍 Matúškovo</div><div class="mock-card-sub">📅 Sob 5 júl 10:00</div><div class="mock-card-sub">👥 2/4 účastníkov</div></div><div class="mock-btn" style="margin-top:10px;">Pripojiť sa</div></div></div>
-        <div class="screen-content">
-          <p class="screen-desc">Pozri všetky detaily termínu pred prihlásením: šport, miesto, dátum, organizátor, prihlásení účastníci. Pripoj sa jedným tapom.</p>
-          <ul class="feature-list">
-            <li><span class="fi">→</span><span><strong>Pripojiť sa</strong> : aktívny profil (rodič alebo oprávnené dieťa) môže obsadiť miesto, ak ešte nie je prihlásený</span></li>
-            <li><span class="fi">→</span><span><strong>Rodič + oprávnené dieťa vo veku 15–17 rokov</strong> : na rovnaký termín dospelých od iného organizátora sa môžu prihlásiť samostatne; každý obsadí jedno miesto. Nevzťahuje sa to na deti vo veku 3–14 rokov</span></li>
-            <li><span class="fi">→</span><span><strong>Odhlásiť sa</strong> : pred začiatkom iba pre aktívny profil, bez odhlásenia druhého profilu účtu</span></li>
-            <li><span class="fi">→</span><span><strong>Účastníci</strong> : zoznam s avatarmi, tap pre verejný profil</span></li>
-            <li><span class="fi">→</span><span><strong>Zrušiť</strong> : organizátor môže zrušiť termín (notifikácia účastníkom)</span></li>
-            <li><span class="fi">→</span><span><strong>Chat</strong> : priamy prístup ku skupinovej diskusii termínu</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="screen-guide">
-      <div class="screen-header"><div class="screen-num">6</div><div class="screen-title">Skupinový Chat</div><div class="screen-tag">Na termín</div></div>
-      <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">💬 Beach Volleyball · Sob</div><div style="margin-bottom:6px;"><div style="background:rgba(255,255,255,0.06);border-radius:12px 12px 12px 2px;padding:7px 10px;font-size:10px;color:var(--gray);max-width:80%;margin-bottom:4px;"><span style="color:var(--primary);font-weight:700;">Manu</span> — Niekto môže priniesť sieť?</div><div style="background:rgba(255,96,53,0.15);border-radius:12px 12px 2px 12px;padding:7px 10px;font-size:10px;color:#fff;max-width:80%;margin-left:auto;">Áno, mám jednu!</div></div><div style="display:flex;gap:6px;margin-top:8px;"><div class="mock-input" style="flex:1;margin:0;">Správa...</div><div style="background:var(--primary);border-radius:8px;padding:8px;font-size:12px;">➤</div></div></div></div>
-        <div class="screen-content">
-          <p class="screen-desc">Každý termín má vlastnú skupinu chatu. Prístup majú len prihlásení účastníci. Koordinuj sa priamo v appke bez odchodu.</p>
-          <ul class="feature-list">
-            <li><span class="fi">→</span><span><strong>Prístup podľa profilu</strong> : chat vidí iba aktívny prihlásený profil; prihlásenie dieťaťa ho neotvorí neprihlásenému profilu dospelého</span></li>
-            <li><span class="fi">→</span><span><strong>Automatické obnovenie</strong> : nové správy každých 5 sekúnd</span></li>
-            <li><span class="fi">→</span><span><strong>Push notifikácia</strong> : dostaneš upozornenie pri novej správe</span></li>
-            <li><span class="fi">→</span><span><strong>Nahlásiť alebo zablokovať</strong> : ťukni na správu iného hráča a vyber príslušnú akciu</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="screen-guide">
-      <div class="screen-header"><div class="screen-num">7</div><div class="screen-title">História</div><div class="screen-tag">Záložka 📋</div></div>
-      <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">História</div><div style="font-size:10px;color:var(--primary);font-weight:700;margin-bottom:6px;">MOJE TERMÍNY</div><div class="mock-card"><div class="mock-card-title">🏐 Beach Volleyball</div><div class="mock-card-sub">30 jún · Prebehnutý</div><div style="background:rgba(76,175,80,0.2);color:#81C784;border-radius:6px;padding:3px 7px;font-size:9px;display:inline-block;margin-top:4px;">✅ Potvrdené</div></div></div></div>
-        <div class="screen-content">
-          <p class="screen-desc">Nájdi všetky svoje minulé a budúce termíny. Potvrď svoju účasť po každej session pre odomknutie hodnotenia.</p>
-          <ul class="feature-list">
-            <li><span class="fi">→</span><span><strong>Moje termíny</strong> : všetky termíny, ktoré si vytvoril</span></li>
-            <li><span class="fi">→</span><span><strong>Profily</strong> : hore na obrazovke vyber rodiča alebo dieťa; termíny, potvrdenia a hodnotenia sa riadia týmto výberom</span></li>
-            <li><span class="fi">→</span><span><strong>Pripojené</strong> : termíny, na ktorých sa vybraný profil zúčastňuje alebo zúčastnil</span></li>
-            <li><span class="fi">→</span><span><strong>Potvrdenie účasti</strong> : tlačidlo "Bolo to dobré?" po dátume</span></li>
-            <li><span class="fi">→</span><span><strong>Blokovanie</strong> : ak máš nepotvrdený termín, musíš ho najprv potvrdiť</span></li>
-          </ul>
-          <div class="tip-box">💡 <strong>Dôležité:</strong> potvrď účasť po každej session pre odomknutie hodnotenia ostatných hráčov.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="screen-guide">
-      <div class="screen-header"><div class="screen-num">8</div><div class="screen-title">Môj Profil</div><div class="screen-tag">Záložka 👤</div></div>
-      <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-avatar">👤</div><div style="text-align:center;font-size:13px;font-weight:800;color:#fff;">Manu</div><div style="text-align:center;font-size:10px;color:var(--gray);margin-bottom:8px;">Bratislava</div><div style="font-size:10px;color:var(--primary);font-weight:700;margin-bottom:4px;">MOJE ŠPORTY</div><div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px;"><div style="background:rgba(255,96,53,0.15);border-radius:8px;padding:3px 8px;font-size:10px;">🏐 Volejbal</div><div style="background:rgba(255,96,53,0.15);border-radius:8px;padding:3px 8px;font-size:10px;">🎾 Tenis</div></div><div style="font-size:10px;color:var(--primary);font-weight:700;margin-bottom:4px;">ODZNAKY</div><div style="font-size:16px;">✅🏅😊</div></div></div>
-        <div class="screen-content">
-          <p class="screen-desc">Tvoj profil centralizuje všetky informácie: fotku, športy, mesto, odznaky a profily detí.</p>
-          <ul class="feature-list">
-            <li><span class="fi">→</span><span><strong>Fotka</strong> : nahranie z galérie, automatické orezanie 400×400</span></li>
-            <li><span class="fi">→</span><span><strong>Športy</strong> : vyber všetky športy, ktoré praktizuješ</span></li>
-            <li><span class="fi">→</span><span><strong>Mesto</strong> : vyhľadávanie Photon/OpenStreetMap cez server Partia</span></li>
-            <li><span class="fi">→</span><span><strong>Profily detí</strong> : rodič je jediným držiteľom účtu; vytvára a spravuje profily, prihlasuje deti a dohliada na stretnutia</span></li>
-            <li><span class="fi">→</span><span><strong>15–17 rokov</strong> : prístup k termínom dospelých vyžaduje súhlas rodiča uložený v časti Moje deti</span></li>
-            <li><span class="fi">→</span><span><strong>Pozitívne odznaky</strong> : ⏰ Dochvíľny · ✅ Spoľahlivý · 🏅 Dobrý hráč · 😊 Cool · 💛 Fairplay</span></li>
-            <li><span class="fi">⚠️</span><span><strong>Automatický odznak</strong> : 🤪 Zábudlivec — 2+ termíny nepotvrdené do 7 dní</span></li>
-            <li><span class="fi">→</span><span><strong>Jazyk</strong> : prepnúť na Slovenčinu / Français / English</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="screen-guide">
-      <div class="screen-header"><div class="screen-num">9</div><div class="screen-title">Hodnotenie po zápase</div><div class="screen-tag">Po potvrdení</div></div>
-      <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">Ohodnoť hráčov</div><div class="mock-card"><div class="mock-avatar" style="width:32px;height:32px;font-size:14px;margin:0 0 6px;">A</div><div class="mock-card-title">Alex</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:6px;"><div style="background:rgba(255,96,53,0.15);border-radius:8px;padding:4px 8px;font-size:10px;border:1px solid rgba(255,96,53,0.3);">⏰ Dochvíľny</div><div style="background:rgba(255,96,53,0.3);border-radius:8px;padding:4px 8px;font-size:10px;border:1px solid var(--primary);color:#fff;">✅ Spoľahlivý</div></div></div></div></div>
-        <div class="screen-content">
-          <p class="screen-desc">Po každej potvrdenej session ohodnoť svojich spoluhráčov pridelením odznakov. Tieto odznaky sa hromadia na ich profile.</p>
-          <ul class="feature-list">
-            <li><span class="fi">→</span><span><strong>5 pozitívnych odznakov</strong> : ⏰ Dochvíľny · ✅ Spoľahlivý · 🏅 Dobrý hráč · 😊 Cool · 💛 Fairplay</span></li>
-            <li><span class="fi">⚠️</span><span><strong>1 automatický odznak</strong> : 🤪 Zábudlivec — objavuje sa <em>automaticky</em> ak 2 alebo viac termínov z posledných 30 dní nebolo potvrdených po 7 dňoch. Potvrď "Bol som tam" do týždňa po každom termíne, aby si sa mu vyhol/la</span></li>
-            <li><span class="fi">→</span><span><strong>Viacnásobný výber</strong> : prideľ koľko chceš odznakov každému hráčovi</span></li>
-            <li><span class="fi">→</span><span><strong>Jedno hodnotenie na profil</strong> : ak sa rodič a oprávnené dieťa vo veku 15–17 rokov zúčastnia spolu, ich účasť aj hodnotenie sa spracujú samostatne</span></li>
-            <li><span class="fi">→</span><span><strong>Samostatné odznaky</strong> : každý odznak patrí príslušnému profilu; za účet a detský profil zostáva zodpovedný rodič</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="screen-guide">
-      <div class="screen-header"><div class="screen-num">11</div><div class="screen-title">Nahlásenie</div><div class="screen-tag">Bezpečnosť komunity</div></div>
-      <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">⚠️ Nahlásiť používateľa</div><div class="mock-card"><div class="mock-card-title" style="color:var(--primary);">Dôvod nahlásenia?</div><div style="display:flex;flex-direction:column;gap:6px;margin-top:8px;"><div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:7px 10px;font-size:10px;color:var(--gray);border:1px solid rgba(255,255,255,0.08);">🚫 Nevhodné správanie</div><div style="background:rgba(255,96,53,0.2);border-radius:8px;padding:7px 10px;font-size:10px;color:#fff;border:1px solid var(--primary);">💬 Urážlivé komentáre</div><div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:7px 10px;font-size:10px;color:var(--gray);border:1px solid rgba(255,255,255,0.08);">👻 Opakovaná absencia</div></div></div><div class="mock-btn" style="margin-top:10px;background:#c0392b;">Odoslať nahlásenie</div></div></div>
-        <div class="screen-content">
-          <p class="screen-desc">Problematického účastníka môžeš nahlásiť po termíne alebo môžeš nahlásiť konkrétnu správu priamo v chate. Každé nahlásenie preskúma tím Partia.</p>
-          <ul class="feature-list">
-            <li><span class="fi">→</span><span><strong>Správa</strong> : ťukni na správu v chate a vyber „Nahlásiť túto správu“</span></li>
-            <li><span class="fi">→</span><span><strong>Dôvody</strong> : nevhodné správanie, urážlivé komentáre, opakovaná absencia, zakázaný obsah</span></li>
-            <li><span class="fi">→</span><span><strong>Anonymita</strong> : nahlásená osoba nevie, kto ju nahlásil</span></li>
-            <li><span class="fi">→</span><span><strong>Admin sledovanie</strong> : všetky otvorené nahlásenia sú viditeľné v admin paneli</span></li>
-            <li><span class="fi">→</span><span><strong>Okamžité blokovanie</strong> : správy a termíny v Objaviť sa skryjú v oboch smeroch</span></li>
-            <li><span class="fi">→</span><span><strong>Odblokovanie</strong> : Profil → Zablokovaní používatelia</span></li>
-          </ul>
-          <div class="tip-box">💡 Nahlásenie spúšťa manuálnu kontrolu. Blokovanie účinkuje okamžite a môžeš ho neskôr zrušiť v profile.</div>
-        </div>
-      </div>
-    </div>
-
+    <p class="section-sub">Od vytvorenia účtu po hodnotenie po zápase — 11 obrazoviek podrobne vysvetlených.</p>
+    <a class="teaser-link" href="guide.html">Pozri si celú príručku →</a>
   </div>
 
   <hr class="hr" />
@@ -1020,7 +382,7 @@
     <p class="hero-tagline">Find teammates &amp; opponents near you</p>
     <p class="hero-sub">The app that helps you do the sports you love.</p>
     <div class="hero-badges">
-      <div class="hero-badge"><span>36</span> sports available</div>
+      <a class="hero-badge" href="sports.html" style="text-decoration:none;"><span>36</span> sports available</a>
       <div class="hero-badge">GPS <span>+</span> distance filter</div>
       <div class="hero-badge">Built-in chat</div>
       <div class="hero-badge"><span>Adults</span> only</div>
@@ -1042,7 +404,8 @@
       <div class="pitch-card"><span class="pitch-icon">🔒</span><div class="pitch-name">Private slots</div><div class="pitch-desc">Create a slot just for your friends with a shareable code — it won't appear in public results.</div></div>
       <div class="pitch-card"><span class="pitch-icon">👨‍👩‍👧‍👦</span><div class="pitch-name">Adults and parents</div><div class="pitch-desc">The adult uses Partia. A parent may organize an activity on behalf of a child and remains responsible for registration, chat and supervision.</div></div>
       <div class="pitch-card"><span class="pitch-icon">💬</span><div class="pitch-name">Chat per slot</div><div class="pitch-desc">Every active slot has its own group chat. Coordinate without leaving the app.</div></div>
-      <div class="pitch-card"><span class="pitch-icon">⭐</span><div class="pitch-name">Reputation</div><div class="pitch-desc">Rate your partners after each session. Punctual, Reliable, Fairplay, Cool...</div></div>
+      <div class="pitch-card"><span class="pitch-icon">⭐</span><div class="pitch-name">Reputation</div><div class="pitch-desc">After each session, award up to 5 badges — all positive, no negative ratings: Punctual, Reliable, Good player, Cool, Fair play.</div></div>
+      <div class="pitch-card"><span class="pitch-icon">🛡️</span><div class="pitch-name">Reporting &amp; blocking</div><div class="pitch-desc">Something feels off? Report it in one tap or block the person directly — they won't be able to see or contact you anymore.</div></div>
     </div>
   </div>
 
@@ -1067,7 +430,7 @@
   <div class="section">
     <p class="section-title">Plans and launch pricing</p>
     <h2 class="section-h2">30 days of Premium Discovery, then your choice</h2>
-    <p class="section-sub">Every new account gets Premium Discovery for 30 days with no payment card. It can then stay on Free or choose a Premium subscription managed by Google Play.</p>
+    <p class="section-sub">Every new account gets Premium Discovery for 30 days with no payment card. It can then stay on Free or choose a <a href="offres.html?lang=en#premium-en" style="color:var(--primary);font-weight:700;">Premium</a> subscription managed by Google Play.</p>
     <div class="plan-grid">
       <div class="plan-card"><div class="plan-name">🆓 Free</div><div class="plan-kicker">After the 30 free days</div></div>
       <div class="plan-card premium"><div class="plan-name">⭐ Premium</div><div class="plan-kicker">€2.99/month</div></div>
@@ -1081,195 +444,9 @@
   <div class="section">
     <p class="section-title">User guide</p>
     <h2 class="section-h2">The app, screen by screen</h2>
-    <p class="section-sub">Here's how Partia works, from account creation to post-match rating.</p>
-
-    <div class="screen-guide">
-      <div class="screen-header"><div class="screen-num">1</div><div class="screen-title">Sign Up &amp; Login</div><div class="screen-tag">Solo · 5 min</div></div>
-      <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div style="text-align:center;padding:8px 0 4px;"><span style="font-size:28px;">🤝</span><div style="color:var(--primary);font-weight:900;font-size:16px;">Partia</div></div><div class="mock-input">📧 Email</div><div class="mock-input">🔒 Password</div><div class="mock-btn">Log in</div><div style="text-align:center;margin-top:8px;font-size:10px;color:var(--gray);">No account? <span style="color:var(--primary);">Sign up</span></div></div></div>
-        <div class="screen-content">
-          <p class="screen-desc">Create your account in 2 minutes. Enter your first name, email, password, gender and date of birth (18+ only). A verification email is sent automatically.</p>
-          <ul class="feature-list">
-            <li><span class="fi">→</span><span><strong>Sign up</strong>: first name, email, password, gender, date of birth</span></li>
-            <li><span class="fi">→</span><span><strong>Email verification</strong>: click the link in the email to activate your account</span></li>
-            <li><span class="fi">→</span><span><strong>Login</strong>: email + password</span></li>
-            <li><span class="fi">→</span><span><strong>Forgot password</strong>: 6-digit code by email, valid 15 min</span></li>
-          </ul>
-          <div class="tip-box">💡 <strong>Tip:</strong> Check your spam folder if you don't receive the confirmation email.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="screen-guide">
-      <div class="screen-header"><div class="screen-num">2</div><div class="screen-title">Profile Setup</div><div class="screen-tag">After sign-up</div></div>
-      <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">My sports 🏅</div><div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px;"><div style="background:rgba(255,96,53,0.3);border:1px solid var(--primary);border-radius:8px;padding:4px 8px;font-size:10px;color:#fff;">⚽ Football</div><div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:4px 8px;font-size:10px;color:var(--gray);">🏀 Basketball</div><div style="background:rgba(255,96,53,0.3);border:1px solid var(--primary);border-radius:8px;padding:4px 8px;font-size:10px;color:#fff;">🎾 Tennis</div><div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:4px 8px;font-size:10px;color:var(--gray);">🏐 Volleyball</div><div style="background:rgba(255,96,53,0.3);border:1px solid var(--primary);border-radius:8px;padding:4px 8px;font-size:10px;color:#fff;">🚴 Cycling</div><div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:4px 8px;font-size:10px;color:var(--gray);">🏃 Running</div></div><div style="font-size:9px;color:var(--gray);margin-bottom:6px;">📍 City (optional)</div><div class="mock-input">Bratislava</div><div class="mock-btn">Save</div></div></div>
-        <div class="screen-content">
-          <p class="screen-desc">After your first login, set up your profile by selecting the sports you play. This lets other players find you and see if you're a good match.</p>
-          <ul class="feature-list">
-            <li><span class="fi">→</span><span><strong>Sports grid</strong>: 36 sports with emoji — tap to select / deselect</span></li>
-            <li><span class="fi">→</span><span><strong>Multi-select</strong>: pick as many sports as you want</span></li>
-            <li><span class="fi">→</span><span><strong>City</strong>: Photon/OpenStreetMap suggestions through the Partia server — used when GPS is off</span></li>
-            <li><span class="fi">→</span><span><strong>Photo</strong>: optional, upload from gallery (auto-cropped 400×400)</span></li>
-            <li><span class="fi">→</span><span><strong>Always editable</strong>: return to the Profile tab anytime to update your sports or city</span></li>
-          </ul>
-          <div class="tip-box">💡 <strong>Tip:</strong> select all the sports you play, even occasionally — it increases your chances of being found.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="screen-guide">
-      <div class="screen-header"><div class="screen-num">3</div><div class="screen-title">Explore — The Feed</div><div class="screen-tag">Main screen</div></div>
-      <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">🤝 Partia <span style="float:right;color:var(--gray);font-weight:400;">📍 12 km</span></div><div class="mock-chips"><div class="mock-chip active">5</div><div class="mock-chip">25</div><div class="mock-chip">∞</div></div><div class="mock-card"><div class="mock-card-title">🏐 Beach Volleyball</div><div class="mock-card-sub">📍 Matúškovo · 3 km</div><div class="mock-card-sub">📅 Sat Jul 5 · 10:00</div><div class="mock-badge">2/4 spots</div></div><div class="mock-card"><div class="mock-card-title">🎾 Tennis</div><div class="mock-card-sub">📍 Bratislava · 8 km</div><div class="mock-card-sub">📅 Sun Jul 6 · 14:00</div><div class="mock-badge">0/2 spots</div></div></div></div>
-        <div class="screen-content">
-          <p class="screen-desc">The main screen lists all available slots near you. Filter by distance, sort by date or proximity, and see remaining spots at a glance.</p>
-          <ul class="feature-list">
-            <li><span class="fi">→</span><span><strong>Auto GPS</strong>: real-time position to calculate distance</span></li>
-            <li><span class="fi">→</span><span><strong>Distance filter</strong>: three clear choices, 5 km / 25 km / ∞ — Free up to 5 km with an anonymous locked preview of slots between 5 and 25 km, Premium up to 25 km, and Premium+ with no limit. <strong>Long press</strong> a chip for its explanation.</span></li>
-            <li><span class="fi">→</span><span><strong>Sort</strong>: by distance or date — <strong>long press</strong> the sort button → tooltip showing the active mode and how to switch</span></li>
-            <li><span class="fi">→</span><span><strong>Pull to refresh</strong>: pull down to update the feed</span></li>
-          </ul>
-          <div class="tip-box">💡 <strong>GPS off?</strong> The app uses your profile city as a fallback. With neither GPS nor city, all slots are shown (∞ filter).</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="screen-guide">
-      <div class="screen-header"><div class="screen-num">4</div><div class="screen-title">Create a Slot</div><div class="screen-tag">+ button at bottom</div></div>
-      <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">New slot</div><div class="mock-input">⚽ Sport</div><div class="mock-input">📍 Location / Area</div><div class="mock-input">📅 Date &amp; Time</div><div class="mock-input">👥 Number of spots</div><div class="mock-input">📝 Description (optional)</div><div class="mock-btn">✅ Create slot</div></div></div>
-        <div class="screen-content">
-          <p class="screen-desc">Create a slot in seconds. Choose the sport, location, date and number of spots. A public slot then appears in the feed of compatible players.</p>
-          <ul class="feature-list">
-            <li><span class="fi">→</span><span><strong>Sport</strong>: 36 sports with emoji</span></li>
-            <li><span class="fi">→</span><span><strong>Location</strong>: type at least 2 characters, then select a park, stadium, sports hall or address from Photon/OpenStreetMap suggestions</span></li>
-            <li><span class="fi">→</span><span><strong>Date &amp; time</strong>: Android picker; a time that has already passed today is moved to the next available quarter-hour</span></li>
-            <li><span class="fi">→</span><span><strong>Spots</strong>: number of participants wanted, excluding the organizer</span></li>
-            <li><span class="fi">→</span><span><strong>Limit</strong>: 3 slots in 7 days for the whole Free account, including child profiles (Premium and Premium+ have no limit)</span></li>
-            <li><span class="fi">→</span><span><strong>Child profile</strong>: create a slot on behalf of your child</span></li>
-            <li><span class="fi">→</span><span><strong>Age 15-17 profile</strong>: in Explore, tap the <code>🔒/🔓</code> lock to view or control access to adult activities</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="screen-guide">
-      <div class="screen-header"><div class="screen-num">5</div><div class="screen-title">Slot Detail</div><div class="screen-tag">Tap a card</div></div>
-      <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div style="text-align:center;font-size:28px;padding:6px 0;">🏐</div><div class="mock-card"><div class="mock-card-title">Beach Volleyball</div><div class="mock-card-sub">📍 Matúškovo</div><div class="mock-card-sub">📅 Sat Jul 5 10:00</div><div class="mock-card-sub">👥 2/4 participants</div></div><div class="mock-btn" style="margin-top:10px;">Join</div></div></div>
-        <div class="screen-content">
-          <p class="screen-desc">See all the details of a slot before joining: sport, location, date, organiser, registered participants. Join with one tap if spots are available.</p>
-          <ul class="feature-list">
-            <li><span class="fi">→</span><span><strong>Join</strong>: the active profile (parent or authorised child) can take a place if that profile has not joined yet</span></li>
-            <li><span class="fi">→</span><span><strong>Parent + authorised 15–17 child</strong>: they may join the same third-party adult slot separately; each takes one place. This does not apply to children aged 3–14</span></li>
-            <li><span class="fi">→</span><span><strong>Leave</strong>: before the start, only for the active profile without removing the account's other profile</span></li>
-            <li><span class="fi">→</span><span><strong>Participants</strong>: list with avatars, tap to see public profile</span></li>
-            <li><span class="fi">→</span><span><strong>Cancel</strong>: the creator can cancel the slot (notification sent to participants)</span></li>
-            <li><span class="fi">→</span><span><strong>Chat</strong>: direct access to the slot's group discussion</span></li>
-            <li><span class="fi">→</span><span><strong>Report</strong>: discreet button to report inappropriate content</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="screen-guide">
-      <div class="screen-header"><div class="screen-num">6</div><div class="screen-title">Group Chat</div><div class="screen-tag">Per slot</div></div>
-      <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">💬 Beach Volleyball · Sat</div><div style="margin-bottom:6px;"><div style="background:rgba(255,255,255,0.06);border-radius:12px 12px 12px 2px;padding:7px 10px;font-size:10px;color:var(--gray);max-width:80%;margin-bottom:4px;"><span style="color:var(--primary);font-weight:700;">Manu</span> — Can someone bring a net?</div><div style="background:rgba(255,96,53,0.15);border-radius:12px 12px 2px 12px;padding:7px 10px;font-size:10px;color:#fff;max-width:80%;margin-left:auto;">Yes I have one!</div></div><div style="display:flex;gap:6px;margin-top:8px;"><div class="mock-input" style="flex:1;margin:0;">Your message...</div><div style="background:var(--primary);border-radius:8px;padding:8px;font-size:12px;">➤</div></div></div></div>
-        <div class="screen-content">
-          <p class="screen-desc">Every slot has its own group chat. Only registered participants have access. Coordinate directly in the app: equipment, timing, meeting point.</p>
-          <ul class="feature-list">
-            <li><span class="fi">→</span><span><strong>Profile-based access</strong>: only the active joined profile sees chat; a child’s participation does not open it to an adult profile that has not joined</span></li>
-            <li><span class="fi">→</span><span><strong>Auto-refresh</strong>: new messages appear every 5 seconds</span></li>
-            <li><span class="fi">→</span><span><strong>Push notification</strong>: you get a notification when a new message arrives</span></li>
-            <li><span class="fi">→</span><span><strong>Report or block</strong>: tap another player's message and choose the appropriate action</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="screen-guide">
-      <div class="screen-header"><div class="screen-num">7</div><div class="screen-title">History</div><div class="screen-tag">Tab 📋</div></div>
-      <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">History</div><div style="font-size:10px;color:var(--primary);font-weight:700;margin-bottom:6px;">MY SLOTS</div><div class="mock-card"><div class="mock-card-title">🏐 Beach Volleyball</div><div class="mock-card-sub">Jun 30 · Past</div><div style="background:rgba(76,175,80,0.2);color:#81C784;border-radius:6px;padding:3px 7px;font-size:9px;display:inline-block;margin-top:4px;">✅ Confirmed</div></div></div></div>
-        <div class="screen-content">
-          <p class="screen-desc">Find all your past and upcoming slots. Confirm attendance after each session to unlock ratings.</p>
-          <ul class="feature-list">
-            <li><span class="fi">→</span><span><strong>My slots</strong>: all slots you've created (active + past)</span></li>
-            <li><span class="fi">→</span><span><strong>Profiles</strong>: choose Parent or a child at the top; slots, confirmations and ratings follow that selection</span></li>
-            <li><span class="fi">→</span><span><strong>Joined</strong>: slots the selected profile participates or participated in</span></li>
-            <li><span class="fi">→</span><span><strong>Cancelled</strong>: slots cancelled by you or the organiser</span></li>
-            <li><span class="fi">→</span><span><strong>Confirm attendance</strong>: "Was it good?" button after the date</span></li>
-            <li><span class="fi">→</span><span><strong>Blocking</strong>: if you have an unconfirmed past slot, confirm it first</span></li>
-          </ul>
-          <div class="tip-box">💡 <strong>Important:</strong> confirm attendance after each session to unlock rating of other players.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="screen-guide">
-      <div class="screen-header"><div class="screen-num">8</div><div class="screen-title">My Profile</div><div class="screen-tag">Tab 👤</div></div>
-      <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-avatar">👤</div><div style="text-align:center;font-size:13px;font-weight:800;color:#fff;">Manu</div><div style="text-align:center;font-size:10px;color:var(--gray);margin-bottom:8px;">Bratislava</div><div style="font-size:10px;color:var(--primary);font-weight:700;margin-bottom:4px;">MY SPORTS</div><div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px;"><div style="background:rgba(255,96,53,0.15);border-radius:8px;padding:3px 8px;font-size:10px;">🏐 Volleyball</div><div style="background:rgba(255,96,53,0.15);border-radius:8px;padding:3px 8px;font-size:10px;">🎾 Tennis</div></div><div style="font-size:10px;color:var(--primary);font-weight:700;margin-bottom:4px;">BADGES</div><div style="font-size:16px;">✅🏅😊</div></div></div>
-        <div class="screen-content">
-          <p class="screen-desc">Your profile centralises all your information: photo, sports, city, badges and child profiles. It's the showcase other players see when they view your card.</p>
-          <ul class="feature-list">
-            <li><span class="fi">→</span><span><strong>Photo</strong>: upload from gallery, auto-cropped to 400×400</span></li>
-            <li><span class="fi">→</span><span><strong>Sports</strong>: select all the sports you practise</span></li>
-            <li><span class="fi">→</span><span><strong>City</strong>: Photon/OpenStreetMap search through the server — used if GPS is off</span></li>
-            <li><span class="fi">→</span><span><strong>Child profiles</strong>: the parent is the sole account holder, creates and manages profiles, registers children and supervises meetups</span></li>
-            <li><span class="fi">→</span><span><strong>Ages 15–17</strong>: access to adult slots requires parental consent recorded under My children</span></li>
-            <li><span class="fi">→</span><span><strong>Positive badges</strong>: ⏰ Punctual · ✅ Reliable · 🏅 Good player · 😊 Cool · 💛 Fairplay</span></li>
-            <li><span class="fi">⚠️</span><span><strong>Automatic badge</strong>: 🤪 Head in the clouds — 2+ sessions unconfirmed within 7 days</span></li>
-            <li><span class="fi">→</span><span><strong>Language</strong>: switch to Français / Slovenčina / English</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="screen-guide">
-      <div class="screen-header"><div class="screen-num">9</div><div class="screen-title">Post-Match Rating</div><div class="screen-tag">After confirmation</div></div>
-      <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">Rate the players</div><div class="mock-card"><div class="mock-avatar" style="width:32px;height:32px;font-size:14px;margin:0 0 6px;">A</div><div class="mock-card-title">Alex</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:6px;"><div style="background:rgba(255,96,53,0.15);border-radius:8px;padding:4px 8px;font-size:10px;border:1px solid rgba(255,96,53,0.3);">⏰ Punctual</div><div style="background:rgba(255,96,53,0.3);border-radius:8px;padding:4px 8px;font-size:10px;border:1px solid var(--primary);color:#fff;">✅ Reliable</div></div></div></div></div>
-        <div class="screen-content">
-          <p class="screen-desc">After each confirmed session, rate your fellow players by awarding badges. These badges accumulate on their profile and build their reputation on Partia.</p>
-          <ul class="feature-list">
-            <li><span class="fi">→</span><span><strong>5 positive badges</strong>: ⏰ Punctual · ✅ Reliable · 🏅 Good player · 😊 Cool · 💛 Fairplay</span></li>
-            <li><span class="fi">⚠️</span><span><strong>1 automatic badge</strong>: 🤪 Head in the clouds — appears <em>automatically</em> when 2 or more sessions from the last 30 days went unconfirmed after 7 days. Tap "I was there" within a week of each session to avoid it</span></li>
-            <li><span class="fi">→</span><span><strong>Multi-select</strong>: award as many badges as you want to each player</span></li>
-            <li><span class="fi">→</span><span><strong>One rating per profile</strong>: when a parent and their authorised 15–17 child attend together, their attendance and rating are handled separately</span></li>
-            <li><span class="fi">→</span><span><strong>Separate badges</strong>: every badge belongs to the relevant profile; the parent remains responsible for the account and child profile</span></li>
-            <li><span class="fi">→</span><span><strong>Visible on profile</strong>: badges display with their count on the public profile</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="screen-guide">
-      <div class="screen-header"><div class="screen-num">11</div><div class="screen-title">Reporting</div><div class="screen-tag">Community safety</div></div>
-      <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">⚠️ Report a user</div><div class="mock-card"><div class="mock-card-title" style="color:var(--primary);">Why are you reporting?</div><div style="display:flex;flex-direction:column;gap:6px;margin-top:8px;"><div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:7px 10px;font-size:10px;color:var(--gray);border:1px solid rgba(255,255,255,0.08);">🚫 Inappropriate behaviour</div><div style="background:rgba(255,96,53,0.2);border-radius:8px;padding:7px 10px;font-size:10px;color:#fff;border:1px solid var(--primary);">💬 Offensive language</div><div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:7px 10px;font-size:10px;color:var(--gray);border:1px solid rgba(255,255,255,0.08);">👻 Repeated no-show</div></div></div><div class="mock-btn" style="margin-top:10px;background:#c0392b;">Send report</div></div></div>
-        <div class="screen-content">
-          <p class="screen-desc">You can report problematic participation after a slot or report a specific message directly from the chat. Every report is reviewed by the Partia team.</p>
-          <ul class="feature-list">
-            <li><span class="fi">→</span><span><strong>Message</strong>: tap the relevant chat message and choose “Report this message”</span></li>
-            <li><span class="fi">→</span><span><strong>Reasons</strong>: inappropriate behaviour, offensive language, repeated no-show, forbidden content</span></li>
-            <li><span class="fi">→</span><span><strong>Anonymous</strong>: the reported person doesn't know who reported them</span></li>
-            <li><span class="fi">→</span><span><strong>Admin tracking</strong>: all open reports are visible in the admin panel</span></li>
-            <li><span class="fi">→</span><span><strong>Immediate blocking</strong>: messages and Explorer slots are hidden in both directions</span></li>
-            <li><span class="fi">→</span><span><strong>Unblock</strong>: Profile → Blocked users</span></li>
-          </ul>
-          <div class="tip-box">💡 Reporting starts a manual review. Blocking acts immediately and can later be reversed from your profile.</div>
-        </div>
-      </div>
-    </div>
-
+    <p class="section-sub">From account creation to post-match rating — 11 screens explained in detail.</p>
+    <a class="teaser-link" href="guide.html">See the full guide →</a>
   </div>
-
-  <hr class="hr" />
-
 
   <hr class="hr" />
 
