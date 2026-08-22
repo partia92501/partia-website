@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Questions fréquentes sur l'application Partia." />
+  <title>FAQ — Partia</title>
+  <link rel="icon" href="assets/partia-sport-icon-v1.png">
+  <style>
+    :root {
+      --primary: #FF6035;
+      --secondary: #FF8C5A;
+      --dark: #1A1A2E;
+      --card: #16213E;
+      --input: #0F3460;
+      --text: #FFFFFF;
+      --gray: #BDBDBD;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--dark); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; }
+
+    .lang-bar { position: sticky; top: 0; z-index: 100; background: rgba(26,26,46,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: space-between; padding: 10px 24px; gap: 16px; flex-wrap: wrap; }
+    .lang-logo { color: var(--primary); font-weight: 900; font-size: 18px; letter-spacing: -0.5px; display:flex; align-items:center; gap:8px; text-decoration: none; }
+    .brand-icon { width:34px; height:34px; object-fit:contain; }
+    .top-nav { display: flex; gap: 18px; }
+    .top-nav a { color: var(--gray); font-weight: 700; font-size: 14px; text-decoration: none; }
+    .top-nav a:hover, .top-nav a.current { color: var(--primary); }
+    .lang-btns { display: flex; gap: 6px; }
+    .lang-btn { background: none; border: 1px solid rgba(255,255,255,0.15); color: var(--gray); padding: 6px 14px; border-radius: 999px; font-size: 13px; font-weight: 700; cursor: pointer; transition: all 0.2s; }
+    .lang-btn.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+    .lang-btn:hover:not(.active) { border-color: var(--primary); color: var(--primary); }
+
+    .page-header { max-width: 900px; margin: 0 auto; padding: 48px 24px 8px; }
+    .back-link { color: var(--gray); font-size: 13px; font-weight: 700; text-decoration: none; }
+    .back-link:hover { color: var(--primary); }
+    .page-title { font-size: 36px; font-weight: 900; color: #fff; margin-top: 14px; }
+    .page-sub { color: var(--gray); font-size: 15px; margin-top: 8px; max-width: 640px; }
+
+    .section { max-width: 900px; margin: 0 auto; padding: 32px 24px 56px; }
+
+    .faq-item { background: var(--card); border-radius: 14px; padding: 18px 20px; margin-bottom: 10px; border: 1px solid rgba(255,255,255,0.06); }
+    .faq-q { font-weight: 800; color: #fff; font-size: 15px; margin-bottom: 6px; display: flex; align-items: flex-start; gap: 10px; }
+    .faq-q::before { content: "?"; background: var(--primary); color: #fff; width: 22px; height: 22px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 900; flex-shrink: 0; margin-top: 1px; }
+    .faq-a { color: var(--gray); font-size: 14px; line-height: 1.6; padding-left: 32px; }
+    .faq-a a { color: #FF9A7F; font-weight: 700; }
+
+    .cta-section { text-align: center; padding: 56px 24px; background: linear-gradient(160deg, #0F3460 0%, #1A1A2E 100%); border-top: 2px solid var(--primary); }
+    .cta-title { font-size: 26px; font-weight: 900; color: #fff; margin-bottom: 10px; }
+    .cta-sub { color: var(--gray); font-size: 15px; }
+
+    footer { background: var(--card); text-align: center; padding: 32px 24px; color: var(--gray); font-size: 13px; border-top: 1px solid rgba(255,255,255,0.06); }
+    footer strong { color: var(--primary); }
+    .legal-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 18px; margin-top: 12px; }
+    .legal-links a { color: #FF9A7F; font-weight: 700; }
+    .legal-links a:hover { color: #fff; }
+
+    [data-lang] { display: none; }
+    [data-lang].visible { display: block; }
+  </style>
+</head>
+<body>
+
+<nav class="lang-bar">
+  <a class="lang-logo" href="index.html"><img class="brand-icon" src="assets/partia-sport-icon-v1.png" alt="">Partia</a>
+  <div class="top-nav" data-lang="fr" style="display:flex"><a href="index.html">Accueil</a><a href="offres.html">Offres</a><a class="current" href="faq.html">FAQ</a></div>
+  <div class="top-nav" data-lang="sk" style="display:none"><a href="index.html">Domov</a><a href="offres.html">Ponuky</a><a class="current" href="faq.html">FAQ</a></div>
+  <div class="top-nav" data-lang="en" style="display:none"><a href="index.html">Home</a><a href="offres.html">Plans</a><a class="current" href="faq.html">FAQ</a></div>
+  <div class="lang-btns">
+    <button class="lang-btn active" data-lang-btn="fr" onclick="setLang('fr')">🇫🇷 FR</button>
+    <button class="lang-btn" data-lang-btn="sk" onclick="setLang('sk')">🇸🇰 SK</button>
+    <button class="lang-btn" data-lang-btn="en" onclick="setLang('en')">🇬🇧 EN</button>
+  </div>
+</nav>
+
+<!-- FRENCH -->
+<div data-lang="fr" class="visible">
+  <div class="page-header">
+    <a class="back-link" href="index.html">← Retour à l'accueil</a>
+    <h1 class="page-title">Questions fréquentes</h1>
+    <p class="page-sub">Tout ce qu'il faut savoir avant de te lancer sur Partia.</p>
+  </div>
+  <div class="section">
+    <div class="faq-item"><div class="faq-q">L'app est-elle gratuite ?</div><div class="faq-a">Oui. Tout nouveau compte bénéficie de Premium Découverte pendant 30 jours, puis passe automatiquement au plan Free gratuit : rayon de 5 km et aperçu anonyme des créneaux disponibles jusqu'à 25 km. Aucun abonnement ne démarre automatiquement. Premium, Premium+ et les boosts à l'unité seront proposés via Google Play après validation. Pendant le test fermé, les testeurs autorisés conservent Premium+ gratuitement. <a href="offres.html">Voir le détail des offres →</a></div></div>
+    <div class="faq-item"><div class="faq-q">Pourquoi utiliser Partia plutôt qu'un groupe WhatsApp ou Meetup ?</div><div class="faq-a">Un groupe WhatsApp ne filtre ni par sport, ni par niveau, ni par distance — tu dois éplucher chaque message toi-même, et le groupe finit par s'endormir. Meetup est pensé pour des événements ponctuels organisés à l'avance, pas pour matcher vite avec des joueurs compatibles près de chez toi. Partia combine filtre sport/niveau/distance, réputation (badges après chaque session) et un chat dédié par créneau — sans gérer un énième groupe qui traîne.</div></div>
+    <div class="faq-item"><div class="faq-q">La liste des sports va-t-elle s'agrandir ?</div><div class="faq-a">Oui. Les 36 sports actuels couvrent déjà les demandes les plus fréquentes, mais la liste évolue selon les retours des utilisateurs — si un sport te manque, dis-le nous.</div></div>
+    <div class="faq-item"><div class="faq-q">Pourquoi je dois confirmer ma présence après un créneau ?</div><div class="faq-a">La confirmation débloque les notations mutuelles entre participants. Sans confirmation, personne ne peut noter l'autre. Ça évite aussi les créneaux "fantômes" où personne ne s'est présenté.</div></div>
+    <div class="faq-item"><div class="faq-q">Puis-je créer des créneaux pour mes enfants ?</div><div class="faq-a">Oui. Partia reste toutefois utilisée exclusivement par le parent adulte. Le parent crée le profil enfant, effectue les recherches, inscriptions et échanges dans le chat au nom de l'enfant, et supervise la rencontre. L'enfant n'a pas de compte autonome et ne doit pas utiliser les identifiants du parent. Les profils restent dans leur tranche d'âge ; pour les 15–17 ans, seul le parent peut gérer l'autorisation d'accès aux créneaux adultes.</div></div>
+    <div class="faq-item"><div class="faq-q">Pourquoi je vois peu de créneaux autour de moi ?</div><div class="faq-a">Partia est en phase bêta avec peu d'utilisateurs. Plus la communauté grandira, plus le feed sera rempli. En Free, les créneaux entre 5 et 25 km peuvent apparaître sous forme d'aperçu anonyme ; Premium permet d'en consulter le détail. Tu peux aussi créer un créneau pour attirer d'autres joueurs dans ta ville.</div></div>
+    <div class="faq-item"><div class="faq-q">Mes données sont-elles sécurisées ?</div><div class="faq-a">Oui. Les mots de passe sont hachés avec bcrypt et les e-mails ne sont jamais affichés publiquement. Consulte notre <a href="privacy.html?lang=fr">politique de confidentialité</a> pour les détails.</div></div>
+  </div>
+  <div class="cta-section">
+    <h2 class="cta-title">D'autres questions ? 🤝</h2>
+    <p class="cta-sub">Écris-nous à <a href="mailto:info.partia@gmail.com" style="color:#FF9A7F;font-weight:700;">info.partia@gmail.com</a></p>
+  </div>
+  <footer>
+    <strong>🤝 Partia</strong> — Test fermé Google Play<br/>
+    Fait avec ❤️ par Manu · Matúškovo / SK
+    <div class="legal-links"><a href="privacy.html?lang=fr">Confidentialité</a><a href="child-safety.html?lang=fr">Sécurité des enfants</a><a href="delete-account.html?lang=fr">Supprimer un compte</a></div>
+  </footer>
+</div>
+
+<!-- SLOVAK -->
+<div data-lang="sk">
+  <div class="page-header">
+    <a class="back-link" href="index.html">← Späť na domovskú stránku</a>
+    <h1 class="page-title">Časté otázky</h1>
+    <p class="page-sub">Všetko, čo potrebuješ vedieť pred tým, ako začneš s Partiou.</p>
+  </div>
+  <div class="section">
+    <div class="faq-item"><div class="faq-q">Je aplikácia bezplatná?</div><div class="faq-a">Áno. Každý nový účet získa Premium na vyskúšanie na 30 dní a potom automaticky prejde na bezplatný Free: okruh 5 km a anonymný náhľad termínov do 25 km. Žiadne predplatné sa nespustí automaticky. Premium, Premium+ a jednotlivé boosty budú dostupné cez Google Play po overení. Oprávnení testeri počas uzavretého testu naďalej dostávajú Premium+ bezplatne. <a href="offres.html">Pozri si podrobnosti ponúk →</a></div></div>
+    <div class="faq-item"><div class="faq-q">Prečo používať Partiu namiesto WhatsApp skupiny alebo Meetupu?</div><div class="faq-a">WhatsApp skupina nefiltruje podľa športu, úrovne ani vzdialenosti — musíš si sám prehrabať každú správu, a skupina nakoniec stíchne. Meetup je stavaný na vopred organizované jednorazové podujatia, nie na rýchle spárovanie s kompatibilnými hráčmi vo tvojom okolí. Partia kombinuje filter športu/úrovne/vzdialenosti, reputáciu (odznaky po každej session) a vyhradený chat pre každý termín — bez ďalšej skupinovej konverzácie, ktorá sa vlečie donekonečna.</div></div>
+    <div class="faq-item"><div class="faq-q">Bude sa zoznam športov rozširovať?</div><div class="faq-a">Áno. Súčasných 36 športov pokrýva už teraz najčastejšie požiadavky, ale zoznam sa vyvíja podľa spätnej väzby používateľov — ak ti nejaký šport chýba, daj nám vedieť.</div></div>
+    <div class="faq-item"><div class="faq-q">Prečo musím potvrdiť účasť po termíne?</div><div class="faq-a">Potvrdenie odomkne vzájomné hodnotenia medzi účastníkmi. Bez potvrdenia nikto nemôže hodnotiť druhého. Zabraňuje to tiež "duchom" termínom kde sa nikto neobjavil.</div></div>
+    <div class="faq-item"><div class="faq-q">Môžem vytvárať termíny pre moje deti?</div><div class="faq-a">Áno. Partiu však používa výhradne dospelý rodič. Rodič vytvorí detský profil, v mene dieťaťa vyhľadáva termíny, prihlasuje ho, komunikuje v chate a dohliada na stretnutie. Dieťa nemá samostatný účet a nesmie používať prihlasovacie údaje rodiča. Profily zostávajú vo svojej vekovej skupine; prístup profilu 15–17 k termínom dospelých môže spravovať iba rodič.</div></div>
+    <div class="faq-item"><div class="faq-q">Prečo vidím málo termínov vo svojom okolí?</div><div class="faq-a">Partia je v beta fáze s malým počtom používateľov. Čím viac komunita porastie, tým viac bude vo feede. Vo Free sa termíny od 5 do 25 km môžu zobraziť ako anonymný náhľad; Premium sprístupní ich detail. Môžeš tiež vytvoriť vlastný termín.</div></div>
+    <div class="faq-item"><div class="faq-q">Sú moje údaje v bezpečí?</div><div class="faq-a">Áno. Heslá sú hashované pomocou bcrypt a e-maily sa nikdy verejne nezobrazujú. Podrobnosti nájdeš v <a href="privacy.html?lang=sk">zásadách ochrany osobných údajov</a>.</div></div>
+  </div>
+  <div class="cta-section">
+    <h2 class="cta-title">Máš ďalšie otázky? 🤝</h2>
+    <p class="cta-sub">Napíš nám na <a href="mailto:info.partia@gmail.com" style="color:#FF9A7F;font-weight:700;">info.partia@gmail.com</a></p>
+  </div>
+  <footer>
+    <strong>🤝 Partia</strong> — Uzavretý test Google Play<br/>
+    Vytvorené s ❤️ od Manu · Matúškovo / SK
+    <div class="legal-links"><a href="privacy.html?lang=sk">Súkromie</a><a href="child-safety.html?lang=sk">Bezpečnosť detí</a><a href="delete-account.html?lang=sk">Vymazanie účtu</a></div>
+  </footer>
+</div>
+
+<!-- ENGLISH -->
+<div data-lang="en">
+  <div class="page-header">
+    <a class="back-link" href="index.html">← Back to home</a>
+    <h1 class="page-title">Frequently Asked Questions</h1>
+    <p class="page-sub">Everything you need to know before getting started on Partia.</p>
+  </div>
+  <div class="section">
+    <div class="faq-item"><div class="faq-q">Is the app free?</div><div class="faq-a">Yes. Every new account gets Premium Discovery for 30 days, then automatically switches to the free plan: a 5 km radius plus an anonymous preview of available slots up to 25 km. No subscription starts automatically. Premium, Premium+ and one-time boosts will be offered through Google Play after validation. Authorized closed-test users continue to receive Premium+ free of charge. <a href="offres.html">See the full plan details →</a></div></div>
+    <div class="faq-item"><div class="faq-q">Why use Partia instead of a WhatsApp group or Meetup?</div><div class="faq-a">A WhatsApp group doesn't filter by sport, skill level, or distance — you have to dig through every message yourself, and the group eventually goes quiet. Meetup is built for pre-organized one-off events, not for quickly matching with compatible players near you. Partia combines sport/level/distance filtering, reputation (badges after each session) and a dedicated chat per slot — without managing yet another group chat that drags on.</div></div>
+    <div class="faq-item"><div class="faq-q">Will the sports list keep growing?</div><div class="faq-a">Yes. The current 36 sports already cover the most common requests, but the list evolves based on user feedback — if a sport is missing, let us know.</div></div>
+    <div class="faq-item"><div class="faq-q">Why do I need to confirm attendance after a slot?</div><div class="faq-a">Confirmation unlocks mutual ratings between participants. Without it, nobody can rate the others. It also avoids "ghost" slots where nobody showed up.</div></div>
+    <div class="faq-item"><div class="faq-q">Can I create slots for my children?</div><div class="faq-a">Yes. Partia must still be used exclusively by the adult parent. The parent creates the child profile, searches, registers and communicates in the chat on the child's behalf, and supervises the meetup. The child has no independent account and must not use the parent's login details. Profiles stay within their age group; only the parent may manage access to adult slots for an age 15–17 profile.</div></div>
+    <div class="faq-item"><div class="faq-q">Why do I see few slots near me?</div><div class="faq-a">Partia is in beta with a small user base. The more the community grows, the more the feed will fill up. On Free, slots between 5 and 25 km may appear as an anonymous preview; Premium unlocks their details. You can also create a slot yourself.</div></div>
+    <div class="faq-item"><div class="faq-q">Is my data secure?</div><div class="faq-a">Yes. Passwords are hashed with bcrypt and email addresses are never displayed publicly. See our <a href="privacy.html?lang=en">privacy policy</a> for details.</div></div>
+  </div>
+  <div class="cta-section">
+    <h2 class="cta-title">More questions? 🤝</h2>
+    <p class="cta-sub">Write to us at <a href="mailto:info.partia@gmail.com" style="color:#FF9A7F;font-weight:700;">info.partia@gmail.com</a></p>
+  </div>
+  <footer>
+    <strong>🤝 Partia</strong> — Closed Google Play test<br/>
+    Made with ❤️ by Manu · Matúškovo / SK
+    <div class="legal-links"><a href="privacy.html?lang=en">Privacy</a><a href="child-safety.html?lang=en">Child safety</a><a href="delete-account.html?lang=en">Delete an account</a></div>
+  </footer>
+</div>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('[data-lang]').forEach(function(el) {
+      el.style.display = (el.getAttribute('data-lang') === lang) ? 'block' : 'none';
+    });
+    document.querySelectorAll('.top-nav[data-lang]').forEach(function(el) {
+      el.style.display = (el.getAttribute('data-lang') === lang) ? 'flex' : 'none';
+    });
+    document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
+      btn.classList.toggle('active', btn.getAttribute('data-lang-btn') === lang);
+    });
+    document.documentElement.lang = lang;
+    var nextUrl = new URL(window.location.href);
+    nextUrl.searchParams.set('lang', lang);
+    if (window.location.protocol !== 'file:') {
+      window.history.replaceState({}, '', nextUrl);
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var requested = new URLSearchParams(window.location.search).get('lang');
+    setLang(['fr', 'sk', 'en'].indexOf(requested) >= 0 ? requested : 'fr');
+  });
+</script>
+
+</body>
+</html>

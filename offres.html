@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Plans et tarifs de l'application Partia — Free, Premium, Premium+." />
+  <title>Offres — Partia</title>
+  <link rel="icon" href="assets/partia-sport-icon-v1.png">
+  <style>
+    :root {
+      --primary: #FF6035;
+      --secondary: #FF8C5A;
+      --dark: #1A1A2E;
+      --card: #16213E;
+      --input: #0F3460;
+      --text: #FFFFFF;
+      --gray: #BDBDBD;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--dark); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; }
+
+    .lang-bar { position: sticky; top: 0; z-index: 100; background: rgba(26,26,46,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: space-between; padding: 10px 24px; gap: 16px; flex-wrap: wrap; }
+    .lang-logo { color: var(--primary); font-weight: 900; font-size: 18px; letter-spacing: -0.5px; display:flex; align-items:center; gap:8px; text-decoration: none; }
+    .brand-icon { width:34px; height:34px; object-fit:contain; }
+    .top-nav { display: flex; gap: 18px; }
+    .top-nav a { color: var(--gray); font-weight: 700; font-size: 14px; text-decoration: none; }
+    .top-nav a:hover, .top-nav a.current { color: var(--primary); }
+    .lang-btns { display: flex; gap: 6px; }
+    .lang-btn { background: none; border: 1px solid rgba(255,255,255,0.15); color: var(--gray); padding: 6px 14px; border-radius: 999px; font-size: 13px; font-weight: 700; cursor: pointer; transition: all 0.2s; }
+    .lang-btn.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+    .lang-btn:hover:not(.active) { border-color: var(--primary); color: var(--primary); }
+
+    .page-header { max-width: 900px; margin: 0 auto; padding: 48px 24px 8px; }
+    .back-link { color: var(--gray); font-size: 13px; font-weight: 700; text-decoration: none; }
+    .back-link:hover { color: var(--primary); }
+    .page-title { font-size: 36px; font-weight: 900; color: #fff; margin-top: 14px; }
+    .page-sub { color: var(--gray); font-size: 15px; margin-top: 8px; max-width: 640px; }
+
+    .section { max-width: 900px; margin: 0 auto; padding: 32px 24px 56px; }
+
+    .plan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+    .plan-card { background: var(--card); border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; padding: 22px 18px; }
+    .plan-card.premium { border-color: rgba(255,140,90,0.45); }
+    .plan-card.plus { border-color: rgba(168,85,247,0.5); }
+    .plan-name { font-size: 20px; font-weight: 900; color: #fff; margin-bottom: 4px; }
+    .plan-kicker { color: var(--primary); font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px; }
+    .plan-list { list-style: none; color: var(--gray); font-size: 14px; }
+    .plan-list li { padding: 5px 0; }
+    .plan-list li::before { content: '✓'; color: var(--primary); font-weight: 900; margin-right: 8px; }
+    .plan-notice { margin-top: 18px; padding: 14px 16px; border-radius: 12px; background: rgba(255,96,53,0.08); border: 1px solid rgba(255,96,53,0.25); color: var(--gray); font-size: 13px; }
+    .plan-notice strong { color: #fff; }
+
+    .cta-section { text-align: center; padding: 56px 24px; background: linear-gradient(160deg, #0F3460 0%, #1A1A2E 100%); border-top: 2px solid var(--primary); }
+    .cta-title { font-size: 26px; font-weight: 900; color: #fff; margin-bottom: 10px; }
+    .cta-sub { color: var(--gray); font-size: 15px; }
+
+    footer { background: var(--card); text-align: center; padding: 32px 24px; color: var(--gray); font-size: 13px; border-top: 1px solid rgba(255,255,255,0.06); }
+    footer strong { color: var(--primary); }
+    .legal-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 18px; margin-top: 12px; }
+    .legal-links a { color: #FF9A7F; font-weight: 700; }
+    .legal-links a:hover { color: #fff; }
+
+    [data-lang] { display: none; }
+    [data-lang].visible { display: block; }
+  </style>
+</head>
+<body>
+
+<nav class="lang-bar">
+  <a class="lang-logo" href="index.html"><img class="brand-icon" src="assets/partia-sport-icon-v1.png" alt="">Partia</a>
+  <div class="top-nav" data-lang="fr" style="display:flex"><a href="index.html">Accueil</a><a class="current" href="offres.html">Offres</a><a href="faq.html">FAQ</a></div>
+  <div class="top-nav" data-lang="sk" style="display:none"><a href="index.html">Domov</a><a class="current" href="offres.html">Ponuky</a><a href="faq.html">FAQ</a></div>
+  <div class="top-nav" data-lang="en" style="display:none"><a href="index.html">Home</a><a class="current" href="offres.html">Plans</a><a href="faq.html">FAQ</a></div>
+  <div class="lang-btns">
+    <button class="lang-btn active" data-lang-btn="fr" onclick="setLang('fr')">🇫🇷 FR</button>
+    <button class="lang-btn" data-lang-btn="sk" onclick="setLang('sk')">🇸🇰 SK</button>
+    <button class="lang-btn" data-lang-btn="en" onclick="setLang('en')">🇬🇧 EN</button>
+  </div>
+</nav>
+
+<!-- FRENCH -->
+<div data-lang="fr" class="visible">
+  <div class="page-header">
+    <a class="back-link" href="index.html">← Retour à l'accueil</a>
+    <h1 class="page-title">30 jours Premium Découverte, puis le choix</h1>
+    <p class="page-sub">Chaque nouveau compte profite de Premium Découverte pendant 30 jours, sans carte bancaire. Ensuite, il peut rester en Free ou choisir un abonnement Premium géré par Google Play. Les achats seront activés seulement après validation du test fermé et de la version sur appareil.</p>
+  </div>
+  <div class="section">
+    <div class="plan-grid">
+      <div class="plan-card"><div class="plan-name">🆓 Free</div><div class="plan-kicker">Après les 30 jours offerts</div><ul class="plan-list"><li>Rayon max 5 km</li><li>Aperçu anonyme des créneaux entre 5 et 25 km</li><li>5 créations par mois</li><li>Historique sur 30 jours</li></ul></div>
+      <div class="plan-card premium"><div class="plan-name">⭐ Premium</div><div class="plan-kicker">2,99 €/mois via Google Play</div><ul class="plan-list"><li>Rayon max 25 km</li><li>Créations illimitées</li><li>Historique sur 90 jours</li><li>1 boost inclus par mois</li></ul></div>
+      <div class="plan-card plus"><div class="plan-name">🚀 Premium+</div><div class="plan-kicker">4,99 €/mois via Google Play</div><ul class="plan-list"><li>Rayon illimité</li><li>Créations illimitées + créneaux privés</li><li>Historique complet</li><li>3 boosts inclus par mois</li></ul></div>
+    </div>
+    <div class="plan-notice"><strong>Premium Découverte est offert automatiquement pendant 30 jours aux nouveaux comptes.</strong> Il repasse ensuite en Free sans prélèvement automatique. Pendant le test fermé Google Play, Premium+ reste attribué gratuitement aux testeurs autorisés.</div>
+    <div class="plan-notice"><strong>⚡ À quoi sert un boost ?</strong> Il place un créneau ouvert en tête des résultats Explorer pendant 24 heures pour augmenter sa visibilité. Premium et Premium+ en incluent chaque mois ; le boost supplémentaire est configuré à 0,99 € dans Google Play. Les achats seront ouverts après la validation finale sur appareil et les prix réellement affichés seront localisés par Google Play. Il ne garantit aucune inscription et ne s'applique pas aux créneaux privés, complets ou terminés.</div>
+  </div>
+  <div class="cta-section">
+    <h2 class="cta-title">Des questions sur les offres ? 🤝</h2>
+    <p class="cta-sub">Consulte la <a href="faq.html" style="color:#FF9A7F;font-weight:700;">FAQ</a> ou écris à <a href="mailto:info.partia@gmail.com" style="color:#FF9A7F;font-weight:700;">info.partia@gmail.com</a></p>
+  </div>
+  <footer>
+    <strong>🤝 Partia</strong> — Test fermé Google Play<br/>
+    Fait avec ❤️ par Manu · Matúškovo / SK
+    <div class="legal-links"><a href="privacy.html?lang=fr">Confidentialité</a><a href="child-safety.html?lang=fr">Sécurité des enfants</a><a href="delete-account.html?lang=fr">Supprimer un compte</a></div>
+  </footer>
+</div>
+
+<!-- SLOVAK -->
+<div data-lang="sk">
+  <div class="page-header">
+    <a class="back-link" href="index.html">← Späť na domovskú stránku</a>
+    <h1 class="page-title">30 dní Premium na vyskúšanie, potom si vyberieš</h1>
+    <p class="page-sub">Každý nový účet získa Premium na vyskúšanie na 30 dní bez platobnej karty. Potom môže zostať na Free alebo si zvoliť predplatné Premium spravované cez Google Play. Nákupy sa aktivujú až po overení uzavretého testu a verzie na zariadení.</p>
+  </div>
+  <div class="section">
+    <div class="plan-grid">
+      <div class="plan-card"><div class="plan-name">🆓 Free</div><div class="plan-kicker">Po 30 bezplatných dňoch</div><ul class="plan-list"><li>Maximálny okruh 5 km</li><li>Anonymný náhľad termínov vo vzdialenosti 5 až 25 km</li><li>5 vytvorení za mesiac</li><li>História za 30 dní</li></ul></div>
+      <div class="plan-card premium"><div class="plan-name">⭐ Premium</div><div class="plan-kicker">2,99 €/mesiac cez Google Play</div><ul class="plan-list"><li>Maximálny okruh 25 km</li><li>Neobmedzené vytváranie</li><li>História za 90 dní</li><li>1 boost zahrnutý mesačne</li></ul></div>
+      <div class="plan-card plus"><div class="plan-name">🚀 Premium+</div><div class="plan-kicker">4,99 €/mesiac cez Google Play</div><ul class="plan-list"><li>Neobmedzený okruh</li><li>Neobmedzené vytváranie + súkromné termíny</li><li>Úplná história</li><li>3 boosty zahrnuté mesačne</li></ul></div>
+    </div>
+    <div class="plan-notice"><strong>Premium na vyskúšanie dostanú nové účty automaticky na 30 dní.</strong> Potom sa bez automatickej platby aktivuje Free. Počas uzavretého testu zostáva Premium+ oprávneným testerom bezplatne.</div>
+    <div class="plan-notice"><strong>⚡ Na čo slúži boost?</strong> Posunie otvorený termín na 24 hodín na začiatok výsledkov Objaviť, aby bol viditeľnejší. Premium a Premium+ zahŕňajú boosty každý mesiac; ďalší boost je v Google Play nastavený na 0,99 €. Nákupy sa sprístupnia po záverečnom overení na zariadení a skutočne zobrazené ceny lokalizuje Google Play. Nezaručuje prihlásenie a neplatí pre súkromné, plné ani ukončené termíny.</div>
+  </div>
+  <div class="cta-section">
+    <h2 class="cta-title">Otázky k ponukám? 🤝</h2>
+    <p class="cta-sub">Pozri si <a href="faq.html" style="color:#FF9A7F;font-weight:700;">FAQ</a> alebo napíš na <a href="mailto:info.partia@gmail.com" style="color:#FF9A7F;font-weight:700;">info.partia@gmail.com</a></p>
+  </div>
+  <footer>
+    <strong>🤝 Partia</strong> — Uzavretý test Google Play<br/>
+    Vytvorené s ❤️ od Manu · Matúškovo / SK
+    <div class="legal-links"><a href="privacy.html?lang=sk">Súkromie</a><a href="child-safety.html?lang=sk">Bezpečnosť detí</a><a href="delete-account.html?lang=sk">Vymazanie účtu</a></div>
+  </footer>
+</div>
+
+<!-- ENGLISH -->
+<div data-lang="en">
+  <div class="page-header">
+    <a class="back-link" href="index.html">← Back to home</a>
+    <h1 class="page-title">30 days of Premium Discovery, then your choice</h1>
+    <p class="page-sub">Every new account gets Premium Discovery for 30 days with no payment card. It can then stay on Free or choose a Premium subscription managed by Google Play. Purchases will only be enabled after the closed test and the device build have been validated.</p>
+  </div>
+  <div class="section">
+    <div class="plan-grid">
+      <div class="plan-card"><div class="plan-name">🆓 Free</div><div class="plan-kicker">After the 30 free days</div><ul class="plan-list"><li>Max radius 5 km</li><li>Anonymous preview of slots between 5 and 25 km</li><li>5 creations per month</li><li>30-day history</li></ul></div>
+      <div class="plan-card premium"><div class="plan-name">⭐ Premium</div><div class="plan-kicker">€2.99/month via Google Play</div><ul class="plan-list"><li>Max radius 25 km</li><li>Unlimited creations</li><li>90-day history</li><li>1 boost included per month</li></ul></div>
+      <div class="plan-card plus"><div class="plan-name">🚀 Premium+</div><div class="plan-kicker">€4.99/month via Google Play</div><ul class="plan-list"><li>Unlimited radius</li><li>Unlimited creations + private slots</li><li>Full history</li><li>3 boosts included per month</li></ul></div>
+    </div>
+    <div class="plan-notice"><strong>Premium Discovery is automatically offered to new accounts for 30 days.</strong> It then switches to Free with no automatic charge. During the closed Google Play test, authorized testers continue to receive Premium+ free of charge.</div>
+    <div class="plan-notice"><strong>⚡ What does a boost do?</strong> It moves an open slot to the top of Explore results for 24 hours to increase visibility. Premium and Premium+ include monthly boosts; the extra boost is configured at €0.99 in Google Play. Purchases will open after final device validation and the prices actually shown will be localized by Google Play. It does not guarantee registrations and does not apply to private, full or past slots.</div>
+  </div>
+  <div class="cta-section">
+    <h2 class="cta-title">Questions about the plans? 🤝</h2>
+    <p class="cta-sub">Check the <a href="faq.html" style="color:#FF9A7F;font-weight:700;">FAQ</a> or write to <a href="mailto:info.partia@gmail.com" style="color:#FF9A7F;font-weight:700;">info.partia@gmail.com</a></p>
+  </div>
+  <footer>
+    <strong>🤝 Partia</strong> — Closed Google Play test<br/>
+    Made with ❤️ by Manu · Matúškovo / SK
+    <div class="legal-links"><a href="privacy.html?lang=en">Privacy</a><a href="child-safety.html?lang=en">Child safety</a><a href="delete-account.html?lang=en">Delete an account</a></div>
+  </footer>
+</div>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('[data-lang]').forEach(function(el) {
+      el.style.display = (el.getAttribute('data-lang') === lang) ? 'block' : 'none';
+    });
+    document.querySelectorAll('.top-nav[data-lang]').forEach(function(el) {
+      el.style.display = (el.getAttribute('data-lang') === lang) ? 'flex' : 'none';
+    });
+    document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
+      btn.classList.toggle('active', btn.getAttribute('data-lang-btn') === lang);
+    });
+    document.documentElement.lang = lang;
+    var nextUrl = new URL(window.location.href);
+    nextUrl.searchParams.set('lang', lang);
+    if (window.location.protocol !== 'file:') {
+      window.history.replaceState({}, '', nextUrl);
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var requested = new URLSearchParams(window.location.search).get('lang');
+    setLang(['fr', 'sk', 'en'].indexOf(requested) >= 0 ? requested : 'fr');
+  });
+</script>
+
+</body>
+</html>
