@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Catalogue des sports disponibles sur Partia et rappel des règles." />
+  <title>Sports — Partia</title>
+  <link rel="icon" href="assets/partia-sport-icon-v1.png">
+  <style>
+    :root {
+      --primary: #FF6035;
+      --secondary: #FF8C5A;
+      --dark: #1A1A2E;
+      --card: #16213E;
+      --input: #0F3460;
+      --text: #FFFFFF;
+      --gray: #BDBDBD;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--dark); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; }
+
+    .lang-bar { position: sticky; top: 0; z-index: 100; background: rgba(26,26,46,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: space-between; padding: 10px 24px; gap: 16px; flex-wrap: wrap; }
+    .lang-logo { color: var(--primary); font-weight: 900; font-size: 18px; letter-spacing: -0.5px; display:flex; align-items:center; gap:8px; text-decoration: none; }
+    .brand-icon { width:34px; height:34px; object-fit:contain; }
+    .top-nav { display: flex; gap: 18px; }
+    .top-nav a { color: var(--gray); font-weight: 700; font-size: 14px; text-decoration: none; }
+    .top-nav a:hover, .top-nav a.current { color: var(--primary); }
+    .lang-btns { display: flex; gap: 6px; }
+    .lang-btn { background: none; border: 1px solid rgba(255,255,255,0.15); color: var(--gray); padding: 6px 14px; border-radius: 999px; font-size: 13px; font-weight: 700; cursor: pointer; transition: all 0.2s; }
+    .lang-btn.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+    .lang-btn:hover:not(.active) { border-color: var(--primary); color: var(--primary); }
+
+    .page-header { max-width: 900px; margin: 0 auto; padding: 48px 24px 8px; }
+    .back-link { color: var(--gray); font-size: 13px; font-weight: 700; text-decoration: none; }
+    .back-link:hover { color: var(--primary); }
+    .page-title { font-size: 36px; font-weight: 900; color: #fff; margin-top: 14px; }
+    .page-sub { color: var(--gray); font-size: 15px; margin-top: 8px; max-width: 640px; }
+
+    .section { max-width: 900px; margin: 0 auto; padding: 32px 24px 56px; }
+    .section-title { color: var(--primary); font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+    .section-h2 { font-size: 26px; font-weight: 900; color: #fff; margin-bottom: 10px; }
+    .section-sub { color: var(--gray); font-size: 15px; max-width: 640px; }
+
+    .sports-grid-lg { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+    .sport-chip-lg { background: var(--card); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 12px 22px; font-size: 16px; color: var(--text); font-weight: 700; display: inline-flex; align-items: center; gap: 10px; }
+    .sport-chip-lg img { width: 30px; height: 30px; object-fit: contain; flex-shrink: 0; }
+
+    .faq-item { background: var(--card); border-radius: 14px; padding: 18px 20px; margin-bottom: 10px; border: 1px solid rgba(255,255,255,0.06); }
+    .faq-q { font-weight: 800; color: #fff; font-size: 15px; margin-bottom: 6px; display: flex; align-items: flex-start; gap: 10px; }
+    .faq-a { color: var(--gray); font-size: 14px; line-height: 1.6; padding-left: 0; }
+
+    .suggest-box { margin-top: 18px; padding: 16px 18px; border-radius: 12px; background: rgba(255,96,53,0.08); border: 1px solid rgba(255,96,53,0.25); color: var(--gray); font-size: 14px; }
+    .suggest-box a { color: #FF9A7F; font-weight: 700; }
+
+    .cta-section { text-align: center; padding: 56px 24px; background: linear-gradient(160deg, #0F3460 0%, #1A1A2E 100%); border-top: 2px solid var(--primary); }
+    .cta-title { font-size: 26px; font-weight: 900; color: #fff; margin-bottom: 10px; }
+    .cta-sub { color: var(--gray); font-size: 15px; }
+
+    footer { background: var(--card); text-align: center; padding: 32px 24px; color: var(--gray); font-size: 13px; border-top: 1px solid rgba(255,255,255,0.06); }
+    footer strong { color: var(--primary); }
+    .legal-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 18px; margin-top: 12px; }
+    .legal-links a { color: #FF9A7F; font-weight: 700; }
+    .legal-links a:hover { color: #fff; }
+
+    [data-lang] { display: none; }
+    [data-lang].visible { display: block; }
+  </style>
+</head>
+<body>
+
+<nav class="lang-bar">
+  <a class="lang-logo" href="index.html"><img class="brand-icon" src="assets/partia-sport-icon-v1.png" alt="">Partia</a>
+  <div class="top-nav" data-lang="fr" style="display:flex"><a href="index.html">Accueil</a><a class="current" href="sports.html">Sports</a><a href="offres.html">Offres</a><a href="faq.html">FAQ</a></div>
+  <div class="top-nav" data-lang="sk" style="display:none"><a href="index.html">Domov</a><a class="current" href="sports.html">Športy</a><a href="offres.html">Ponuky</a><a href="faq.html">FAQ</a></div>
+  <div class="top-nav" data-lang="en" style="display:none"><a href="index.html">Home</a><a class="current" href="sports.html">Sports</a><a href="offres.html">Plans</a><a href="faq.html">FAQ</a></div>
+  <div class="lang-btns">
+    <button class="lang-btn active" data-lang-btn="fr" onclick="setLang('fr')">🇫🇷 FR</button>
+    <button class="lang-btn" data-lang-btn="sk" onclick="setLang('sk')">🇸🇰 SK</button>
+    <button class="lang-btn" data-lang-btn="en" onclick="setLang('en')">🇬🇧 EN</button>
+  </div>
+</nav>
+
+<!-- FRENCH -->
+<div data-lang="fr" class="visible">
+  <div class="page-header">
+    <a class="back-link" href="index.html">← Retour à l'accueil</a>
+    <h1 class="page-title">36 sports disponibles</h1>
+    <p class="page-sub">Du foot au Mölkky en passant par le Hyrox — le catalogue complet, et un petit rappel des règles pour les moins connus.</p>
+  </div>
+  <div class="section">
+    <p class="section-title">Catalogue</p>
+    <h2 class="section-h2">Le catalogue complet</h2>
+    <p class="section-sub">D'autres sports seront ajoutés au fil des retours utilisateurs.</p>
+    <div class="sports-grid-lg">
+      <div class="sport-chip-lg"><img src="assets/sport-icons/course.png" alt="">Course</div><div class="sport-chip-lg"><img src="assets/sport-icons/velo.png" alt="">Vélo</div><div class="sport-chip-lg"><img src="assets/sport-icons/natation.png" alt="">Natation</div><div class="sport-chip-lg"><img src="assets/sport-icons/randonnee.png" alt="">Randonnée</div><div class="sport-chip-lg"><img src="assets/sport-icons/fitness.png" alt="">Fitness</div><div class="sport-chip-lg"><img src="assets/sport-icons/yoga.png" alt="">Yoga</div><div class="sport-chip-lg"><img src="assets/sport-icons/roller.png" alt="">Roller</div><div class="sport-chip-lg"><img src="assets/sport-icons/tennis.png" alt="">Tennis</div><div class="sport-chip-lg"><img src="assets/sport-icons/badminton.png" alt="">Badminton</div><div class="sport-chip-lg"><img src="assets/sport-icons/squash.png" alt="">Squash</div><div class="sport-chip-lg">🏓 Tennis de table</div><div class="sport-chip-lg"><img src="assets/sport-icons/padel.png" alt="">Padel</div><div class="sport-chip-lg">⚽ Football</div><div class="sport-chip-lg"><img src="assets/sport-icons/futsal.png" alt="">Futsal</div><div class="sport-chip-lg">🏀 Basketball</div><div class="sport-chip-lg">🏐 Volleyball</div><div class="sport-chip-lg"><img src="assets/sport-icons/beachvolley.png" alt="">Beach Volley</div><div class="sport-chip-lg"><img src="assets/sport-icons/floorball.png" alt="">Floorball</div><div class="sport-chip-lg"><img src="assets/sport-icons/petanque.png" alt="">Pétanque</div><div class="sport-chip-lg">🐎 Équitation</div><div class="sport-chip-lg">🏉 Rugby à 7</div><div class="sport-chip-lg">🤾 Handball</div><div class="sport-chip-lg"><img src="assets/sport-icons/beachsoccer.png" alt="">Beach Soccer</div><div class="sport-chip-lg">🤽 Water-polo</div><div class="sport-chip-lg"><img src="assets/sport-icons/sandball.png" alt="">Sandball</div><div class="sport-chip-lg">🥏 Ultimate Frisbee</div><div class="sport-chip-lg"><img src="assets/sport-icons/trail.png" alt="">Trail</div><div class="sport-chip-lg"><img src="assets/sport-icons/hyrox.png" alt="">Hyrox</div><div class="sport-chip-lg">🏹 Tir à l'arc</div><div class="sport-chip-lg">🏄 Surf</div><div class="sport-chip-lg"><img src="assets/sport-icons/sup.png" alt="">Stand Up Paddle</div><div class="sport-chip-lg">⛷️ Ski / Snowboard</div><div class="sport-chip-lg">💃 Danse</div><div class="sport-chip-lg"><img src="assets/sport-icons/molkky.png" alt="">Molkky</div><div class="sport-chip-lg"><img src="assets/sport-icons/paletbreton.png" alt="">Palet Breton</div><div class="sport-chip-lg"><img src="assets/sport-icons/echecs.png" alt="">Échecs</div>
+    </div>
+    <div class="suggest-box">Un nouveau sport mériterait d'y être ? Pas de souci, écris-nous ta suggestion à <a href="mailto:info.partia@gmail.com">info.partia@gmail.com</a>.</div>
+  </div>
+
+  <hr style="border:none;border-top:1px solid rgba(255,255,255,0.06);max-width:900px;margin:0 auto;" />
+
+  <div class="section">
+    <p class="section-title">Sports moins connus</p>
+    <h2 class="section-h2">Comment ça se joue ?</h2>
+    <p class="section-sub">Un petit rappel des règles pour les sports les moins évidents du catalogue.</p>
+    <div class="faq-item"><div class="faq-q">🏑 Floorball</div><div class="faq-a">Sport avec crosse en plastique et balle légère perforée, jouable en salle ou en extérieur. Équipes de 5 ou 6 contre 6, sans contact physique, crosse toujours sous la hauteur de hanche.</div></div>
+    <div class="faq-item"><div class="faq-q">🏖️ Beach Soccer</div><div class="faq-a">Football sur sable, 5 contre 5, 3 périodes de 12 minutes. Pas de touche : la balle sortie se relance au pied directement.</div></div>
+    <div class="faq-item"><div class="faq-q">🌴 Sandball</div><div class="faq-a">Un peu comme le handball, mais sur sable et sans dribble. 4 contre 4, on marque en envoyant le ballon dans le but adverse.</div></div>
+    <div class="faq-item"><div class="faq-q">🥏 Ultimate Frisbee</div><div class="faq-a">Sport collectif avec un disque volant. On marque en l'attrapant dans la zone d'en-but adverse ; interdit de courir avec le disque en main (pied de pivot comme au basket), pas de contact, sans arbitre.</div></div>
+    <div class="faq-item"><div class="faq-q">⛰️ Trail</div><div class="faq-a">Course à pied en pleine nature (chemins, sentiers, montagne), sur terrain varié. Individuel, distance libre — l'important, c'est le dénivelé et le terrain, pas juste la vitesse.</div></div>
+    <div class="faq-item"><div class="faq-q">⏱️ Hyrox</div><div class="faq-a">Format de course fitness : 8 km de course entrecoupés de 8 ateliers fonctionnels (rameur, poussée/tirage de traîneau, burpees...). Individuel ou en binôme, format identique partout dans le monde.</div></div>
+    <div class="faq-item"><div class="faq-q">🛶 Stand Up Paddle</div><div class="faq-a">Debout sur une grande planche, on avance à la pagaie simple pale, sur eau calme (lac, mer, rivière tranquille). Question d'équilibre avant tout — décontracté ou en course selon l'envie.</div></div>
+    <div class="faq-item"><div class="faq-q">🎳 Molkky</div><div class="faq-a">Jeu de lancer finlandais : on lance un bâton en bois pour faire tomber des quilles numérotées. Le score = le numéro de la quille tombée seule, ou le nombre de quilles si plusieurs tombent. Premier à exactement 50 points gagne (redescend à 25 en cas de dépassement).</div></div>
+    <div class="faq-item"><div class="faq-q">🥌 Palet Breton</div><div class="faq-a">Jeu de précision breton : on fait glisser des palets (disques) sur une planche en bois pour les rapprocher d'une cible ou déloger ceux de l'adversaire. Un peu comme le curling, mais lancé à la main.</div></div>
+  </div>
+
+  <div class="cta-section">
+    <h2 class="cta-title">Prêt à jouer ? 🤝</h2>
+    <p class="cta-sub">Partia est disponible sur Google Play. Installe l'application et trouve ton premier partenaire de sport.</p>
+  </div>
+  <footer>
+    <strong>🤝 Partia</strong> — Disponible sur Google Play<br/>
+    Fait avec ❤️ par Manu · Matúškovo / SK
+    <div class="legal-links"><a href="privacy.html?lang=fr">Confidentialité</a><a href="child-safety.html?lang=fr">Sécurité des enfants</a><a href="delete-account.html?lang=fr">Supprimer un compte</a></div>
+  </footer>
+</div>
+
+<!-- SLOVAK -->
+<div data-lang="sk">
+  <div class="page-header">
+    <a class="back-link" href="index.html">← Späť na domovskú stránku</a>
+    <h1 class="page-title">36 dostupných športov</h1>
+    <p class="page-sub">Od futbalu po Mölkky a Hyrox — kompletný katalóg a krátke pripomenutie pravidiel pre tie menej známe.</p>
+  </div>
+  <div class="section">
+    <p class="section-title">Katalóg</p>
+    <h2 class="section-h2">Kompletný katalóg</h2>
+    <p class="section-sub">Ďalšie športy budú pridané podľa spätnej väzby používateľov.</p>
+    <div class="sports-grid-lg">
+      <div class="sport-chip-lg"><img src="assets/sport-icons/course.png" alt="">Beh</div><div class="sport-chip-lg"><img src="assets/sport-icons/velo.png" alt="">Cyklistika</div><div class="sport-chip-lg"><img src="assets/sport-icons/natation.png" alt="">Plávanie</div><div class="sport-chip-lg"><img src="assets/sport-icons/randonnee.png" alt="">Turistika</div><div class="sport-chip-lg"><img src="assets/sport-icons/fitness.png" alt="">Fitness</div><div class="sport-chip-lg"><img src="assets/sport-icons/yoga.png" alt="">Jóga</div><div class="sport-chip-lg"><img src="assets/sport-icons/roller.png" alt="">Korčuľovanie</div><div class="sport-chip-lg"><img src="assets/sport-icons/tennis.png" alt="">Tenis</div><div class="sport-chip-lg"><img src="assets/sport-icons/badminton.png" alt="">Bedminton</div><div class="sport-chip-lg"><img src="assets/sport-icons/squash.png" alt="">Squash</div><div class="sport-chip-lg">🏓 Stolný tenis</div><div class="sport-chip-lg"><img src="assets/sport-icons/padel.png" alt="">Padel</div><div class="sport-chip-lg">⚽ Futbal</div><div class="sport-chip-lg"><img src="assets/sport-icons/futsal.png" alt="">Futsál</div><div class="sport-chip-lg">🏀 Basketbal</div><div class="sport-chip-lg">🏐 Volejbal</div><div class="sport-chip-lg"><img src="assets/sport-icons/beachvolley.png" alt="">Plážový volejbal</div><div class="sport-chip-lg"><img src="assets/sport-icons/floorball.png" alt="">Florbal</div><div class="sport-chip-lg"><img src="assets/sport-icons/petanque.png" alt="">Pétanque</div><div class="sport-chip-lg">🐎 Jazdectvo</div><div class="sport-chip-lg">🏉 Rugby 7</div><div class="sport-chip-lg">🤾 Hádzaná</div><div class="sport-chip-lg"><img src="assets/sport-icons/beachsoccer.png" alt="">Plážový futbal</div><div class="sport-chip-lg">🤽 Vodné pólo</div><div class="sport-chip-lg"><img src="assets/sport-icons/sandball.png" alt="">Sandball</div><div class="sport-chip-lg">🥏 Ultimate</div><div class="sport-chip-lg"><img src="assets/sport-icons/trail.png" alt="">Trailový beh</div><div class="sport-chip-lg"><img src="assets/sport-icons/hyrox.png" alt="">Hyrox</div><div class="sport-chip-lg">🏹 Lukostreľba</div><div class="sport-chip-lg">🏄 Surfovanie</div><div class="sport-chip-lg"><img src="assets/sport-icons/sup.png" alt="">Paddleboarding</div><div class="sport-chip-lg">⛷️ Lyžovanie/Snowboarding</div><div class="sport-chip-lg">💃 Tanec</div><div class="sport-chip-lg"><img src="assets/sport-icons/molkky.png" alt="">Mölkky</div><div class="sport-chip-lg"><img src="assets/sport-icons/paletbreton.png" alt="">Palet Breton</div><div class="sport-chip-lg"><img src="assets/sport-icons/echecs.png" alt="">Šach</div>
+    </div>
+    <div class="suggest-box">Chýba ti nejaký šport? Žiadny problém, napíš nám svoj návrh na <a href="mailto:info.partia@gmail.com">info.partia@gmail.com</a>.</div>
+  </div>
+
+  <hr style="border:none;border-top:1px solid rgba(255,255,255,0.06);max-width:900px;margin:0 auto;" />
+
+  <div class="section">
+    <p class="section-title">Menej známe športy</p>
+    <h2 class="section-h2">Ako sa hrá?</h2>
+    <p class="section-sub">Krátke pripomenutie pravidiel pre menej zjavné športy z katalógu.</p>
+    <div class="faq-item"><div class="faq-q">🏑 Florbal</div><div class="faq-a">Šport s plastovou hokejkou a ľahkou dierovanou loptičkou, hrateľný v hale aj vonku. Tímy po 5 alebo 6 hráčoch, bez telesného kontaktu, hokejka stále pod výškou bokov.</div></div>
+    <div class="faq-item"><div class="faq-q">🏖️ Plážový futbal</div><div class="faq-a">Futbal na piesku, 5 na 5, 3 tretiny po 12 minút. Žiadne vhadzovanie — lopta sa vracia priamo kopom.</div></div>
+    <div class="faq-item"><div class="faq-q">🌴 Sandball</div><div class="faq-a">Podobné hádzanej, ale na piesku a bez driblovania. 4 na 4, gól sa dáva hodením lopty do súperovej bránky.</div></div>
+    <div class="faq-item"><div class="faq-q">🥏 Ultimate</div><div class="faq-a">Kolektívny šport s lietajúcim diskom. Gól sa dáva chytením disku v súperovej end zóne; s diskom v ruke sa nesmie bežať (pivotná noha ako v basketbale), bez kontaktu, bez rozhodcu.</div></div>
+    <div class="faq-item"><div class="faq-q">⛰️ Trailový beh</div><div class="faq-a">Beh v prírode (chodníky, hory, lesy) po rôznorodom teréne. Individuálne, ľubovoľná vzdialenosť — dôležité je prevýšenie a terén, nie len rýchlosť.</div></div>
+    <div class="faq-item"><div class="faq-q">⏱️ Hyrox</div><div class="faq-a">Fitness pretekársky formát: 8 km behu prerušovaného 8 funkčnými stanicami (veslovanie, tlačenie/ťahanie sane, burpees...). Sólo alebo v dvojici, rovnaký formát na celom svete.</div></div>
+    <div class="faq-item"><div class="faq-q">🛶 Paddleboarding</div><div class="faq-a">Státie na veľkej doske, veslovanie jednolistým veslom po pokojnej vode (jazero, more, pokojná rieka). Ide hlavne o rovnováhu — pokojne alebo pretekársky podľa chuti.</div></div>
+    <div class="faq-item"><div class="faq-q">🎳 Mölkky</div><div class="faq-a">Fínska hádzacia hra: hodom drevenej palice sa zhadzujú očíslované kolky. Skóre = číslo jediného zhodeného kolku, alebo počet kolkov, ak padne viac. Prvý presne na 50 bodoch vyhráva (pri prekročení klesá na 25).</div></div>
+    <div class="faq-item"><div class="faq-q">🥌 Palet Breton</div><div class="faq-a">Presná hra z Bretónska: po drevenej doske sa posúvajú kotúče ("palety"), aby skončili blízko cieľa alebo vyradili súperove kotúče. Trochu ako curling, ale hádzané rukou.</div></div>
+  </div>
+
+  <div class="cta-section">
+    <h2 class="cta-title">Pripravený hrať? 🤝</h2>
+    <p class="cta-sub">Partia je dostupná na Google Play. Nainštaluj si aplikáciu a nájdi svojho prvého športového partnera.</p>
+  </div>
+  <footer>
+    <strong>🤝 Partia</strong> — Dostupné na Google Play<br/>
+    Vytvorené s ❤️ od Manu · Matúškovo / SK
+    <div class="legal-links"><a href="privacy.html?lang=sk">Súkromie</a><a href="child-safety.html?lang=sk">Bezpečnosť detí</a><a href="delete-account.html?lang=sk">Vymazanie účtu</a></div>
+  </footer>
+</div>
+
+<!-- ENGLISH -->
+<div data-lang="en">
+  <div class="page-header">
+    <a class="back-link" href="index.html">← Back to home</a>
+    <h1 class="page-title">36 sports available</h1>
+    <p class="page-sub">From football to Mölkky and Hyrox — the full catalogue, plus a quick rules reminder for the less obvious ones.</p>
+  </div>
+  <div class="section">
+    <p class="section-title">Catalogue</p>
+    <h2 class="section-h2">The full catalogue</h2>
+    <p class="section-sub">More sports will be added based on user feedback.</p>
+    <div class="sports-grid-lg">
+      <div class="sport-chip-lg"><img src="assets/sport-icons/course.png" alt="">Running</div><div class="sport-chip-lg"><img src="assets/sport-icons/velo.png" alt="">Cycling</div><div class="sport-chip-lg"><img src="assets/sport-icons/natation.png" alt="">Swimming</div><div class="sport-chip-lg"><img src="assets/sport-icons/randonnee.png" alt="">Hiking</div><div class="sport-chip-lg"><img src="assets/sport-icons/fitness.png" alt="">Fitness</div><div class="sport-chip-lg"><img src="assets/sport-icons/yoga.png" alt="">Yoga</div><div class="sport-chip-lg"><img src="assets/sport-icons/roller.png" alt="">Roller skating</div><div class="sport-chip-lg"><img src="assets/sport-icons/tennis.png" alt="">Tennis</div><div class="sport-chip-lg"><img src="assets/sport-icons/badminton.png" alt="">Badminton</div><div class="sport-chip-lg"><img src="assets/sport-icons/squash.png" alt="">Squash</div><div class="sport-chip-lg">🏓 Table Tennis</div><div class="sport-chip-lg"><img src="assets/sport-icons/padel.png" alt="">Padel</div><div class="sport-chip-lg">⚽ Football</div><div class="sport-chip-lg"><img src="assets/sport-icons/futsal.png" alt="">Futsal</div><div class="sport-chip-lg">🏀 Basketball</div><div class="sport-chip-lg">🏐 Volleyball</div><div class="sport-chip-lg"><img src="assets/sport-icons/beachvolley.png" alt="">Beach Volleyball</div><div class="sport-chip-lg"><img src="assets/sport-icons/floorball.png" alt="">Floorball</div><div class="sport-chip-lg"><img src="assets/sport-icons/petanque.png" alt="">Pétanque</div><div class="sport-chip-lg">🐎 Horse riding</div><div class="sport-chip-lg">🏉 Rugby Sevens</div><div class="sport-chip-lg">🤾 Handball</div><div class="sport-chip-lg"><img src="assets/sport-icons/beachsoccer.png" alt="">Beach Soccer</div><div class="sport-chip-lg">🤽 Water Polo</div><div class="sport-chip-lg"><img src="assets/sport-icons/sandball.png" alt="">Sandball</div><div class="sport-chip-lg">🥏 Ultimate Frisbee</div><div class="sport-chip-lg"><img src="assets/sport-icons/trail.png" alt="">Trail running</div><div class="sport-chip-lg"><img src="assets/sport-icons/hyrox.png" alt="">Hyrox</div><div class="sport-chip-lg">🏹 Archery</div><div class="sport-chip-lg">🏄 Surfing</div><div class="sport-chip-lg"><img src="assets/sport-icons/sup.png" alt="">Stand Up Paddle</div><div class="sport-chip-lg">⛷️ Skiing / Snowboarding</div><div class="sport-chip-lg">💃 Dance</div><div class="sport-chip-lg"><img src="assets/sport-icons/molkky.png" alt="">Mölkky</div><div class="sport-chip-lg"><img src="assets/sport-icons/paletbreton.png" alt="">Palet Breton</div><div class="sport-chip-lg"><img src="assets/sport-icons/echecs.png" alt="">Chess</div>
+    </div>
+    <div class="suggest-box">Think a sport is missing? No problem, send us your suggestion at <a href="mailto:info.partia@gmail.com">info.partia@gmail.com</a>.</div>
+  </div>
+
+  <hr style="border:none;border-top:1px solid rgba(255,255,255,0.06);max-width:900px;margin:0 auto;" />
+
+  <div class="section">
+    <p class="section-title">Lesser-known sports</p>
+    <h2 class="section-h2">How is it played?</h2>
+    <p class="section-sub">A quick rules reminder for the less obvious sports in the catalog.</p>
+    <div class="faq-item"><div class="faq-q">🏑 Floorball</div><div class="faq-a">A sport played indoors or outdoors, with a plastic stick and a light perforated ball. Teams of 5 or 6-a-side, no body contact, stick always below hip height.</div></div>
+    <div class="faq-item"><div class="faq-q">🏖️ Beach Soccer</div><div class="faq-a">Football on sand, 5-a-side, 3 periods of 12 minutes. No throw-ins — the ball is kicked back in directly.</div></div>
+    <div class="faq-item"><div class="faq-q">🌴 Sandball</div><div class="faq-a">Similar to handball but on sand, no dribbling. 4-a-side, score by throwing the ball into the opponent's goal.</div></div>
+    <div class="faq-item"><div class="faq-q">🥏 Ultimate Frisbee</div><div class="faq-a">Team sport with a flying disc. Score by catching it in the opponent's end zone; no running while holding the disc (pivot foot like basketball), no contact, self-refereed.</div></div>
+    <div class="faq-item"><div class="faq-q">⛰️ Trail</div><div class="faq-a">Off-road running (trails, mountains, forests) on varied terrain. Individual, any distance — it's about elevation and terrain, not just speed.</div></div>
+    <div class="faq-item"><div class="faq-q">⏱️ Hyrox</div><div class="faq-a">A fitness race format: 8km of running split by 8 functional stations (rowing, sled push/pull, burpees...). Solo or in pairs, same standardized format worldwide.</div></div>
+    <div class="faq-item"><div class="faq-q">🛶 Stand Up Paddle</div><div class="faq-a">Standing on a large board, paddling with a single-bladed paddle, on calm water (lake, sea, calm river). Mostly about balance — leisurely or race-style.</div></div>
+    <div class="faq-item"><div class="faq-q">🎳 Mölkky</div><div class="faq-a">Finnish throwing game: toss a wooden baton to knock over numbered pins. Score = the number on the single pin knocked down, or the count of pins if several fall. First to exactly 50 points wins (drops back to 25 if you go over).</div></div>
+    <div class="faq-item"><div class="faq-q">🥌 Palet Breton</div><div class="faq-a">A precision game from Brittany: slide discs ("palets") along a wooden board to land close to a target or knock out the opponent's discs. A bit like curling, but hand-thrown.</div></div>
+  </div>
+
+  <div class="cta-section">
+    <h2 class="cta-title">Ready to play? 🤝</h2>
+    <p class="cta-sub">Partia is available on Google Play. Install the app and find your first sports partner.</p>
+  </div>
+  <footer>
+    <strong>🤝 Partia</strong> — Available on Google Play<br/>
+    Made with ❤️ by Manu · Matúškovo / SK
+    <div class="legal-links"><a href="privacy.html?lang=en">Privacy</a><a href="child-safety.html?lang=en">Child safety</a><a href="delete-account.html?lang=en">Delete an account</a></div>
+  </footer>
+</div>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('[data-lang]').forEach(function(el) {
+      el.style.display = (el.getAttribute('data-lang') === lang) ? 'block' : 'none';
+    });
+    document.querySelectorAll('.top-nav[data-lang]').forEach(function(el) {
+      el.style.display = (el.getAttribute('data-lang') === lang) ? 'flex' : 'none';
+    });
+    document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
+      btn.classList.toggle('active', btn.getAttribute('data-lang-btn') === lang);
+    });
+    document.documentElement.lang = lang;
+    var nextUrl = new URL(window.location.href);
+    nextUrl.searchParams.set('lang', lang);
+    if (window.location.protocol !== 'file:') {
+      window.history.replaceState({}, '', nextUrl);
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var requested = new URLSearchParams(window.location.search).get('lang');
+    setLang(['fr', 'sk', 'en'].indexOf(requested) >= 0 ? requested : 'fr');
+  });
+</script>
+
+</body>
+</html>

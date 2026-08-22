@@ -66,6 +66,9 @@
     .pitch-icon { font-size: 36px; margin-bottom: 12px; display: block; }
     .pitch-name { color: #fff; font-weight: 800; font-size: 15px; margin-bottom: 6px; }
     .pitch-desc { color: var(--gray); font-size: 13px; line-height: 1.5; }
+    .concept-hook { color: var(--text); font-size: 16px; font-weight: 700; margin-bottom: 14px; max-width: 640px; }
+    .concept-list { color: var(--gray); font-size: 15px; line-height: 1.7; margin: 0 0 24px 20px; max-width: 640px; }
+    .concept-list li { margin-bottom: 6px; }
 
     /* DEMO VIDEOS */
     .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-top: 8px; }
@@ -161,9 +164,9 @@
 <!-- LANG BAR -->
 <nav class="lang-bar">
   <div class="lang-logo"><img class="brand-icon" src="assets/partia-sport-icon-v1.png" alt="">Partia</div>
-  <div class="top-nav" data-lang="fr" style="display:flex"><a href="index.html">Accueil</a><a href="offres.html">Offres</a><a href="faq.html">FAQ</a></div>
-  <div class="top-nav" data-lang="sk" style="display:none"><a href="index.html">Domov</a><a href="offres.html">Ponuky</a><a href="faq.html">FAQ</a></div>
-  <div class="top-nav" data-lang="en" style="display:none"><a href="index.html">Home</a><a href="offres.html">Plans</a><a href="faq.html">FAQ</a></div>
+  <div class="top-nav" data-lang="fr" style="display:flex"><a class="current" href="index.html">Accueil</a><a href="sports.html">Sports</a><a href="offres.html">Offres</a><a href="faq.html">FAQ</a></div>
+  <div class="top-nav" data-lang="sk" style="display:none"><a class="current" href="index.html">Domov</a><a href="sports.html">Športy</a><a href="offres.html">Ponuky</a><a href="faq.html">FAQ</a></div>
+  <div class="top-nav" data-lang="en" style="display:none"><a class="current" href="index.html">Home</a><a href="sports.html">Sports</a><a href="offres.html">Plans</a><a href="faq.html">FAQ</a></div>
   <div class="lang-btns">
     <button class="lang-btn active" data-lang-btn="fr" onclick="setLang('fr')">🇫🇷 FR</button>
     <button class="lang-btn" data-lang-btn="sk" onclick="setLang('sk')">🇸🇰 SK</button>
@@ -188,19 +191,22 @@
       <div class="hero-badge">Chat intégré</div>
       <div class="hero-badge">Réservée aux <span>adultes</span></div>
     </div>
-    <a class="demo-placeholder" href="#demo-fr">
-      <span class="demo-placeholder-icon">🎥</span>
-      <span class="demo-placeholder-text">Voir Partia en action ⬇</span>
-    </a>
   </div>
 
   <!-- PITCH -->
   <div class="section">
     <p class="section-title">Le concept</p>
     <h2 class="section-h2">Le sport, sans la galère d'organisation</h2>
-    <p class="section-sub">Consulte le sport, le niveau et la disponibilité de nouvelles personnes près de toi. Partia permet de se rencontrer autour d’un créneau clair, puis de construire la confiance grâce aux profils et à la réputation.</p>
+    <p class="concept-hook">Tu adores le sport, tu as souvent envie de jouer, mais c'est dur de trouver des partenaires disponibles au même moment.</p>
+    <p class="section-sub" style="margin-bottom:8px;">Le concept de Partia est simple :</p>
+    <ul class="concept-list">
+      <li>Tu crées ton compte et renseignes ton profil avec les sports que tu aimes.</li>
+      <li>Partia te propose des créneaux créés par d'autres sportifs comme toi, selon tes sports préférés, autour de toi (le rayon dépend de ton offre : 5 km / 25 km / illimité).</li>
+      <li>Tu peux aussi créer tes propres créneaux et les booster (quotas selon ton offre).</li>
+    </ul>
     <div class="pitch-grid">
       <div class="pitch-card"><span class="pitch-icon">📍</span><div class="pitch-name">Proche de toi</div><div class="pitch-desc">Filtrage GPS par distance. Vois uniquement les créneaux dans ton rayon.</div></div>
+      <div class="pitch-card"><span class="pitch-icon">🔒</span><div class="pitch-name">Créneaux privés</div><div class="pitch-desc">Crée un créneau réservé à tes amis via un code à partager — il n'apparaît pas dans les résultats publics.</div></div>
       <div class="pitch-card"><span class="pitch-icon">👨‍👩‍👧‍👦</span><div class="pitch-name">Adultes et parents</div><div class="pitch-desc">L’adulte utilise Partia. Un parent peut organiser une activité au nom de son enfant et reste responsable des inscriptions, du chat et de la supervision.</div></div>
       <div class="pitch-card"><span class="pitch-icon">💬</span><div class="pitch-name">Chat par créneau</div><div class="pitch-desc">Chaque créneau actif a son groupe de discussion. Coordination sans quitter l'app.</div></div>
       <div class="pitch-card"><span class="pitch-icon">⭐</span><div class="pitch-name">Réputation</div><div class="pitch-desc">Après chaque session, note tes partenaires. Ponctuel, Fiable, Fairplay, Cool...</div></div>
@@ -213,7 +219,7 @@
   <div class="section" id="demo-fr">
     <p class="section-title">En vidéo</p>
     <h2 class="section-h2">Partia en action</h2>
-    <p class="section-sub">Quelques captures d'écran filmées pour voir concrètement à quoi ça ressemble. (Vidéos en français pour l'instant.)</p>
+    <p class="section-sub">Quelques captures d'écran filmées pour voir concrètement à quoi ça ressemble.</p>
     <div class="video-grid">
       <div class="video-card"><video controls preload="none" playsinline src="assets/videos/create_account.mp4"></video><div class="video-card-label">📝 Créer un compte</div></div>
       <div class="video-card"><video controls preload="none" playsinline src="assets/videos/create_slot.mp4"></video><div class="video-card-label">➕ Créer un créneau</div></div>
@@ -678,28 +684,8 @@
   <div class="section">
     <p class="section-title">Catalogue</p>
     <h2 class="section-h2">36 sports disponibles</h2>
-    <p class="section-sub">D'autres sports seront ajoutés au fil des retours utilisateurs.</p>
-    <div class="sports-grid">
-      <div class="sport-chip"><img src="assets/sport-icons/course.png" alt="">Course</div><div class="sport-chip"><img src="assets/sport-icons/velo.png" alt="">Vélo</div><div class="sport-chip"><img src="assets/sport-icons/natation.png" alt="">Natation</div><div class="sport-chip"><img src="assets/sport-icons/randonnee.png" alt="">Randonnée</div><div class="sport-chip"><img src="assets/sport-icons/fitness.png" alt="">Fitness</div><div class="sport-chip"><img src="assets/sport-icons/yoga.png" alt="">Yoga</div><div class="sport-chip"><img src="assets/sport-icons/roller.png" alt="">Roller</div><div class="sport-chip"><img src="assets/sport-icons/tennis.png" alt="">Tennis</div><div class="sport-chip"><img src="assets/sport-icons/badminton.png" alt="">Badminton</div><div class="sport-chip"><img src="assets/sport-icons/squash.png" alt="">Squash</div><div class="sport-chip">🏓 Tennis de table</div><div class="sport-chip"><img src="assets/sport-icons/padel.png" alt="">Padel</div><div class="sport-chip">⚽ Football</div><div class="sport-chip"><img src="assets/sport-icons/futsal.png" alt="">Futsal</div><div class="sport-chip">🏀 Basketball</div><div class="sport-chip">🏐 Volleyball</div><div class="sport-chip"><img src="assets/sport-icons/beachvolley.png" alt="">Beach Volley</div><div class="sport-chip"><img src="assets/sport-icons/floorball.png" alt="">Floorball</div><div class="sport-chip"><img src="assets/sport-icons/petanque.png" alt="">Pétanque</div><div class="sport-chip">🐎 Équitation</div><div class="sport-chip">🏉 Rugby à 7</div><div class="sport-chip">🤾 Handball</div><div class="sport-chip"><img src="assets/sport-icons/beachsoccer.png" alt="">Beach Soccer</div><div class="sport-chip">🤽 Water-polo</div><div class="sport-chip"><img src="assets/sport-icons/sandball.png" alt="">Sandball</div><div class="sport-chip">🥏 Ultimate Frisbee</div><div class="sport-chip"><img src="assets/sport-icons/trail.png" alt="">Trail</div><div class="sport-chip"><img src="assets/sport-icons/hyrox.png" alt="">Hyrox</div><div class="sport-chip">🏹 Tir à l'arc</div><div class="sport-chip">🏄 Surf</div><div class="sport-chip"><img src="assets/sport-icons/sup.png" alt="">Stand Up Paddle</div><div class="sport-chip">⛷️ Ski / Snowboard</div><div class="sport-chip">💃 Danse</div><div class="sport-chip"><img src="assets/sport-icons/molkky.png" alt="">Molkky</div><div class="sport-chip"><img src="assets/sport-icons/paletbreton.png" alt="">Palet Breton</div><div class="sport-chip"><img src="assets/sport-icons/echecs.png" alt="">Échecs</div>
-    </div>
-  </div>
-
-  <hr class="hr" />
-
-  <!-- REGLES SPORTS MECONNUS -->
-  <div class="section">
-    <p class="section-title">Sports moins connus</p>
-    <h2 class="section-h2">Comment ça se joue ?</h2>
-    <p class="section-sub">Un petit rappel des règles pour les sports les moins évidents du catalogue.</p>
-    <div class="faq-item"><div class="faq-q">🏑 Floorball</div><div class="faq-a">Sport avec crosse en plastique et balle légère perforée, jouable en salle ou en extérieur. Équipes de 5 ou 6 contre 6, sans contact physique, crosse toujours sous la hauteur de hanche.</div></div>
-    <div class="faq-item"><div class="faq-q">🏖️ Beach Soccer</div><div class="faq-a">Football sur sable, 5 contre 5, 3 périodes de 12 minutes. Pas de touche : la balle sortie se relance au pied directement.</div></div>
-    <div class="faq-item"><div class="faq-q">🌴 Sandball</div><div class="faq-a">Un peu comme le handball, mais sur sable et sans dribble. 4 contre 4, on marque en envoyant le ballon dans le but adverse.</div></div>
-    <div class="faq-item"><div class="faq-q">🥏 Ultimate Frisbee</div><div class="faq-a">Sport collectif avec un disque volant. On marque en l'attrapant dans la zone d'en-but adverse ; interdit de courir avec le disque en main (pied de pivot comme au basket), pas de contact, sans arbitre.</div></div>
-    <div class="faq-item"><div class="faq-q">⛰️ Trail</div><div class="faq-a">Course à pied en pleine nature (chemins, sentiers, montagne), sur terrain varié. Individuel, distance libre — l'important, c'est le dénivelé et le terrain, pas juste la vitesse.</div></div>
-    <div class="faq-item"><div class="faq-q">⏱️ Hyrox</div><div class="faq-a">Format de course fitness : 8 km de course entrecoupés de 8 ateliers fonctionnels (rameur, poussée/tirage de traîneau, burpees...). Individuel ou en binôme, format identique partout dans le monde.</div></div>
-    <div class="faq-item"><div class="faq-q">🛶 Stand Up Paddle</div><div class="faq-a">Debout sur une grande planche, on avance à la pagaie simple pale, sur eau calme (lac, mer, rivière tranquille). Question d'équilibre avant tout — décontracté ou en course selon l'envie.</div></div>
-    <div class="faq-item"><div class="faq-q">🎳 Molkky</div><div class="faq-a">Jeu de lancer finlandais : on lance un bâton en bois pour faire tomber des quilles numérotées. Le score = le numéro de la quille tombée seule, ou le nombre de quilles si plusieurs tombent. Premier à exactement 50 points gagne (redescend à 25 en cas de dépassement).</div></div>
-    <div class="faq-item"><div class="faq-q">🥌 Palet Breton</div><div class="faq-a">Jeu de précision breton : on fait glisser des palets (disques) sur une planche en bois pour les rapprocher d'une cible ou déloger ceux de l'adversaire. Un peu comme le curling, mais lancé à la main.</div></div>
+    <p class="section-sub">Foot, tennis, volley, pétanque, échecs, Hyrox, Mölkky... D'autres sports seront ajoutés au fil des retours utilisateurs.</p>
+    <a class="teaser-link" href="sports.html">Voir tous les sports et comment ils se jouent →</a>
   </div>
 
   <hr class="hr" />
@@ -710,7 +696,7 @@
     <h2 class="section-h2">FAQ</h2>
     <p class="section-sub"></p>
     <div class="faq-item"><div class="faq-q">L'app est-elle gratuite ?</div><div class="faq-a">Oui. Tout nouveau compte bénéficie de Premium Découverte pendant 30 jours, puis passe automatiquement au plan Free gratuit. <a href="offres.html">Voir les offres →</a></div></div>
-    <div class="faq-item"><div class="faq-q">Pourquoi utiliser Partia plutôt qu'un groupe WhatsApp ou Meetup ?</div><div class="faq-a">Un groupe WhatsApp ne filtre ni par sport, ni par niveau, ni par distance. Partia combine filtre sport/niveau/distance, réputation et un chat dédié par créneau — sans gérer un énième groupe qui s'endort.</div></div>
+    <div class="faq-item"><div class="faq-q">Pourquoi utiliser Partia plutôt qu'un groupe WhatsApp ou Meetup ?</div><div class="faq-a">Un groupe WhatsApp suppose que tu connaisses déjà quelqu'un pour y être invité, et il ne filtre ni par sport, ni par niveau, ni par distance. Partia est fait pour jouer avec des gens que tu ne connais pas encore : filtre sport/niveau/distance, réputation et un chat dédié par créneau — sans gérer un énième groupe qui s'endort.</div></div>
     <a class="teaser-link" href="faq.html">Voir toute la FAQ →</a>
   </div>
 
@@ -747,18 +733,21 @@
       <div class="hero-badge">Zabudovaný chat</div>
       <div class="hero-badge">Len pre <span>dospelých</span></div>
     </div>
-    <a class="demo-placeholder" href="#demo-sk">
-      <span class="demo-placeholder-icon">🎥</span>
-      <span class="demo-placeholder-text">Pozri si Partiu v akcii ⬇</span>
-    </a>
   </div>
 
   <div class="section">
     <p class="section-title">Koncept</p>
     <h2 class="section-h2">Šport bez organizačného chaosu</h2>
-    <p class="section-sub">Pozri si šport, úroveň a dostupnosť nových ľudí vo svojom okolí. Partia vám umožní stretnúť sa pri jasne dohodnutom termíne a budovať dôveru vďaka profilom a reputácii.</p>
+    <p class="concept-hook">Miluješ šport, často máš chuť si zahrať, ale je ťažké nájsť partnerov voľných v rovnakom čase.</p>
+    <p class="section-sub" style="margin-bottom:8px;">Koncept Partie je jednoduchý:</p>
+    <ul class="concept-list">
+      <li>Vytvoríš si účet a vyplníš profil športmi, ktoré máš rád.</li>
+      <li>Partia ti ponúkne termíny vytvorené inými športovcami ako ty, podľa tvojich obľúbených športov, v tvojom okolí (okruh závisí od tvojej ponuky: 5 km / 25 km / neobmedzene).</li>
+      <li>Môžeš si tiež vytvárať vlastné termíny a boostovať ich (kvóty podľa ponuky).</li>
+    </ul>
     <div class="pitch-grid">
       <div class="pitch-card"><span class="pitch-icon">📍</span><div class="pitch-name">Blízko teba</div><div class="pitch-desc">GPS filtrovanie podľa vzdialenosti. Vidíš len termíny vo svojom okruhu.</div></div>
+      <div class="pitch-card"><span class="pitch-icon">🔒</span><div class="pitch-name">Súkromné termíny</div><div class="pitch-desc">Vytvor termín len pre tvojich kamarátov cez kód na zdieľanie — nezobrazí sa vo verejných výsledkoch.</div></div>
       <div class="pitch-card"><span class="pitch-icon">👨‍👩‍👧‍👦</span><div class="pitch-name">Dospelí a rodičia</div><div class="pitch-desc">Partiu používa dospelý. Rodič môže organizovať aktivitu v mene dieťaťa a zodpovedá za prihlásenie, chat aj dohľad.</div></div>
       <div class="pitch-card"><span class="pitch-icon">💬</span><div class="pitch-name">Chat na termín</div><div class="pitch-desc">Každý aktívny termín má vlastnú skupinu. Koordinácia bez opustenia appky.</div></div>
       <div class="pitch-card"><span class="pitch-icon">⭐</span><div class="pitch-name">Reputácia</div><div class="pitch-desc">Po každej session ohodnoť partnerov. Dochvíľny, Spoľahlivý, Fairplay, Cool...</div></div>
@@ -989,27 +978,8 @@
   <div class="section">
     <p class="section-title">Katalóg</p>
     <h2 class="section-h2">36 dostupných športov</h2>
-    <p class="section-sub">Ďalšie športy budú pridané podľa spätnej väzby používateľov.</p>
-    <div class="sports-grid">
-      <div class="sport-chip"><img src="assets/sport-icons/course.png" alt="">Beh</div><div class="sport-chip"><img src="assets/sport-icons/velo.png" alt="">Cyklistika</div><div class="sport-chip"><img src="assets/sport-icons/natation.png" alt="">Plávanie</div><div class="sport-chip"><img src="assets/sport-icons/randonnee.png" alt="">Turistika</div><div class="sport-chip"><img src="assets/sport-icons/fitness.png" alt="">Fitness</div><div class="sport-chip"><img src="assets/sport-icons/yoga.png" alt="">Jóga</div><div class="sport-chip"><img src="assets/sport-icons/roller.png" alt="">Korčuľovanie</div><div class="sport-chip"><img src="assets/sport-icons/tennis.png" alt="">Tenis</div><div class="sport-chip"><img src="assets/sport-icons/badminton.png" alt="">Bedminton</div><div class="sport-chip"><img src="assets/sport-icons/squash.png" alt="">Squash</div><div class="sport-chip">🏓 Stolný tenis</div><div class="sport-chip"><img src="assets/sport-icons/padel.png" alt="">Padel</div><div class="sport-chip">⚽ Futbal</div><div class="sport-chip"><img src="assets/sport-icons/futsal.png" alt="">Futsál</div><div class="sport-chip">🏀 Basketbal</div><div class="sport-chip">🏐 Volejbal</div><div class="sport-chip"><img src="assets/sport-icons/beachvolley.png" alt="">Plážový volejbal</div><div class="sport-chip"><img src="assets/sport-icons/floorball.png" alt="">Florbal</div><div class="sport-chip"><img src="assets/sport-icons/petanque.png" alt="">Pétanque</div><div class="sport-chip">🐎 Jazdectvo</div><div class="sport-chip">🏉 Rugby 7</div><div class="sport-chip">🤾 Hádzaná</div><div class="sport-chip"><img src="assets/sport-icons/beachsoccer.png" alt="">Plážový futbal</div><div class="sport-chip">🤽 Vodné pólo</div><div class="sport-chip"><img src="assets/sport-icons/sandball.png" alt="">Sandball</div><div class="sport-chip">🥏 Ultimate</div><div class="sport-chip"><img src="assets/sport-icons/trail.png" alt="">Trailový beh</div><div class="sport-chip"><img src="assets/sport-icons/hyrox.png" alt="">Hyrox</div><div class="sport-chip">🏹 Lukostreľba</div><div class="sport-chip">🏄 Surfovanie</div><div class="sport-chip"><img src="assets/sport-icons/sup.png" alt="">Paddleboarding</div><div class="sport-chip">⛷️ Lyžovanie/Snowboarding</div><div class="sport-chip">💃 Tanec</div><div class="sport-chip"><img src="assets/sport-icons/molkky.png" alt="">Mölkky</div><div class="sport-chip"><img src="assets/sport-icons/paletbreton.png" alt="">Palet Breton</div><div class="sport-chip"><img src="assets/sport-icons/echecs.png" alt="">Šach</div>
-    </div>
-  </div>
-
-  <hr class="hr" />
-
-  <div class="section">
-    <p class="section-title">Menej známe športy</p>
-    <h2 class="section-h2">Ako sa hrá?</h2>
-    <p class="section-sub">Krátke pripomenutie pravidiel pre menej zjavné športy z katalógu.</p>
-    <div class="faq-item"><div class="faq-q">🏑 Florbal</div><div class="faq-a">Šport s plastovou hokejkou a ľahkou dierovanou loptičkou, hrateľný v hale aj vonku. Tímy po 5 alebo 6 hráčoch, bez telesného kontaktu, hokejka stále pod výškou bokov.</div></div>
-    <div class="faq-item"><div class="faq-q">🏖️ Plážový futbal</div><div class="faq-a">Futbal na piesku, 5 na 5, 3 tretiny po 12 minút. Žiadne vhadzovanie — lopta sa vracia priamo kopom.</div></div>
-    <div class="faq-item"><div class="faq-q">🌴 Sandball</div><div class="faq-a">Podobné hádzanej, ale na piesku a bez driblovania. 4 na 4, gól sa dáva hodením lopty do súperovej bránky.</div></div>
-    <div class="faq-item"><div class="faq-q">🥏 Ultimate</div><div class="faq-a">Kolektívny šport s lietajúcim diskom. Gól sa dáva chytením disku v súperovej end zóne; s diskom v ruke sa nesmie bežať (pivotná noha ako v basketbale), bez kontaktu, bez rozhodcu.</div></div>
-    <div class="faq-item"><div class="faq-q">⛰️ Trailový beh</div><div class="faq-a">Beh v prírode (chodníky, hory, lesy) po rôznorodom teréne. Individuálne, ľubovoľná vzdialenosť — dôležité je prevýšenie a terén, nie len rýchlosť.</div></div>
-    <div class="faq-item"><div class="faq-q">⏱️ Hyrox</div><div class="faq-a">Fitness pretekársky formát: 8 km behu prerušovaného 8 funkčnými stanicami (veslovanie, tlačenie/ťahanie sane, burpees...). Sólo alebo v dvojici, rovnaký formát na celom svete.</div></div>
-    <div class="faq-item"><div class="faq-q">🛶 Paddleboarding</div><div class="faq-a">Státie na veľkej doske, veslovanie jednolistým veslom po pokojnej vode (jazero, more, pokojná rieka). Ide hlavne o rovnováhu — pokojne alebo pretekársky podľa chuti.</div></div>
-    <div class="faq-item"><div class="faq-q">🎳 Mölkky</div><div class="faq-a">Fínska hádzacia hra: hodom drevenej palice sa zhadzujú očíslované kolky. Skóre = číslo jediného zhodeného kolku, alebo počet kolkov, ak padne viac. Prvý presne na 50 bodoch vyhráva (pri prekročení klesá na 25).</div></div>
-    <div class="faq-item"><div class="faq-q">🥌 Palet Breton</div><div class="faq-a">Presná hra z Bretónska: po drevenej doske sa posúvajú kotúče ("palety"), aby skončili blízko cieľa alebo vyradili súperove kotúče. Trochu ako curling, ale hádzané rukou.</div></div>
+    <p class="section-sub">Futbal, tenis, volejbal, pétanque, šach, Hyrox, Mölkky... Ďalšie športy budú pridané podľa spätnej väzby používateľov.</p>
+    <a class="teaser-link" href="sports.html">Pozri si všetky športy a ako sa hrajú →</a>
   </div>
 
   <hr class="hr" />
@@ -1019,7 +989,7 @@
     <h2 class="section-h2">FAQ</h2>
     <p class="section-sub"></p>
     <div class="faq-item"><div class="faq-q">Je aplikácia bezplatná?</div><div class="faq-a">Áno. Každý nový účet získa Premium na vyskúšanie na 30 dní a potom automaticky prejde na bezplatný Free. <a href="offres.html">Pozri si ponuky →</a></div></div>
-    <div class="faq-item"><div class="faq-q">Prečo používať Partiu namiesto WhatsApp skupiny alebo Meetupu?</div><div class="faq-a">WhatsApp skupina nefiltruje podľa športu, úrovne ani vzdialenosti. Partia kombinuje filter športu/úrovne/vzdialenosti, reputáciu a vyhradený chat pre každý termín — bez ďalšej skupinovej konverzácie, ktorá stíchne.</div></div>
+    <div class="faq-item"><div class="faq-q">Prečo používať Partiu namiesto WhatsApp skupiny alebo Meetupu?</div><div class="faq-a">WhatsApp skupina predpokladá, že už niekoho poznáš, a nefiltruje podľa športu, úrovne ani vzdialenosti. Partia je na to, aby si hral so športovcami, ktorých ešte nepoznáš: filter športu/úrovne/vzdialenosti, reputácia a vyhradený chat pre každý termín — bez ďalšej skupinovej konverzácie, ktorá stíchne.</div></div>
     <a class="teaser-link" href="faq.html">Pozri si celé FAQ →</a>
   </div>
 
@@ -1055,18 +1025,21 @@
       <div class="hero-badge">Built-in chat</div>
       <div class="hero-badge"><span>Adults</span> only</div>
     </div>
-    <a class="demo-placeholder" href="#demo-en">
-      <span class="demo-placeholder-icon">🎥</span>
-      <span class="demo-placeholder-text">See Partia in action ⬇</span>
-    </a>
   </div>
 
   <div class="section">
     <p class="section-title">The concept</p>
     <h2 class="section-h2">Sport without the organisational hassle</h2>
-    <p class="section-sub">See the sport, level and availability of new people nearby. Partia helps you meet around a clear session and build trust through profiles and reputation.</p>
+    <p class="concept-hook">You love sport, you often feel like playing, but it's hard to find partners available at the same time.</p>
+    <p class="section-sub" style="margin-bottom:8px;">Partia's concept is simple:</p>
+    <ul class="concept-list">
+      <li>You create your account and fill in your profile with the sports you like.</li>
+      <li>Partia shows you slots created by other athletes like you, matching your favorite sports, near you (the radius depends on your plan: 5 km / 25 km / unlimited).</li>
+      <li>You can also create your own slots and boost them (quotas depend on your plan).</li>
+    </ul>
     <div class="pitch-grid">
       <div class="pitch-card"><span class="pitch-icon">📍</span><div class="pitch-name">Near you</div><div class="pitch-desc">GPS-based distance filtering. See only slots within your chosen radius.</div></div>
+      <div class="pitch-card"><span class="pitch-icon">🔒</span><div class="pitch-name">Private slots</div><div class="pitch-desc">Create a slot just for your friends with a shareable code — it won't appear in public results.</div></div>
       <div class="pitch-card"><span class="pitch-icon">👨‍👩‍👧‍👦</span><div class="pitch-name">Adults and parents</div><div class="pitch-desc">The adult uses Partia. A parent may organize an activity on behalf of a child and remains responsible for registration, chat and supervision.</div></div>
       <div class="pitch-card"><span class="pitch-icon">💬</span><div class="pitch-name">Chat per slot</div><div class="pitch-desc">Every active slot has its own group chat. Coordinate without leaving the app.</div></div>
       <div class="pitch-card"><span class="pitch-icon">⭐</span><div class="pitch-name">Reputation</div><div class="pitch-desc">Rate your partners after each session. Punctual, Reliable, Fairplay, Cool...</div></div>
@@ -1303,27 +1276,8 @@
   <div class="section">
     <p class="section-title">Catalogue</p>
     <h2 class="section-h2">36 sports available</h2>
-    <p class="section-sub">More sports will be added based on user feedback.</p>
-    <div class="sports-grid">
-      <div class="sport-chip"><img src="assets/sport-icons/course.png" alt="">Running</div><div class="sport-chip"><img src="assets/sport-icons/velo.png" alt="">Cycling</div><div class="sport-chip"><img src="assets/sport-icons/natation.png" alt="">Swimming</div><div class="sport-chip"><img src="assets/sport-icons/randonnee.png" alt="">Hiking</div><div class="sport-chip"><img src="assets/sport-icons/fitness.png" alt="">Fitness</div><div class="sport-chip"><img src="assets/sport-icons/yoga.png" alt="">Yoga</div><div class="sport-chip"><img src="assets/sport-icons/roller.png" alt="">Roller skating</div><div class="sport-chip"><img src="assets/sport-icons/tennis.png" alt="">Tennis</div><div class="sport-chip"><img src="assets/sport-icons/badminton.png" alt="">Badminton</div><div class="sport-chip"><img src="assets/sport-icons/squash.png" alt="">Squash</div><div class="sport-chip">🏓 Table Tennis</div><div class="sport-chip"><img src="assets/sport-icons/padel.png" alt="">Padel</div><div class="sport-chip">⚽ Football</div><div class="sport-chip"><img src="assets/sport-icons/futsal.png" alt="">Futsal</div><div class="sport-chip">🏀 Basketball</div><div class="sport-chip">🏐 Volleyball</div><div class="sport-chip"><img src="assets/sport-icons/beachvolley.png" alt="">Beach Volleyball</div><div class="sport-chip"><img src="assets/sport-icons/floorball.png" alt="">Floorball</div><div class="sport-chip"><img src="assets/sport-icons/petanque.png" alt="">Pétanque</div><div class="sport-chip">🐎 Horse riding</div><div class="sport-chip">🏉 Rugby Sevens</div><div class="sport-chip">🤾 Handball</div><div class="sport-chip"><img src="assets/sport-icons/beachsoccer.png" alt="">Beach Soccer</div><div class="sport-chip">🤽 Water Polo</div><div class="sport-chip"><img src="assets/sport-icons/sandball.png" alt="">Sandball</div><div class="sport-chip">🥏 Ultimate Frisbee</div><div class="sport-chip"><img src="assets/sport-icons/trail.png" alt="">Trail running</div><div class="sport-chip"><img src="assets/sport-icons/hyrox.png" alt="">Hyrox</div><div class="sport-chip">🏹 Archery</div><div class="sport-chip">🏄 Surfing</div><div class="sport-chip"><img src="assets/sport-icons/sup.png" alt="">Stand Up Paddle</div><div class="sport-chip">⛷️ Skiing / Snowboarding</div><div class="sport-chip">💃 Dance</div><div class="sport-chip"><img src="assets/sport-icons/molkky.png" alt="">Mölkky</div><div class="sport-chip"><img src="assets/sport-icons/paletbreton.png" alt="">Palet Breton</div><div class="sport-chip"><img src="assets/sport-icons/echecs.png" alt="">Chess</div>
-    </div>
-  </div>
-
-  <hr class="hr" />
-
-  <div class="section">
-    <p class="section-title">Lesser-known sports</p>
-    <h2 class="section-h2">How is it played?</h2>
-    <p class="section-sub">A quick rules reminder for the less obvious sports in the catalog.</p>
-    <div class="faq-item"><div class="faq-q">🏑 Floorball</div><div class="faq-a">A sport played indoors or outdoors, with a plastic stick and a light perforated ball. Teams of 5 or 6-a-side, no body contact, stick always below hip height.</div></div>
-    <div class="faq-item"><div class="faq-q">🏖️ Beach Soccer</div><div class="faq-a">Football on sand, 5-a-side, 3 periods of 12 minutes. No throw-ins — the ball is kicked back in directly.</div></div>
-    <div class="faq-item"><div class="faq-q">🌴 Sandball</div><div class="faq-a">Similar to handball but on sand, no dribbling. 4-a-side, score by throwing the ball into the opponent's goal.</div></div>
-    <div class="faq-item"><div class="faq-q">🥏 Ultimate Frisbee</div><div class="faq-a">Team sport with a flying disc. Score by catching it in the opponent's end zone; no running while holding the disc (pivot foot like basketball), no contact, self-refereed.</div></div>
-    <div class="faq-item"><div class="faq-q">⛰️ Trail</div><div class="faq-a">Off-road running (trails, mountains, forests) on varied terrain. Individual, any distance — it's about elevation and terrain, not just speed.</div></div>
-    <div class="faq-item"><div class="faq-q">⏱️ Hyrox</div><div class="faq-a">A fitness race format: 8km of running split by 8 functional stations (rowing, sled push/pull, burpees...). Solo or in pairs, same standardized format worldwide.</div></div>
-    <div class="faq-item"><div class="faq-q">🛶 Stand Up Paddle</div><div class="faq-a">Standing on a large board, paddling with a single-bladed paddle, on calm water (lake, sea, calm river). Mostly about balance — leisurely or race-style.</div></div>
-    <div class="faq-item"><div class="faq-q">🎳 Mölkky</div><div class="faq-a">Finnish throwing game: toss a wooden baton to knock over numbered pins. Score = the number on the single pin knocked down, or the count of pins if several fall. First to exactly 50 points wins (drops back to 25 if you go over).</div></div>
-    <div class="faq-item"><div class="faq-q">🥌 Palet Breton</div><div class="faq-a">A precision game from Brittany: slide discs ("palets") along a wooden board to land close to a target or knock out the opponent's discs. A bit like curling, but hand-thrown.</div></div>
+    <p class="section-sub">Football, tennis, volleyball, pétanque, chess, Hyrox, Mölkky... More sports will be added based on user feedback.</p>
+    <a class="teaser-link" href="sports.html">See all sports and how they're played →</a>
   </div>
 
   <hr class="hr" />
@@ -1333,7 +1287,7 @@
     <h2 class="section-h2">Frequently Asked Questions</h2>
     <p class="section-sub"></p>
     <div class="faq-item"><div class="faq-q">Is the app free?</div><div class="faq-a">Yes. Every new account gets Premium Discovery for 30 days, then automatically switches to the free plan. <a href="offres.html">See the plans →</a></div></div>
-    <div class="faq-item"><div class="faq-q">Why use Partia instead of a WhatsApp group or Meetup?</div><div class="faq-a">A WhatsApp group doesn't filter by sport, skill level, or distance. Partia combines sport/level/distance filtering, reputation and a dedicated chat per slot — without managing yet another group chat that goes quiet.</div></div>
+    <div class="faq-item"><div class="faq-q">Why use Partia instead of a WhatsApp group or Meetup?</div><div class="faq-a">A WhatsApp group assumes you already know someone, and it doesn't filter by sport, skill level, or distance. Partia is built for playing with people you don't know yet: sport/level/distance filtering, reputation and a dedicated chat per slot — without managing yet another group chat that goes quiet.</div></div>
     <a class="teaser-link" href="faq.html">See the full FAQ →</a>
   </div>
 

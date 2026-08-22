@@ -50,6 +50,10 @@
     .plan-notice { margin-top: 18px; padding: 14px 16px; border-radius: 12px; background: rgba(255,96,53,0.08); border: 1px solid rgba(255,96,53,0.25); color: var(--gray); font-size: 13px; }
     .plan-notice strong { color: #fff; }
 
+    .info-tip { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; border-radius: 50%; background: rgba(255,96,53,0.25); color: var(--primary); font-size: 11px; font-weight: 900; margin-left: 4px; cursor: help; vertical-align: middle; }
+    .info-tip-bubble { display: none; position: absolute; bottom: 130%; left: 50%; transform: translateX(-50%); width: 230px; background: var(--dark); border: 1px solid rgba(255,96,53,0.35); border-radius: 10px; padding: 10px 12px; font-size: 12px; font-weight: 500; color: var(--gray); line-height: 1.5; box-shadow: 0 8px 24px rgba(0,0,0,0.4); z-index: 10; text-align: left; }
+    .info-tip:hover .info-tip-bubble, .info-tip:focus .info-tip-bubble { display: block; }
+
     .cta-section { text-align: center; padding: 56px 24px; background: linear-gradient(160deg, #0F3460 0%, #1A1A2E 100%); border-top: 2px solid var(--primary); }
     .cta-title { font-size: 26px; font-weight: 900; color: #fff; margin-bottom: 10px; }
     .cta-sub { color: var(--gray); font-size: 15px; }
@@ -68,9 +72,9 @@
 
 <nav class="lang-bar">
   <a class="lang-logo" href="index.html"><img class="brand-icon" src="assets/partia-sport-icon-v1.png" alt="">Partia</a>
-  <div class="top-nav" data-lang="fr" style="display:flex"><a href="index.html">Accueil</a><a class="current" href="offres.html">Offres</a><a href="faq.html">FAQ</a></div>
-  <div class="top-nav" data-lang="sk" style="display:none"><a href="index.html">Domov</a><a class="current" href="offres.html">Ponuky</a><a href="faq.html">FAQ</a></div>
-  <div class="top-nav" data-lang="en" style="display:none"><a href="index.html">Home</a><a class="current" href="offres.html">Plans</a><a href="faq.html">FAQ</a></div>
+  <div class="top-nav" data-lang="fr" style="display:flex"><a href="index.html">Accueil</a><a href="sports.html">Sports</a><a class="current" href="offres.html">Offres</a><a href="faq.html">FAQ</a></div>
+  <div class="top-nav" data-lang="sk" style="display:none"><a href="index.html">Domov</a><a href="sports.html">Športy</a><a class="current" href="offres.html">Ponuky</a><a href="faq.html">FAQ</a></div>
+  <div class="top-nav" data-lang="en" style="display:none"><a href="index.html">Home</a><a href="sports.html">Sports</a><a class="current" href="offres.html">Plans</a><a href="faq.html">FAQ</a></div>
   <div class="lang-btns">
     <button class="lang-btn active" data-lang-btn="fr" onclick="setLang('fr')">🇫🇷 FR</button>
     <button class="lang-btn" data-lang-btn="sk" onclick="setLang('sk')">🇸🇰 SK</button>
@@ -87,9 +91,9 @@
   </div>
   <div class="section">
     <div class="plan-grid">
-      <div class="plan-card"><div class="plan-name">🆓 Free</div><div class="plan-kicker">Après les 30 jours offerts</div><ul class="plan-list"><li>Vois et rejoins les créneaux jusqu'à 5 km autour de toi</li><li>Aperçu (sans les détails) des créneaux entre 5 et 25 km</li><li>Organise jusqu'à 5 créneaux par mois</li><li>Retrouve tes 30 derniers jours d'activité</li></ul></div>
-      <div class="plan-card premium"><div class="plan-name">⭐ Premium</div><div class="plan-kicker">2,99 €/mois via Google Play</div><ul class="plan-list"><li>Vois et rejoins les créneaux jusqu'à 25 km autour de toi</li><li>Organise autant de créneaux que tu veux</li><li>Retrouve tes 90 derniers jours d'activité</li><li>1 boost offert chaque mois pour plus de visibilité</li></ul></div>
-      <div class="plan-card plus"><div class="plan-name">🚀 Premium+</div><div class="plan-kicker">4,99 €/mois via Google Play</div><ul class="plan-list"><li>Aucune limite de distance, où que tu sois</li><li>Créneaux illimités, y compris en privé entre amis</li><li>Historique complet, sans limite de temps</li><li>3 boosts offerts chaque mois</li></ul></div>
+      <div class="plan-card"><div class="plan-name">🆓 Free</div><div class="plan-kicker">Après les 30 jours offerts</div><ul class="plan-list"><li>Vois et rejoins les créneaux jusqu'à 5 km autour de toi</li><li>Aperçu (sans les détails) des créneaux entre 5 et 25 km</li><li>Organise jusqu'à 5 créneaux par mois</li><li>Retrouve tous les créneaux où tu apparais, sur les 30 derniers jours</li></ul></div>
+      <div class="plan-card premium"><div class="plan-name">⭐ Premium</div><div class="plan-kicker">2,99 €/mois via Google Play</div><ul class="plan-list"><li>Vois et rejoins les créneaux jusqu'à 25 km autour de toi</li><li>Organise autant de créneaux que tu veux</li><li>Retrouve tous les créneaux où tu apparais, sur les 90 derniers jours</li><li>1 boost offert chaque mois pour plus de visibilité</li></ul></div>
+      <div class="plan-card plus"><div class="plan-name">🚀 Premium+</div><div class="plan-kicker">4,99 €/mois via Google Play</div><ul class="plan-list"><li>Aucune limite de distance, où que tu sois</li><li>Créneaux illimités, y compris en privé entre amis <span class="info-tip" tabindex="0">i<span class="info-tip-bubble">Crée un créneau privé et partage son code avec tes amis : seuls ceux qui l'ont peuvent le rejoindre, il n'apparaît jamais dans les résultats publics.</span></span></li><li>Retrouve tous les créneaux où tu apparais, sans limite de temps</li><li>3 boosts offerts chaque mois</li></ul></div>
     </div>
     <div class="plan-notice"><strong>Premium Découverte est offert automatiquement pendant 30 jours aux nouveaux comptes.</strong> Il repasse ensuite en Free sans prélèvement automatique.</div>
     <div class="plan-notice"><strong>⚡ À quoi sert un boost ?</strong> Il place un créneau ouvert en tête des résultats Explorer pendant 24 heures pour augmenter sa visibilité. Premium et Premium+ en incluent chaque mois ; le boost supplémentaire est configuré à 0,99 € dans Google Play. Les prix réellement affichés sont localisés par Google Play. Il ne garantit aucune inscription et ne s'applique pas aux créneaux privés, complets ou terminés.</div>
@@ -114,9 +118,9 @@
   </div>
   <div class="section">
     <div class="plan-grid">
-      <div class="plan-card"><div class="plan-name">🆓 Free</div><div class="plan-kicker">Po 30 bezplatných dňoch</div><ul class="plan-list"><li>Vidíš a pripájaš sa k termínom do 5 km od teba</li><li>Náhľad (bez detailov) termínov vo vzdialenosti 5 až 25 km</li><li>Vytváraš až 5 termínov mesačne</li><li>Vidíš posledných 30 dní svojej aktivity</li></ul></div>
-      <div class="plan-card premium"><div class="plan-name">⭐ Premium</div><div class="plan-kicker">2,99 €/mesiac cez Google Play</div><ul class="plan-list"><li>Vidíš a pripájaš sa k termínom do 25 km od teba</li><li>Vytváraš toľko termínov, koľko chceš</li><li>Vidíš posledných 90 dní svojej aktivity</li><li>1 boost mesačne zadarmo pre väčšiu viditeľnosť</li></ul></div>
-      <div class="plan-card plus"><div class="plan-name">🚀 Premium+</div><div class="plan-kicker">4,99 €/mesiac cez Google Play</div><ul class="plan-list"><li>Žiadny limit vzdialenosti, nech si kdekoľvek</li><li>Neobmedzené termíny vrátane súkromných s kamarátmi</li><li>Kompletná história bez časového obmedzenia</li><li>3 boosty mesačne zadarmo</li></ul></div>
+      <div class="plan-card"><div class="plan-name">🆓 Free</div><div class="plan-kicker">Po 30 bezplatných dňoch</div><ul class="plan-list"><li>Vidíš a pripájaš sa k termínom do 5 km od teba</li><li>Náhľad (bez detailov) termínov vo vzdialenosti 5 až 25 km</li><li>Vytváraš až 5 termínov mesačne</li><li>Vidíš všetky svoje termíny za posledných 30 dní</li></ul></div>
+      <div class="plan-card premium"><div class="plan-name">⭐ Premium</div><div class="plan-kicker">2,99 €/mesiac cez Google Play</div><ul class="plan-list"><li>Vidíš a pripájaš sa k termínom do 25 km od teba</li><li>Vytváraš toľko termínov, koľko chceš</li><li>Vidíš všetky svoje termíny za posledných 90 dní</li><li>1 boost mesačne zadarmo pre väčšiu viditeľnosť</li></ul></div>
+      <div class="plan-card plus"><div class="plan-name">🚀 Premium+</div><div class="plan-kicker">4,99 €/mesiac cez Google Play</div><ul class="plan-list"><li>Žiadny limit vzdialenosti, nech si kdekoľvek</li><li>Neobmedzené termíny vrátane súkromných s kamarátmi <span class="info-tip" tabindex="0">i<span class="info-tip-bubble">Vytvor súkromný termín a zdieľaj jeho kód s kamarátmi — pripojiť sa môžu len tí, čo kód majú, vo verejných výsledkoch sa nikdy nezobrazí.</span></span></li><li>Vidíš všetky svoje termíny bez časového obmedzenia</li><li>3 boosty mesačne zadarmo</li></ul></div>
     </div>
     <div class="plan-notice"><strong>Premium na vyskúšanie dostanú nové účty automaticky na 30 dní.</strong> Potom sa bez automatickej platby aktivuje Free.</div>
     <div class="plan-notice"><strong>⚡ Na čo slúži boost?</strong> Posunie otvorený termín na 24 hodín na začiatok výsledkov Objaviť, aby bol viditeľnejší. Premium a Premium+ zahŕňajú boosty každý mesiac; ďalší boost je v Google Play nastavený na 0,99 €. Skutočne zobrazené ceny lokalizuje Google Play. Nezaručuje prihlásenie a neplatí pre súkromné, plné ani ukončené termíny.</div>
@@ -141,9 +145,9 @@
   </div>
   <div class="section">
     <div class="plan-grid">
-      <div class="plan-card"><div class="plan-name">🆓 Free</div><div class="plan-kicker">After the 30 free days</div><ul class="plan-list"><li>See and join slots up to 5 km from you</li><li>Preview (without details) of slots between 5 and 25 km</li><li>Host up to 5 slots per month</li><li>See your last 30 days of activity</li></ul></div>
-      <div class="plan-card premium"><div class="plan-name">⭐ Premium</div><div class="plan-kicker">€2.99/month via Google Play</div><ul class="plan-list"><li>See and join slots up to 25 km from you</li><li>Host as many slots as you want</li><li>See your last 90 days of activity</li><li>1 free boost every month for extra visibility</li></ul></div>
-      <div class="plan-card plus"><div class="plan-name">🚀 Premium+</div><div class="plan-kicker">€4.99/month via Google Play</div><ul class="plan-list"><li>No distance limit, wherever you are</li><li>Unlimited slots, including private ones with friends</li><li>Full history, no time limit</li><li>3 free boosts every month</li></ul></div>
+      <div class="plan-card"><div class="plan-name">🆓 Free</div><div class="plan-kicker">After the 30 free days</div><ul class="plan-list"><li>See and join slots up to 5 km from you</li><li>Preview (without details) of slots between 5 and 25 km</li><li>Host up to 5 slots per month</li><li>See every slot you appear in, over the last 30 days</li></ul></div>
+      <div class="plan-card premium"><div class="plan-name">⭐ Premium</div><div class="plan-kicker">€2.99/month via Google Play</div><ul class="plan-list"><li>See and join slots up to 25 km from you</li><li>Host as many slots as you want</li><li>See every slot you appear in, over the last 90 days</li><li>1 free boost every month for extra visibility</li></ul></div>
+      <div class="plan-card plus"><div class="plan-name">🚀 Premium+</div><div class="plan-kicker">€4.99/month via Google Play</div><ul class="plan-list"><li>No distance limit, wherever you are</li><li>Unlimited slots, including private ones with friends <span class="info-tip" tabindex="0">i<span class="info-tip-bubble">Create a private slot and share its code with friends — only people with the code can join, it never appears in public results.</span></span></li><li>See every slot you appear in, with no time limit</li><li>3 free boosts every month</li></ul></div>
     </div>
     <div class="plan-notice"><strong>Premium Discovery is automatically offered to new accounts for 30 days.</strong> It then switches to Free with no automatic charge.</div>
     <div class="plan-notice"><strong>⚡ What does a boost do?</strong> It moves an open slot to the top of Explore results for 24 hours to increase visibility. Premium and Premium+ include monthly boosts; the extra boost is configured at €0.99 in Google Play. The prices actually shown are localized by Google Play. It does not guarantee registrations and does not apply to private, full or past slots.</div>
