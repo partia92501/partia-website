@@ -99,9 +99,15 @@
     .egg-thanks { color: var(--gray); font-size: 12px; margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08); line-height: 1.6; }
     .egg-thanks strong { color: var(--primary); }
     .egg-close { display: block; margin: 20px auto 0; background: none; border: none; color: var(--primary); font-size: 15px; font-weight: 700; cursor: pointer; padding: 0; font-family: inherit; }
+
+    /* SITE-WIDE SPORT EMOJI BACKGROUND — discret, visible entre les blocs opaques */
+    .sport-bg { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+    .sport-bg span { position: absolute; }
   </style>
 </head>
 <body>
+
+<div class="sport-bg" id="sport-bg"></div>
 
 <nav class="lang-bar">
   <a class="lang-logo" href="index.html"><img class="brand-icon" src="assets/partia-sport-icon-v1.png" alt="">Partia</a>
@@ -791,6 +797,24 @@
 </div>
 
 <script>
+  // Fond discret d'emoji sport, visible entre les blocs opaques (même esprit que l'app).
+  (function () {
+    var BG_SPORTS = ['⚽','🏀','🎾','🏐','🏃','🚴','🏊','🏋️','🧘','🛼','🏸','🏓','🏒','🐎'];
+    document.addEventListener('DOMContentLoaded', function () {
+      var container = document.getElementById('sport-bg');
+      if (!container) return;
+      for (var i = 0; i < 60; i++) {
+        var span = document.createElement('span');
+        span.textContent = BG_SPORTS[i % BG_SPORTS.length];
+        span.style.left = (Math.random() * 100) + '%';
+        span.style.top = (Math.random() * 100) + '%';
+        span.style.fontSize = (14 + Math.random() * 10) + 'px';
+        span.style.opacity = (0.04 + Math.random() * 0.06).toFixed(2);
+        container.appendChild(span);
+      }
+    });
+  })();
+
   // Easter egg — 5 taps sur le logo, texte selon la langue active.
   (function () {
     var EGG_SPORTS = ['⚽','🏀','🎾','🏐','🏃','🚴','🏊','🏋️','🧘','🛼','🏸','🏓','🏒','🐎'];
