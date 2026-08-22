@@ -122,6 +122,18 @@
     @media (max-width: 640px) {
       .hero-title { font-size: 48px; }
     }
+
+    /* EASTER EGG */
+    .egg-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.88); z-index: 1000; align-items: center; justify-content: center; padding: 24px; }
+    .egg-overlay.visible { display: flex; }
+    .egg-bg { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+    .egg-bg span { position: absolute; }
+    .egg-box { position: relative; background: var(--card); border-radius: 20px; padding: 28px; max-width: 360px; width: 90%; max-height: 80vh; overflow-y: auto; box-shadow: 0 20px 60px rgba(0,0,0,0.5); z-index: 1; }
+    .egg-title { color: #fff; font-size: 22px; font-weight: 900; margin-bottom: 16px; }
+    .egg-line { color: var(--gray); font-size: 14px; line-height: 1.6; margin-bottom: 10px; }
+    .egg-thanks { color: var(--gray); font-size: 12px; margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08); line-height: 1.6; }
+    .egg-thanks strong { color: var(--primary); }
+    .egg-close { display: block; margin: 20px auto 0; background: none; border: none; color: var(--primary); font-size: 15px; font-weight: 700; cursor: pointer; padding: 0; font-family: inherit; }
   </style>
 </head>
 <body>
@@ -483,7 +495,115 @@
 
 </div><!-- /en -->
 
+<div class="egg-overlay" id="egg-overlay">
+  <div class="egg-bg" id="egg-bg"></div>
+  <div class="egg-box">
+    <div id="egg-title" class="egg-title"></div>
+    <div id="egg-lines"></div>
+    <div id="egg-thanks" class="egg-thanks"></div>
+    <button id="egg-close" class="egg-close"><span id="egg-close-text"></span></button>
+  </div>
+</div>
+
 <audio id="demo-bgm" src="assets/audio/demo-bgm.mp3" preload="none"></audio>
+
+<script>
+  // Easter egg — 5 taps sur le logo, texte selon la langue active.
+  (function () {
+    var EGG_SPORTS = ['⚽','🏀','🎾','🏐','🏃','🚴','🏊','🏋️','🧘','🛼','🏸','🏓','🏒','🐎'];
+    var EGG_TEXT = {
+      fr: {
+        greeting: "Enfin, tu m'as trouvé 😉",
+        lines: [
+          "Bon, pas trop de place ici pour écrire un roman, alors on va faire court 🙂",
+          "Moi c'est Manu, Français vivant en Slovaquie — j'en avais marre de galérer à faire les sports que j'aime.",
+          "Ma solution : une appli simple et fonctionnelle.",
+          "Amuse-toi bien !!!! 😘"
+        ],
+        thanksPrefix: "Remerciements à mes testeurs : Ophélie, Jana, Catherine, Monika, Priscilla, Zoya, Nicholas, Mikaël, Médéric, Maxime, Ferus et mon fidèle assistant (et fils) ",
+        close: 'Fermer'
+      },
+      sk: {
+        greeting: "Konečne si ma našiel/našla 😉",
+        lines: [
+          "Tu nie je veľa miesta na román, tak to spravím krátko 🙂",
+          "Ja som Manu, Francúz žijúci na Slovensku — mal som dosť trápenia s hľadaním športu, ktorý mám rád.",
+          "Moje riešenie: jednoduchá a funkčná appka.",
+          "Uži si to !!!! 😘"
+        ],
+        thanksPrefix: "Poďakovanie mojim testerom: Ophélie, Jana, Catherine, Monika, Priscilla, Zoya, Nicholas, Mikaël, Médéric, Maxime, Ferus a môjmu vernému asistentovi (a synovi) ",
+        close: 'Zavrieť'
+      },
+      en: {
+        greeting: "You finally found me 😉",
+        lines: [
+          "Not much room here for a novel, so let's keep it short 🙂",
+          "I'm Manu, a Frenchman living in Slovakia — I got tired of struggling to play the sports I love.",
+          "My solution: a simple, functional app.",
+          "Have fun !!!! 😘"
+        ],
+        thanksPrefix: "Thanks to my testers: Ophélie, Jana, Catherine, Monika, Priscilla, Zoya, Nicholas, Mikaël, Médéric, Maxime, Ferus, and my loyal assistant (and son) ",
+        close: 'Close'
+      }
+    };
+
+    function buildEggBg(container) {
+      container.innerHTML = '';
+      for (var i = 0; i < 50; i++) {
+        var span = document.createElement('span');
+        span.textContent = EGG_SPORTS[i % EGG_SPORTS.length];
+        span.style.left = (Math.random() * 100) + '%';
+        span.style.top = (Math.random() * 100) + '%';
+        span.style.fontSize = (16 + Math.random() * 16) + 'px';
+        span.style.opacity = (0.08 + Math.random() * 0.14).toFixed(2);
+        container.appendChild(span);
+      }
+    }
+
+    function showEgg() {
+      var lang = document.documentElement.lang || 'fr';
+      var data = EGG_TEXT[lang] || EGG_TEXT.fr;
+      document.getElementById('egg-title').textContent = data.greeting;
+      document.getElementById('egg-lines').innerHTML = data.lines.map(function (l) {
+        return '<p class="egg-line">' + l + '</p>';
+      }).join('');
+      document.getElementById('egg-thanks').innerHTML = data.thanksPrefix + '<strong>Daniel</strong>.';
+      document.getElementById('egg-close-text').textContent = data.close;
+      buildEggBg(document.getElementById('egg-bg'));
+      document.getElementById('egg-overlay').classList.add('visible');
+    }
+
+    function hideEgg() {
+      document.getElementById('egg-overlay').classList.remove('visible');
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var logo = document.querySelector('.lang-logo');
+      var tapCount = 0, navTimer = null;
+      if (logo) {
+        var href = logo.getAttribute('href');
+        logo.addEventListener('click', function (e) {
+          e.preventDefault();
+          clearTimeout(navTimer);
+          tapCount++;
+          if (tapCount >= 5) {
+            tapCount = 0;
+            showEgg();
+            return;
+          }
+          navTimer = setTimeout(function () {
+            tapCount = 0;
+            if (href) window.location.href = href;
+          }, 320);
+        });
+      }
+      var closeBtn = document.getElementById('egg-close');
+      if (closeBtn) closeBtn.addEventListener('click', hideEgg);
+      var overlay = document.getElementById('egg-overlay');
+      if (overlay) overlay.addEventListener('click', function (e) { if (e.target === overlay) hideEgg(); });
+    });
+  })();
+</script>
 
 <script>
   // Musique de fond synchronisée sur les vidéos démo — un seul fichier audio
