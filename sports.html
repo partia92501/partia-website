@@ -250,13 +250,13 @@
     document.addEventListener('DOMContentLoaded', function () {
       var container = document.getElementById('sport-bg');
       if (!container) return;
-      for (var i = 0; i < 60; i++) {
+      for (var i = 0; i < 130; i++) {
         var span = document.createElement('span');
         span.textContent = BG_SPORTS[i % BG_SPORTS.length];
         span.style.left = (Math.random() * 100) + '%';
         span.style.top = (Math.random() * 100) + '%';
-        span.style.fontSize = (14 + Math.random() * 10) + 'px';
-        span.style.opacity = (0.04 + Math.random() * 0.06).toFixed(2);
+        span.style.fontSize = (18 + Math.random() * 12) + 'px';
+        span.style.opacity = (0.12 + Math.random() * 0.13).toFixed(2);
         container.appendChild(span);
       }
     });
