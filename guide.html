@@ -46,6 +46,9 @@
     .screen-tag { margin-left: auto; background: rgba(255,96,53,0.12); color: var(--primary); border-radius: 999px; padding: 4px 12px; font-size: 12px; font-weight: 700; }
     .screen-layout { display: grid; grid-template-columns: 200px 1fr; gap: 28px; align-items: start; }
     .screen-mock { background: var(--card); border-radius: 24px; border: 2px solid rgba(255,255,255,0.1); overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,0.5); }
+    .screen-mock.shot { display: flex; flex-direction: column; }
+    .screen-mock.shot img { width: 100%; display: block; }
+    .screen-mock.shot img + img { border-top: 2px solid rgba(255,255,255,0.1); }
     .mock-status { background: #0F3460; padding: 8px 14px; display: flex; justify-content: space-between; font-size: 10px; color: rgba(255,255,255,0.5); }
     .mock-body { padding: 12px; min-height: 280px; }
     .mock-topbar { background: rgba(255,255,255,0.05); border-radius: 10px; padding: 10px 12px; margin-bottom: 10px; font-size: 11px; color: var(--primary); font-weight: 800; }
@@ -133,7 +136,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">1</div><div class="screen-title">Inscription &amp; Connexion</div><div class="screen-tag">Solo · 5 min</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div style="text-align:center;padding:8px 0 4px;"><span style="font-size:28px;">🤝</span><div style="color:var(--primary);font-weight:900;font-size:16px;">Partia</div></div><div class="mock-input">📧 Email</div><div class="mock-input">🔒 Mot de passe</div><div class="mock-btn">Se connecter</div><div style="text-align:center;margin-top:8px;font-size:10px;color:var(--gray);">Pas encore de compte ? <span style="color:var(--primary);">S'inscrire</span></div></div></div>
+        <div class="screen-mock shot"><img src="assets/screenshots/login_FR.jpg" alt="Écran de connexion Partia"></div>
         <div class="screen-content">
           <p class="screen-desc">Crée ton compte en 2 minutes. Renseigne ton prénom, email, mot de passe, sexe et date de naissance (18 ans minimum). Un email de vérification est envoyé automatiquement.</p>
           <ul class="feature-list">
@@ -150,7 +153,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">2</div><div class="screen-title">Configuration du Profil</div><div class="screen-tag">Après inscription</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">Mes sports 🏅</div><div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px;"><div style="background:rgba(255,96,53,0.3);border:1px solid var(--primary);border-radius:8px;padding:4px 8px;font-size:10px;color:#fff;">⚽ Football</div><div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:4px 8px;font-size:10px;color:var(--gray);">🏀 Basket</div><div style="background:rgba(255,96,53,0.3);border:1px solid var(--primary);border-radius:8px;padding:4px 8px;font-size:10px;color:#fff;">🎾 Tennis</div><div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:4px 8px;font-size:10px;color:var(--gray);">🏐 Volley</div><div style="background:rgba(255,96,53,0.3);border:1px solid var(--primary);border-radius:8px;padding:4px 8px;font-size:10px;color:#fff;">🚴 Vélo</div><div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:4px 8px;font-size:10px;color:var(--gray);">🏃 Course</div><div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:4px 8px;font-size:10px;color:var(--gray);">🏊 Natation</div><div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:4px 8px;font-size:10px;color:var(--gray);">🧘 Yoga</div></div><div style="font-size:9px;color:var(--gray);margin-bottom:6px;">📍 Ville (optionnel)</div><div class="mock-input">Bratislava</div><div class="mock-btn">Sauvegarder</div></div></div>
+        <div class="screen-mock shot"><img src="assets/screenshots/select_sports_FR.jpg" alt="Choix des sports et niveaux"><img src="assets/screenshots/pseudo_FR.jpg" alt="Choix du pseudo public"></div>
         <div class="screen-content">
           <p class="screen-desc">Dès la connexion, complète ton profil en sélectionnant les sports que tu pratiques. C'est ce qui permet aux autres joueurs de te trouver et de voir si vous êtes compatibles.</p>
           <ul class="feature-list">
@@ -186,7 +189,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">4</div><div class="screen-title">Créer un Créneau</div><div class="screen-tag">Bouton + en bas</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">Nouveau créneau</div><div class="mock-input">⚽ Sport</div><div class="mock-input">📍 Lieu / Zone</div><div class="mock-input">📅 Date &amp; Heure</div><div class="mock-input">👥 Nombre de places</div><div class="mock-input">📝 Description (optionnel)</div><div class="mock-btn">✅ Créer le créneau</div></div></div>
+        <div class="screen-mock shot"><img src="assets/screenshots/creation_FR.jpg" alt="Création d'un créneau"></div>
         <div class="screen-content">
           <p class="screen-desc">Crée un créneau en quelques secondes. Choisis le sport, le lieu, la date et le nombre de places. Un créneau public apparaît ensuite dans le fil des joueurs compatibles.</p>
           <ul class="feature-list">
@@ -206,7 +209,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">5</div><div class="screen-title">Détail d'un Créneau</div><div class="screen-tag">Tap sur une carte</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div style="text-align:center;font-size:28px;padding:6px 0;">🏐</div><div class="mock-card"><div class="mock-card-title">Beach Volley</div><div class="mock-card-sub">📍 Matúškovo, Slovaquie</div><div class="mock-card-sub">📅 Sam 5 juil 10:00</div><div class="mock-card-sub">👥 2/4 participants</div></div><div style="font-size:10px;color:var(--gray);margin:6px 0 4px;">Participants</div><div style="display:flex;gap:6px;"><div style="background:rgba(255,96,53,0.2);border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:13px;">M</div><div style="background:rgba(255,96,53,0.2);border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:13px;">A</div></div><div class="mock-btn" style="margin-top:10px;">Rejoindre</div></div></div>
+        <div class="screen-mock shot"><img src="assets/screenshots/slot_details_FR.jpg" alt="Détail d'un créneau"></div>
         <div class="screen-content">
           <p class="screen-desc">Vois tous les détails d'un créneau avant de rejoindre : sport, lieu, date, organisateur, participants inscrits. Rejoins en un tap si des places sont disponibles.</p>
           <ul class="feature-list">
@@ -226,7 +229,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">6</div><div class="screen-title">Chat de Groupe</div><div class="screen-tag">Par créneau</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">💬 Beach Volley · Sam 5 juil</div><div style="margin-bottom:6px;"><div style="background:rgba(255,255,255,0.06);border-radius:12px 12px 12px 2px;padding:7px 10px;font-size:10px;color:var(--gray);max-width:80%;margin-bottom:4px;"><span style="color:var(--primary);font-weight:700;">Manu</span> — Quelqu'un peut apporter un filet ?</div><div style="background:rgba(255,96,53,0.15);border-radius:12px 12px 2px 12px;padding:7px 10px;font-size:10px;color:#fff;max-width:80%;margin-left:auto;margin-bottom:4px;">Oui j'en ai un !</div><div style="background:rgba(255,255,255,0.06);border-radius:12px 12px 12px 2px;padding:7px 10px;font-size:10px;color:var(--gray);max-width:80%;"><span style="color:var(--primary);font-weight:700;">Alex</span> — 👍 à tout à l'heure</div></div><div style="display:flex;gap:6px;margin-top:8px;"><div class="mock-input" style="flex:1;margin:0;">Votre message...</div><div style="background:var(--primary);border-radius:8px;padding:8px;font-size:12px;">➤</div></div></div></div>
+        <div class="screen-mock shot"><img src="assets/screenshots/chat_FR.jpg" alt="Chat de groupe d'un créneau"></div>
         <div class="screen-content">
           <p class="screen-desc">Chaque créneau a son propre groupe de chat. Seuls les participants inscrits y ont accès. Coordonne-toi directement dans l'app : matériel, horaires, point de rendez-vous.</p>
           <ul class="feature-list">
@@ -244,7 +247,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">7</div><div class="screen-title">Historique</div><div class="screen-tag">Onglet 📋</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">Historique</div><div style="font-size:10px;color:var(--primary);font-weight:700;margin-bottom:6px;">MES CRÉNEAUX</div><div class="mock-card"><div class="mock-card-title">🏐 Beach Volley</div><div class="mock-card-sub">30 juin · Passé</div><div style="display:flex;gap:4px;margin-top:4px;"><div style="background:rgba(76,175,80,0.2);color:#81C784;border-radius:6px;padding:3px 7px;font-size:9px;">✅ Confirmé</div></div></div><div style="font-size:10px;color:var(--primary);font-weight:700;margin:8px 0 6px;">REJOINTS</div><div class="mock-card"><div class="mock-card-title">🎾 Tennis</div><div class="mock-card-sub">28 juin · Passé</div><div style="background:rgba(255,193,7,0.15);color:#FFD54F;border-radius:6px;padding:3px 7px;font-size:9px;display:inline-block;margin-top:4px;">⏳ À confirmer</div></div></div></div>
+        <div class="screen-mock shot"><img src="assets/screenshots/history_FR.jpg" alt="Historique des créneaux"></div>
         <div class="screen-content">
           <p class="screen-desc">Retrouve tous tes créneaux passés et à venir : ceux que tu as créés, ceux que tu as rejoints, et ceux qui ont été annulés. Confirme ta présence après chaque session.</p>
           <ul class="feature-list">
@@ -262,7 +265,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">8</div><div class="screen-title">Mon Profil</div><div class="screen-tag">Onglet 👤</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-avatar">👤</div><div style="text-align:center;font-size:13px;font-weight:800;color:#fff;">Manu</div><div style="text-align:center;font-size:10px;color:var(--gray);margin-bottom:8px;">Bratislava</div><div style="font-size:10px;color:var(--primary);font-weight:700;margin-bottom:4px;">MES SPORTS</div><div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px;"><div style="background:rgba(255,96,53,0.15);border-radius:8px;padding:3px 8px;font-size:10px;">🏐 Volley</div><div style="background:rgba(255,96,53,0.15);border-radius:8px;padding:3px 8px;font-size:10px;">🎾 Tennis</div></div><div style="font-size:10px;color:var(--primary);font-weight:700;margin-bottom:4px;">BADGES</div><div style="display:flex;gap:4px;flex-wrap:wrap;"><div style="font-size:16px;">✅🏅😊</div></div></div></div>
+        <div class="screen-mock shot"><img src="assets/screenshots/profil_FR.jpg" alt="Mon profil"></div>
         <div class="screen-content">
           <p class="screen-desc">Ton profil centralise toutes tes informations : photo, pseudo, sports pratiqués, ville, badges reçus et profils enfants. C'est la vitrine que les autres joueurs voient quand ils consultent ta fiche.</p>
           <ul class="feature-list">
@@ -284,7 +287,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">9</div><div class="screen-title">Notation Post-Match</div><div class="screen-tag">Après confirmation</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">Noter les joueurs</div><div class="mock-card"><div class="mock-avatar" style="width:32px;height:32px;font-size:14px;margin:0 0 6px;">A</div><div class="mock-card-title">Alex</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:6px;"><div style="background:rgba(255,96,53,0.15);border-radius:8px;padding:4px 8px;font-size:10px;border:1px solid rgba(255,96,53,0.3);">⏰ Ponctuel</div><div style="background:rgba(255,96,53,0.3);border-radius:8px;padding:4px 8px;font-size:10px;border:1px solid var(--primary);color:#fff;">✅ Fiable</div><div style="background:rgba(255,96,53,0.15);border-radius:8px;padding:4px 8px;font-size:10px;border:1px solid rgba(255,96,53,0.3);">😊 Cool</div></div></div></div></div>
+        <div class="screen-mock shot"><img src="assets/screenshots/rate_FR.jpg" alt="Notation post-match"></div>
         <div class="screen-content">
           <p class="screen-desc">Après chaque session confirmée, note tes partenaires de jeu en attribuant des badges. Ces badges s'accumulent sur leur profil et construisent leur réputation sur Partia.</p>
           <ul class="feature-list">
@@ -302,7 +305,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">10</div><div class="screen-title">Profil Public d'un Joueur</div><div class="screen-tag">Tap sur un participant</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-avatar">🧑</div><div style="text-align:center;font-size:13px;font-weight:800;color:#fff;">Alex</div><div style="text-align:center;font-size:10px;color:var(--gray);margin-bottom:8px;">Bratislava · Homme</div><div style="font-size:10px;color:var(--primary);font-weight:700;margin-bottom:4px;">SPORTS</div><div style="display:flex;gap:4px;margin-bottom:8px;flex-wrap:wrap;"><div style="background:rgba(255,96,53,0.15);border-radius:8px;padding:3px 8px;font-size:9px;">🎾 Tennis</div><div style="background:rgba(255,96,53,0.15);border-radius:8px;padding:3px 8px;font-size:9px;">🏸 Badminton</div></div><div style="font-size:10px;color:var(--primary);font-weight:700;margin-bottom:4px;">BADGES (12)</div><div style="font-size:18px;">✅✅✅ 😊😊 💛</div></div></div>
+        <div class="screen-mock shot"><img src="assets/screenshots/public_FR.jpg" alt="Profil public d'un joueur"><img src="assets/screenshots/block_FR.jpg" alt="Bloquer cet utilisateur"></div>
         <div class="screen-content">
           <p class="screen-desc">Clique sur n'importe quel participant d'un créneau pour voir son profil public : sports pratiqués, ville, tranche d'âge et badges accumulés. Vérifie la réputation d'un joueur avant de rejoindre son créneau.</p>
           <ul class="feature-list">
@@ -318,7 +321,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">11</div><div class="screen-title">Signalement</div><div class="screen-tag">Sécurité communauté</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">⚠️ Signaler un utilisateur</div><div class="mock-card"><div class="mock-card-title" style="color:var(--primary);">Pourquoi signalez-vous ?</div><div style="display:flex;flex-direction:column;gap:6px;margin-top:8px;"><div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:7px 10px;font-size:10px;color:var(--gray);border:1px solid rgba(255,255,255,0.08);">🚫 Comportement inapproprié</div><div style="background:rgba(255,96,53,0.2);border-radius:8px;padding:7px 10px;font-size:10px;color:#fff;border:1px solid var(--primary);">💬 Propos offensants</div><div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:7px 10px;font-size:10px;color:var(--gray);border:1px solid rgba(255,255,255,0.08);">👻 No-show répété</div><div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:7px 10px;font-size:10px;color:var(--gray);border:1px solid rgba(255,255,255,0.08);">🔞 Contenu interdit</div></div></div><div class="mock-btn" style="margin-top:10px;background:#c0392b;">Envoyer le signalement</div></div></div>
+        <div class="screen-mock shot"><img src="assets/screenshots/signal_FR.jpg" alt="Signaler un joueur"></div>
         <div class="screen-content">
           <p class="screen-desc">Si tu rencontres un comportement problématique, tu peux signaler un participant après le créneau ou signaler directement un message depuis le chat. Chaque signalement est examiné par l'équipe Partia.</p>
           <ul class="feature-list">
@@ -338,11 +341,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">12</div><div class="screen-title">Notifications</div><div class="screen-tag">Toutes les alertes de l'app</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body">
-          <div style="background:rgba(255,255,255,0.06);border-radius:12px;padding:8px 10px;margin:6px 0;font-size:10px;color:#fff;border:1px solid rgba(255,255,255,0.1);">🆕 <strong>Nouveau créneau dispo à moins de 5 km !</strong><br/><span style="color:var(--gray);">Futsal · Bratislava</span></div>
-          <div style="background:rgba(255,255,255,0.06);border-radius:12px;padding:8px 10px;margin:6px 0;font-size:10px;color:#fff;border:1px solid rgba(255,255,255,0.1);">💬 <strong>Nouveau message</strong><br/><span style="color:var(--gray);">Yoga · Salle Alpha</span></div>
-          <div style="background:rgba(255,255,255,0.06);border-radius:12px;padding:8px 10px;margin:6px 0;font-size:10px;color:#fff;border:1px solid rgba(255,255,255,0.1);">✅ <strong>Présence confirmée</strong><br/><span style="color:var(--gray);">Priscilla a confirmé sa présence</span></div>
-        </div></div>
+        <div class="screen-mock shot"><img src="assets/screenshots/notif_FR.jpg" alt="Notification Partia"></div>
         <div class="screen-content">
           <p class="screen-desc">Partia t'envoie une notification push à chaque événement qui te concerne, dans la langue de ton profil. Voici la liste complète :</p>
           <ul class="feature-list">
@@ -386,7 +385,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">1</div><div class="screen-title">Registrácia &amp; Prihlásenie</div><div class="screen-tag">Solo · 5 min</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div style="text-align:center;padding:8px 0 4px;"><span style="font-size:28px;">🤝</span><div style="color:var(--primary);font-weight:900;font-size:16px;">Partia</div></div><div class="mock-input">📧 Email</div><div class="mock-input">🔒 Heslo</div><div class="mock-btn">Prihlásiť sa</div><div style="text-align:center;margin-top:8px;font-size:10px;color:var(--gray);">Nemáš účet? <span style="color:var(--primary);">Registrovať sa</span></div></div></div>
+        <div class="screen-mock shot"><img src="assets/screenshots/login_SK.jpg" alt="Prihlasovacia obrazovka Partia"></div>
         <div class="screen-content">
           <p class="screen-desc">Vytvor účet za 2 minúty. Zadaj meno, email, heslo, pohlavie a dátum narodenia (min. 18 rokov). Potvrdzovací email sa odošle automaticky.</p>
           <ul class="feature-list">
@@ -403,7 +402,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">2</div><div class="screen-title">Nastavenie profilu</div><div class="screen-tag">Po registrácii</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">Moje športy 🏅</div><div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px;"><div style="background:rgba(255,96,53,0.3);border:1px solid var(--primary);border-radius:8px;padding:4px 8px;font-size:10px;color:#fff;">⚽ Futbal</div><div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:4px 8px;font-size:10px;color:var(--gray);">🏀 Basketbal</div><div style="background:rgba(255,96,53,0.3);border:1px solid var(--primary);border-radius:8px;padding:4px 8px;font-size:10px;color:#fff;">🎾 Tenis</div><div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:4px 8px;font-size:10px;color:var(--gray);">🏐 Volejbal</div><div style="background:rgba(255,96,53,0.3);border:1px solid var(--primary);border-radius:8px;padding:4px 8px;font-size:10px;color:#fff;">🚴 Cyklo</div><div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:4px 8px;font-size:10px;color:var(--gray);">🏃 Beh</div></div><div style="font-size:9px;color:var(--gray);margin-bottom:6px;">📍 Mesto (voliteľné)</div><div class="mock-input">Bratislava</div><div class="mock-btn">Uložiť</div></div></div>
+        <div class="screen-mock shot"><img src="assets/screenshots/select_sports_SK.jpg" alt="Výber športov a úrovní"><img src="assets/screenshots/pseudo_SK.jpg" alt="Výber verejného pseudonymu"></div>
         <div class="screen-content">
           <p class="screen-desc">Po prvom prihlásení si nastav profil — vyber športy, ktoré praktizuješ. To umožní ostatným hráčom nájsť ťa a vidieť, či ste kompatibilní.</p>
           <ul class="feature-list">
@@ -438,7 +437,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">4</div><div class="screen-title">Vytvoriť termín</div><div class="screen-tag">Tlačidlo + dole</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">Nový termín</div><div class="mock-input">⚽ Šport</div><div class="mock-input">📍 Miesto / Zóna</div><div class="mock-input">📅 Dátum &amp; Čas</div><div class="mock-input">👥 Počet miest</div><div class="mock-input">📝 Popis (voliteľné)</div><div class="mock-btn">✅ Vytvoriť termín</div></div></div>
+        <div class="screen-mock shot"><img src="assets/screenshots/creation_SK.jpg" alt="Vytvorenie termínu"></div>
         <div class="screen-content">
           <p class="screen-desc">Vytvor termín za pár sekúnd. Vyber šport, miesto, dátum a počet miest. Verejný termín sa potom zobrazí vo feede kompatibilných hráčov.</p>
           <ul class="feature-list">
@@ -458,7 +457,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">5</div><div class="screen-title">Detail termínu</div><div class="screen-tag">Tap na kartu</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div style="text-align:center;font-size:28px;padding:6px 0;">🏐</div><div class="mock-card"><div class="mock-card-title">Beach Volleyball</div><div class="mock-card-sub">📍 Matúškovo</div><div class="mock-card-sub">📅 Sob 5 júl 10:00</div><div class="mock-card-sub">👥 2/4 účastníkov</div></div><div class="mock-btn" style="margin-top:10px;">Pripojiť sa</div></div></div>
+        <div class="screen-mock shot"><img src="assets/screenshots/slot_details_SK.jpg" alt="Detail termínu"></div>
         <div class="screen-content">
           <p class="screen-desc">Pozri všetky detaily termínu pred prihlásením: šport, miesto, dátum, organizátor, prihlásení účastníci. Pripoj sa jedným tapom.</p>
           <ul class="feature-list">
@@ -477,7 +476,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">6</div><div class="screen-title">Skupinový Chat</div><div class="screen-tag">Na termín</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">💬 Beach Volleyball · Sob</div><div style="margin-bottom:6px;"><div style="background:rgba(255,255,255,0.06);border-radius:12px 12px 12px 2px;padding:7px 10px;font-size:10px;color:var(--gray);max-width:80%;margin-bottom:4px;"><span style="color:var(--primary);font-weight:700;">Manu</span> — Niekto môže priniesť sieť?</div><div style="background:rgba(255,96,53,0.15);border-radius:12px 12px 2px 12px;padding:7px 10px;font-size:10px;color:#fff;max-width:80%;margin-left:auto;">Áno, mám jednu!</div></div><div style="display:flex;gap:6px;margin-top:8px;"><div class="mock-input" style="flex:1;margin:0;">Správa...</div><div style="background:var(--primary);border-radius:8px;padding:8px;font-size:12px;">➤</div></div></div></div>
+        <div class="screen-mock shot"><img src="assets/screenshots/chat_SK.jpg" alt="Skupinový chat termínu"></div>
         <div class="screen-content">
           <p class="screen-desc">Každý termín má vlastnú skupinu chatu. Prístup majú len prihlásení účastníci. Koordinuj sa priamo v appke bez odchodu.</p>
           <ul class="feature-list">
@@ -494,7 +493,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">7</div><div class="screen-title">História</div><div class="screen-tag">Záložka 📋</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">História</div><div style="font-size:10px;color:var(--primary);font-weight:700;margin-bottom:6px;">MOJE TERMÍNY</div><div class="mock-card"><div class="mock-card-title">🏐 Beach Volleyball</div><div class="mock-card-sub">30 jún · Prebehnutý</div><div style="background:rgba(76,175,80,0.2);color:#81C784;border-radius:6px;padding:3px 7px;font-size:9px;display:inline-block;margin-top:4px;">✅ Potvrdené</div></div></div></div>
+        <div class="screen-mock shot"><img src="assets/screenshots/history_SK.jpg" alt="História termínov"></div>
         <div class="screen-content">
           <p class="screen-desc">Nájdi všetky svoje minulé a budúce termíny. Potvrď svoju účasť po každej session pre odomknutie hodnotenia.</p>
           <ul class="feature-list">
@@ -511,7 +510,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">8</div><div class="screen-title">Môj Profil</div><div class="screen-tag">Záložka 👤</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-avatar">👤</div><div style="text-align:center;font-size:13px;font-weight:800;color:#fff;">Manu</div><div style="text-align:center;font-size:10px;color:var(--gray);margin-bottom:8px;">Bratislava</div><div style="font-size:10px;color:var(--primary);font-weight:700;margin-bottom:4px;">MOJE ŠPORTY</div><div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px;"><div style="background:rgba(255,96,53,0.15);border-radius:8px;padding:3px 8px;font-size:10px;">🏐 Volejbal</div><div style="background:rgba(255,96,53,0.15);border-radius:8px;padding:3px 8px;font-size:10px;">🎾 Tenis</div></div><div style="font-size:10px;color:var(--primary);font-weight:700;margin-bottom:4px;">ODZNAKY</div><div style="font-size:16px;">✅🏅😊</div></div></div>
+        <div class="screen-mock shot"><img src="assets/screenshots/profil_SK.jpg" alt="Môj profil"></div>
         <div class="screen-content">
           <p class="screen-desc">Tvoj profil centralizuje všetky informácie: fotku, pseudonym, športy, mesto, odznaky a profily detí.</p>
           <ul class="feature-list">
@@ -532,7 +531,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">9</div><div class="screen-title">Hodnotenie po zápase</div><div class="screen-tag">Po potvrdení</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">Ohodnoť hráčov</div><div class="mock-card"><div class="mock-avatar" style="width:32px;height:32px;font-size:14px;margin:0 0 6px;">A</div><div class="mock-card-title">Alex</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:6px;"><div style="background:rgba(255,96,53,0.15);border-radius:8px;padding:4px 8px;font-size:10px;border:1px solid rgba(255,96,53,0.3);">⏰ Dochvíľny</div><div style="background:rgba(255,96,53,0.3);border-radius:8px;padding:4px 8px;font-size:10px;border:1px solid var(--primary);color:#fff;">✅ Spoľahlivý</div></div></div></div></div>
+        <div class="screen-mock shot"><img src="assets/screenshots/rate_SK.jpg" alt="Hodnotenie po zápase"></div>
         <div class="screen-content">
           <p class="screen-desc">Po každej potvrdenej session ohodnoť svojich spoluhráčov pridelením odznakov. Tieto odznaky sa hromadia na ich profile.</p>
           <ul class="feature-list">
@@ -550,7 +549,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">10</div><div class="screen-title">Verejný profil hráča</div><div class="screen-tag">Tap na účastníka</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-avatar">🧑</div><div style="text-align:center;font-size:13px;font-weight:800;color:#fff;">Alex</div><div style="text-align:center;font-size:10px;color:var(--gray);margin-bottom:8px;">Bratislava · Muž</div><div style="font-size:10px;color:var(--primary);font-weight:700;margin-bottom:4px;">ŠPORTY</div><div style="display:flex;gap:4px;margin-bottom:8px;flex-wrap:wrap;"><div style="background:rgba(255,96,53,0.15);border-radius:8px;padding:3px 8px;font-size:9px;">🎾 Tenis</div><div style="background:rgba(255,96,53,0.15);border-radius:8px;padding:3px 8px;font-size:9px;">🏸 Bedminton</div></div><div style="font-size:10px;color:var(--primary);font-weight:700;margin-bottom:4px;">ODZNAKY (12)</div><div style="font-size:18px;">✅✅✅ 😊😊 💛</div></div></div>
+        <div class="screen-mock shot"><img src="assets/screenshots/public_SK.jpg" alt="Verejný profil hráča"><img src="assets/screenshots/block_SK.jpg" alt="Zablokovať používateľa"></div>
         <div class="screen-content">
           <p class="screen-desc">Klikni na ktoréhokoľvek účastníka termínu a zobraz si jeho verejný profil: športy, mesto, veková skupina a nazbierané odznaky. Over si reputáciu hráča pred pripojením k jeho termínu.</p>
           <ul class="feature-list">
@@ -566,7 +565,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">11</div><div class="screen-title">Nahlásenie</div><div class="screen-tag">Bezpečnosť komunity</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">⚠️ Nahlásiť používateľa</div><div class="mock-card"><div class="mock-card-title" style="color:var(--primary);">Dôvod nahlásenia?</div><div style="display:flex;flex-direction:column;gap:6px;margin-top:8px;"><div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:7px 10px;font-size:10px;color:var(--gray);border:1px solid rgba(255,255,255,0.08);">🚫 Nevhodné správanie</div><div style="background:rgba(255,96,53,0.2);border-radius:8px;padding:7px 10px;font-size:10px;color:#fff;border:1px solid var(--primary);">💬 Urážlivé komentáre</div><div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:7px 10px;font-size:10px;color:var(--gray);border:1px solid rgba(255,255,255,0.08);">👻 Opakovaná absencia</div></div></div><div class="mock-btn" style="margin-top:10px;background:#c0392b;">Odoslať nahlásenie</div></div></div>
+        <div class="screen-mock shot"><img src="assets/screenshots/signal_SK.jpg" alt="Nahlásiť hráča"></div>
         <div class="screen-content">
           <p class="screen-desc">Problematického účastníka môžeš nahlásiť po termíne alebo môžeš nahlásiť konkrétnu správu priamo v chate. Každé nahlásenie preskúma tím Partia.</p>
           <ul class="feature-list">
@@ -585,11 +584,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">12</div><div class="screen-title">Notifikácie</div><div class="screen-tag">Všetky upozornenia appky</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body">
-          <div style="background:rgba(255,255,255,0.06);border-radius:12px;padding:8px 10px;margin:6px 0;font-size:10px;color:#fff;border:1px solid rgba(255,255,255,0.1);">🆕 <strong>Nový termín do 5 km od teba!</strong><br/><span style="color:var(--gray);">Futsal · Bratislava</span></div>
-          <div style="background:rgba(255,255,255,0.06);border-radius:12px;padding:8px 10px;margin:6px 0;font-size:10px;color:#fff;border:1px solid rgba(255,255,255,0.1);">💬 <strong>Nová správa</strong><br/><span style="color:var(--gray);">Joga · Sála Alfa</span></div>
-          <div style="background:rgba(255,255,255,0.06);border-radius:12px;padding:8px 10px;margin:6px 0;font-size:10px;color:#fff;border:1px solid rgba(255,255,255,0.1);">✅ <strong>Účasť potvrdená</strong><br/><span style="color:var(--gray);">Priscilla potvrdila svoju účasť</span></div>
-        </div></div>
+        <div class="screen-mock shot"><img src="assets/screenshots/notif_SK.jpg" alt="Notifikácia Partia"></div>
         <div class="screen-content">
           <p class="screen-desc">Partia ti pošle push notifikáciu pri každej udalosti, ktorá sa ťa týka, v jazyku tvojho profilu. Tu je kompletný zoznam:</p>
           <ul class="feature-list">
@@ -633,7 +628,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">1</div><div class="screen-title">Sign Up &amp; Login</div><div class="screen-tag">Solo · 5 min</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div style="text-align:center;padding:8px 0 4px;"><span style="font-size:28px;">🤝</span><div style="color:var(--primary);font-weight:900;font-size:16px;">Partia</div></div><div class="mock-input">📧 Email</div><div class="mock-input">🔒 Password</div><div class="mock-btn">Log in</div><div style="text-align:center;margin-top:8px;font-size:10px;color:var(--gray);">No account? <span style="color:var(--primary);">Sign up</span></div></div></div>
+        <div class="screen-mock shot"><img src="assets/screenshots/login_EN.jpg" alt="Partia login screen"></div>
         <div class="screen-content">
           <p class="screen-desc">Create your account in 2 minutes. Enter your first name, email, password, gender and date of birth (18+ only). A verification email is sent automatically.</p>
           <ul class="feature-list">
@@ -650,7 +645,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">2</div><div class="screen-title">Profile Setup</div><div class="screen-tag">After sign-up</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">My sports 🏅</div><div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px;"><div style="background:rgba(255,96,53,0.3);border:1px solid var(--primary);border-radius:8px;padding:4px 8px;font-size:10px;color:#fff;">⚽ Football</div><div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:4px 8px;font-size:10px;color:var(--gray);">🏀 Basketball</div><div style="background:rgba(255,96,53,0.3);border:1px solid var(--primary);border-radius:8px;padding:4px 8px;font-size:10px;color:#fff;">🎾 Tennis</div><div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:4px 8px;font-size:10px;color:var(--gray);">🏐 Volleyball</div><div style="background:rgba(255,96,53,0.3);border:1px solid var(--primary);border-radius:8px;padding:4px 8px;font-size:10px;color:#fff;">🚴 Cycling</div><div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:4px 8px;font-size:10px;color:var(--gray);">🏃 Running</div></div><div style="font-size:9px;color:var(--gray);margin-bottom:6px;">📍 City (optional)</div><div class="mock-input">Bratislava</div><div class="mock-btn">Save</div></div></div>
+        <div class="screen-mock shot"><img src="assets/screenshots/select_sports_EN.jpg" alt="Sport and level selection"><img src="assets/screenshots/pseudo_EN.jpg" alt="Public handle selection"></div>
         <div class="screen-content">
           <p class="screen-desc">After your first login, set up your profile by selecting the sports you play. This lets other players find you and see if you're a good match.</p>
           <ul class="feature-list">
@@ -685,7 +680,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">4</div><div class="screen-title">Create a Slot</div><div class="screen-tag">+ button at bottom</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">New slot</div><div class="mock-input">⚽ Sport</div><div class="mock-input">📍 Location / Area</div><div class="mock-input">📅 Date &amp; Time</div><div class="mock-input">👥 Number of spots</div><div class="mock-input">📝 Description (optional)</div><div class="mock-btn">✅ Create slot</div></div></div>
+        <div class="screen-mock shot"><img src="assets/screenshots/creation_EN.jpg" alt="Creating a slot"></div>
         <div class="screen-content">
           <p class="screen-desc">Create a slot in seconds. Choose the sport, location, date and number of spots. A public slot then appears in the feed of compatible players.</p>
           <ul class="feature-list">
@@ -705,7 +700,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">5</div><div class="screen-title">Slot Detail</div><div class="screen-tag">Tap a card</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div style="text-align:center;font-size:28px;padding:6px 0;">🏐</div><div class="mock-card"><div class="mock-card-title">Beach Volleyball</div><div class="mock-card-sub">📍 Matúškovo</div><div class="mock-card-sub">📅 Sat Jul 5 10:00</div><div class="mock-card-sub">👥 2/4 participants</div></div><div class="mock-btn" style="margin-top:10px;">Join</div></div></div>
+        <div class="screen-mock shot"><img src="assets/screenshots/slot_details_EN.jpg" alt="Slot detail"></div>
         <div class="screen-content">
           <p class="screen-desc">See all the details of a slot before joining: sport, location, date, organiser, registered participants. Join with one tap if spots are available.</p>
           <ul class="feature-list">
@@ -724,7 +719,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">6</div><div class="screen-title">Group Chat</div><div class="screen-tag">Per slot</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">💬 Beach Volleyball · Sat</div><div style="margin-bottom:6px;"><div style="background:rgba(255,255,255,0.06);border-radius:12px 12px 12px 2px;padding:7px 10px;font-size:10px;color:var(--gray);max-width:80%;margin-bottom:4px;"><span style="color:var(--primary);font-weight:700;">Manu</span> — Can someone bring a net?</div><div style="background:rgba(255,96,53,0.15);border-radius:12px 12px 2px 12px;padding:7px 10px;font-size:10px;color:#fff;max-width:80%;margin-left:auto;">Yes I have one!</div></div><div style="display:flex;gap:6px;margin-top:8px;"><div class="mock-input" style="flex:1;margin:0;">Your message...</div><div style="background:var(--primary);border-radius:8px;padding:8px;font-size:12px;">➤</div></div></div></div>
+        <div class="screen-mock shot"><img src="assets/screenshots/chat_EN.jpg" alt="Slot group chat"></div>
         <div class="screen-content">
           <p class="screen-desc">Every slot has its own group chat. Only registered participants have access. Coordinate directly in the app: equipment, timing, meeting point.</p>
           <ul class="feature-list">
@@ -741,7 +736,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">7</div><div class="screen-title">History</div><div class="screen-tag">Tab 📋</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">History</div><div style="font-size:10px;color:var(--primary);font-weight:700;margin-bottom:6px;">MY SLOTS</div><div class="mock-card"><div class="mock-card-title">🏐 Beach Volleyball</div><div class="mock-card-sub">Jun 30 · Past</div><div style="background:rgba(76,175,80,0.2);color:#81C784;border-radius:6px;padding:3px 7px;font-size:9px;display:inline-block;margin-top:4px;">✅ Confirmed</div></div></div></div>
+        <div class="screen-mock shot"><img src="assets/screenshots/history_EN.jpg" alt="Slot history"></div>
         <div class="screen-content">
           <p class="screen-desc">Find all your past and upcoming slots. Confirm attendance after each session to unlock ratings.</p>
           <ul class="feature-list">
@@ -758,7 +753,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">8</div><div class="screen-title">My Profile</div><div class="screen-tag">Tab 👤</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-avatar">👤</div><div style="text-align:center;font-size:13px;font-weight:800;color:#fff;">Manu</div><div style="text-align:center;font-size:10px;color:var(--gray);margin-bottom:8px;">Bratislava</div><div style="font-size:10px;color:var(--primary);font-weight:700;margin-bottom:4px;">MY SPORTS</div><div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px;"><div style="background:rgba(255,96,53,0.15);border-radius:8px;padding:3px 8px;font-size:10px;">🏐 Volleyball</div><div style="background:rgba(255,96,53,0.15);border-radius:8px;padding:3px 8px;font-size:10px;">🎾 Tennis</div></div><div style="font-size:10px;color:var(--primary);font-weight:700;margin-bottom:4px;">BADGES</div><div style="font-size:16px;">✅🏅😊</div></div></div>
+        <div class="screen-mock shot"><img src="assets/screenshots/profil_EN.jpg" alt="My profile"></div>
         <div class="screen-content">
           <p class="screen-desc">Your profile centralises all your information: photo, handle, sports, city, badges and child profiles. It's the showcase other players see when they view your card.</p>
           <ul class="feature-list">
@@ -779,7 +774,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">9</div><div class="screen-title">Post-Match Rating</div><div class="screen-tag">After confirmation</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">Rate the players</div><div class="mock-card"><div class="mock-avatar" style="width:32px;height:32px;font-size:14px;margin:0 0 6px;">A</div><div class="mock-card-title">Alex</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:6px;"><div style="background:rgba(255,96,53,0.15);border-radius:8px;padding:4px 8px;font-size:10px;border:1px solid rgba(255,96,53,0.3);">⏰ Punctual</div><div style="background:rgba(255,96,53,0.3);border-radius:8px;padding:4px 8px;font-size:10px;border:1px solid var(--primary);color:#fff;">✅ Reliable</div></div></div></div></div>
+        <div class="screen-mock shot"><img src="assets/screenshots/rate_EN.jpg" alt="Post-match rating"></div>
         <div class="screen-content">
           <p class="screen-desc">After each confirmed session, rate your fellow players by awarding badges. These badges accumulate on their profile and build their reputation on Partia.</p>
           <ul class="feature-list">
@@ -797,7 +792,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">10</div><div class="screen-title">A Player's Public Profile</div><div class="screen-tag">Tap a participant</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-avatar">🧑</div><div style="text-align:center;font-size:13px;font-weight:800;color:#fff;">Alex</div><div style="text-align:center;font-size:10px;color:var(--gray);margin-bottom:8px;">Bratislava · Male</div><div style="font-size:10px;color:var(--primary);font-weight:700;margin-bottom:4px;">SPORTS</div><div style="display:flex;gap:4px;margin-bottom:8px;flex-wrap:wrap;"><div style="background:rgba(255,96,53,0.15);border-radius:8px;padding:3px 8px;font-size:9px;">🎾 Tennis</div><div style="background:rgba(255,96,53,0.15);border-radius:8px;padding:3px 8px;font-size:9px;">🏸 Badminton</div></div><div style="font-size:10px;color:var(--primary);font-weight:700;margin-bottom:4px;">BADGES (12)</div><div style="font-size:18px;">✅✅✅ 😊😊 💛</div></div></div>
+        <div class="screen-mock shot"><img src="assets/screenshots/public_EN.jpg" alt="A player's public profile"><img src="assets/screenshots/block_EN.jpg" alt="Block this user"></div>
         <div class="screen-content">
           <p class="screen-desc">Tap any participant in a slot to see their public profile: sports played, city, age group and accumulated badges. Check a player's reputation before joining their slot.</p>
           <ul class="feature-list">
@@ -813,7 +808,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">11</div><div class="screen-title">Reporting</div><div class="screen-tag">Community safety</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body"><div class="mock-topbar">⚠️ Report a user</div><div class="mock-card"><div class="mock-card-title" style="color:var(--primary);">Why are you reporting?</div><div style="display:flex;flex-direction:column;gap:6px;margin-top:8px;"><div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:7px 10px;font-size:10px;color:var(--gray);border:1px solid rgba(255,255,255,0.08);">🚫 Inappropriate behaviour</div><div style="background:rgba(255,96,53,0.2);border-radius:8px;padding:7px 10px;font-size:10px;color:#fff;border:1px solid var(--primary);">💬 Offensive language</div><div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:7px 10px;font-size:10px;color:var(--gray);border:1px solid rgba(255,255,255,0.08);">👻 Repeated no-show</div></div></div><div class="mock-btn" style="margin-top:10px;background:#c0392b;">Send report</div></div></div>
+        <div class="screen-mock shot"><img src="assets/screenshots/signal_EN.jpg" alt="Report a player"></div>
         <div class="screen-content">
           <p class="screen-desc">You can report problematic participation after a slot or report a specific message directly from the chat. Every report is reviewed by the Partia team.</p>
           <ul class="feature-list">
@@ -832,11 +827,7 @@
     <div class="screen-guide">
       <div class="screen-header"><div class="screen-num">12</div><div class="screen-title">Notifications</div><div class="screen-tag">Every alert the app sends</div></div>
       <div class="screen-layout">
-        <div class="screen-mock"><div class="mock-status"><span>9:41</span><span>●●●</span></div><div class="mock-body">
-          <div style="background:rgba(255,255,255,0.06);border-radius:12px;padding:8px 10px;margin:6px 0;font-size:10px;color:#fff;border:1px solid rgba(255,255,255,0.1);">🆕 <strong>New slot available within 5 km!</strong><br/><span style="color:var(--gray);">Futsal · Bratislava</span></div>
-          <div style="background:rgba(255,255,255,0.06);border-radius:12px;padding:8px 10px;margin:6px 0;font-size:10px;color:#fff;border:1px solid rgba(255,255,255,0.1);">💬 <strong>New message</strong><br/><span style="color:var(--gray);">Yoga · Studio Alpha</span></div>
-          <div style="background:rgba(255,255,255,0.06);border-radius:12px;padding:8px 10px;margin:6px 0;font-size:10px;color:#fff;border:1px solid rgba(255,255,255,0.1);">✅ <strong>Attendance confirmed</strong><br/><span style="color:var(--gray);">Priscilla confirmed their attendance</span></div>
-        </div></div>
+        <div class="screen-mock shot"><img src="assets/screenshots/notif_EN.jpg" alt="Partia notification"></div>
         <div class="screen-content">
           <p class="screen-desc">Partia sends you a push notification for every event that concerns you, in your profile's language. Here's the full list:</p>
           <ul class="feature-list">
