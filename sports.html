@@ -379,7 +379,23 @@
     if (window.location.protocol !== 'file:') {
       window.history.replaceState({}, '', nextUrl);
     }
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Le bloc ciblé par l'ancre est masqué (display:none) tant que sa langue
+    // n'est pas active -- le saut natif du navigateur rate donc sa cible au
+    // chargement. On recale le scroll ici, une fois le bon bloc affiché.
+    // Chaque langue reutilise le meme id (ex. "hyrox") sur son propre bloc,
+    // donc on cherche seulement dans le bloc de contenu de la langue active
+    // (le top-nav a aussi un data-lang, on l'exclut).
+    var activeBlock = Array.prototype.filter.call(
+      document.querySelectorAll('[data-lang="' + lang + '"]'),
+      function(el) { return !el.classList.contains('top-nav'); }
+    )[0];
+    var hashTarget = window.location.hash && activeBlock &&
+      activeBlock.querySelector('#' + CSS.escape(window.location.hash.slice(1)));
+    if (hashTarget) {
+      hashTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   }
 
   document.addEventListener('DOMContentLoaded', function() {
