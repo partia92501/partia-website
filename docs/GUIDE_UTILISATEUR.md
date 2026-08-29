@@ -30,7 +30,7 @@ Pour un créneau privé, saisir le code à six caractères reçu du créateur. L
 
 ## 5. Créer un créneau
 
-Appuyer sur **＋**, choisir le profil concerné, puis renseigner sport, lieu, date/heure, durée et capacité. La date doit être future, la capacité positive et le lieu doit provenir d’une suggestion. Un compte Free est limité à trois créations sur 7 jours glissants, créneaux adultes et de tous ses enfants confondus. Les créneaux privés sont réservés à Premium+.
+Appuyer sur **＋**, choisir le profil concerné, puis renseigner sport, lieu, date/heure, durée et capacité. La date doit être future, la capacité positive et le lieu doit provenir d’une suggestion. Un compte Free est limité à cinq créations sur 30 jours glissants, créneaux adultes et de tous ses enfants confondus. Les créneaux privés sont réservés à Premium+.
 
 ## 6. Profil, enfants et historique
 
@@ -59,7 +59,7 @@ Sur un appareil réel, autoriser les notifications. Elles annoncent notamment le
 |---|---:|---:|---:|
 | Distance | 5 km | 25 km | illimitée |
 | Démarrage | Après l'essai | 30 jours offerts, puis abonnement facultatif | Abonnement facultatif ou attribution Partia |
-| Créations/7 jours pour tout le compte | 3 | illimitées | illimitées |
+| Créations/30 jours pour tout le compte | 5 | illimitées | illimitées |
 | Historique | 30 jours | 90 jours | complet |
 | Créneau privé | non | non | oui |
 | Boost/mois | 0 | 1 | 3 |
