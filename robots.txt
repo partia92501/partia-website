@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://partia-website.netlify.app/sitemap.xml
