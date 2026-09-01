@@ -91,6 +91,20 @@
     .video-card video { width: 100%; aspect-ratio: 9 / 20; object-fit: contain; display: block; background: #000; }
     .video-card-label { padding: 12px 14px; color: #fff; font-weight: 800; font-size: 13px; }
 
+    /* LAUNCH BANNER */
+    .launch-banner { background: rgba(255,96,53,0.12); border: 1px solid rgba(255,96,53,0.35); border-radius: 999px; padding: 8px 20px; display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; color: var(--primary); position: relative; margin-bottom: 20px; }
+
+    /* SPORT DU JOUR GALLERY */
+    .sportday-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; margin-top: 8px; }
+    .sportday-card { border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.06); aspect-ratio: 1/1; }
+    .sportday-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* TESTIMONIALS (shell, not yet activated) */
+    .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 8px; }
+    .testimonial-card { background: var(--card); border-radius: 18px; padding: 22px 20px; border: 1px solid rgba(255,255,255,0.06); }
+    .testimonial-quote { color: #fff; font-size: 15px; line-height: 1.6; margin-bottom: 12px; }
+    .testimonial-author { color: var(--primary); font-weight: 800; font-size: 13px; }
+
     /* FUTURE PLANS */
     .plan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
     .plan-card { background: var(--card); border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; padding: 22px 18px; }
@@ -179,6 +193,7 @@
 
   <!-- HERO -->
   <div class="hero">
+    <div class="launch-banner">🚀 Lancement public bientôt disponible</div><br>
     <img class="hero-emoji" src="assets/partia-sport-icon-v1.png" alt="Logo Partia">
     <h1 class="hero-title">Partia</h1>
     <p class="hero-tagline">Trouve des coéquipiers &amp; adversaires près de toi</p>
@@ -229,6 +244,39 @@
   </div>
 
   <hr class="hr" />
+
+  <!-- SPORT DU JOUR GALLERY -->
+  <div class="section">
+    <p class="section-title">Découvre</p>
+    <h2 class="section-h2">Un aperçu de nos sports</h2>
+    <p class="section-sub">Un extrait de notre série "Sport du jour" — parmi les 36 sports disponibles sur Partia.</p>
+    <div class="sportday-grid">
+      <div class="sportday-card"><img src="assets/sport-du-jour/molkky_fr.jpg" alt="Mölkky" loading="lazy"></div>
+      <div class="sportday-card"><img src="assets/sport-du-jour/beach_soccer_fr.jpg" alt="Beach soccer" loading="lazy"></div>
+      <div class="sportday-card"><img src="assets/sport-du-jour/padel_fr.jpg" alt="Padel" loading="lazy"></div>
+      <div class="sportday-card"><img src="assets/sport-du-jour/hyrox_fr.jpg" alt="Hyrox" loading="lazy"></div>
+      <div class="sportday-card"><img src="assets/sport-du-jour/floorball_fr.jpg" alt="Floorball" loading="lazy"></div>
+      <div class="sportday-card"><img src="assets/sport-du-jour/trail_fr.jpg" alt="Trail" loading="lazy"></div>
+      <div class="sportday-card"><img src="assets/sport-du-jour/sup_fr.jpg" alt="Stand up paddle" loading="lazy"></div>
+      <div class="sportday-card"><img src="assets/sport-du-jour/sandball_fr.jpg" alt="Sandball" loading="lazy"></div>
+      <div class="sportday-card"><img src="assets/sport-du-jour/palet_breton_fr.jpg" alt="Palet breton" loading="lazy"></div>
+      <div class="sportday-card"><img src="assets/sport-du-jour/ultimate_fr.jpg" alt="Ultimate frisbee" loading="lazy"></div>
+    </div>
+  </div>
+
+  <hr class="hr" />
+
+  <!-- TEMOIGNAGES -- pret a activer, pas encore de vraies citations
+  <div class="section">
+    <p class="section-title">Ils en parlent</p>
+    <h2 class="section-h2">Ce que disent nos premiers testeurs</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card"><p class="testimonial-quote">« Citation à venir »</p><p class="testimonial-author">— Prénom, ville</p></div>
+      <div class="testimonial-card"><p class="testimonial-quote">« Citation à venir »</p><p class="testimonial-author">— Prénom, ville</p></div>
+      <div class="testimonial-card"><p class="testimonial-quote">« Citation à venir »</p><p class="testimonial-author">— Prénom, ville</p></div>
+    </div>
+  </div>
+  -->
 
   <div class="section">
     <p class="section-title">Plans et tarifs de lancement</p>
@@ -297,6 +345,7 @@
 <div data-lang="sk">
 
   <div class="hero">
+    <div class="launch-banner">🚀 Verejné spustenie už čoskoro</div><br>
     <img class="hero-emoji" src="assets/partia-sport-icon-v1.png" alt="Logo Partia">
     <h1 class="hero-title">Partia</h1>
     <p class="hero-tagline">Nájdi spoluhráčov &amp; súperov blízko teba</p>
@@ -346,6 +395,39 @@
   </div>
 
   <hr class="hr" />
+
+  <!-- SPORT DU JOUR GALLERY -->
+  <div class="section">
+    <p class="section-title">Objav</p>
+    <h2 class="section-h2">Ukážka našich športov</h2>
+    <p class="section-sub">Výber z našej série "Šport dňa" — z 36 športov dostupných na Partia.</p>
+    <div class="sportday-grid">
+      <div class="sportday-card"><img src="assets/sport-du-jour/molkky_sk.jpg" alt="Mölkky" loading="lazy"></div>
+      <div class="sportday-card"><img src="assets/sport-du-jour/beach_soccer_sk.jpg" alt="Plážový futbal" loading="lazy"></div>
+      <div class="sportday-card"><img src="assets/sport-du-jour/padel_sk.jpg" alt="Padel" loading="lazy"></div>
+      <div class="sportday-card"><img src="assets/sport-du-jour/hyrox_sk.jpg" alt="Hyrox" loading="lazy"></div>
+      <div class="sportday-card"><img src="assets/sport-du-jour/floorball_sk.jpg" alt="Florbal" loading="lazy"></div>
+      <div class="sportday-card"><img src="assets/sport-du-jour/trail_sk.jpg" alt="Trailový beh" loading="lazy"></div>
+      <div class="sportday-card"><img src="assets/sport-du-jour/sup_sk.jpg" alt="Paddleboarding" loading="lazy"></div>
+      <div class="sportday-card"><img src="assets/sport-du-jour/sandball_sk.jpg" alt="Sandball" loading="lazy"></div>
+      <div class="sportday-card"><img src="assets/sport-du-jour/palet_breton_sk.jpg" alt="Palet breton" loading="lazy"></div>
+      <div class="sportday-card"><img src="assets/sport-du-jour/ultimate_sk.jpg" alt="Ultimate frisbee" loading="lazy"></div>
+    </div>
+  </div>
+
+  <hr class="hr" />
+
+  <!-- TESTIMONIALS -- pripravene, este bez skutocnych citacii
+  <div class="section">
+    <p class="section-title">Hovoria o nás</p>
+    <h2 class="section-h2">Čo hovoria naši prví testeri</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card"><p class="testimonial-quote">„Citát čoskoro“</p><p class="testimonial-author">— Meno, mesto</p></div>
+      <div class="testimonial-card"><p class="testimonial-quote">„Citát čoskoro“</p><p class="testimonial-author">— Meno, mesto</p></div>
+      <div class="testimonial-card"><p class="testimonial-quote">„Citát čoskoro“</p><p class="testimonial-author">— Meno, mesto</p></div>
+    </div>
+  </div>
+  -->
 
   <div class="section">
     <p class="section-title">Plány a uvádzacie ceny</p>
@@ -410,6 +492,7 @@
 <div data-lang="en">
 
   <div class="hero">
+    <div class="launch-banner">🚀 Public launch coming soon</div><br>
     <img class="hero-emoji" src="assets/partia-sport-icon-v1.png" alt="Partia logo">
     <h1 class="hero-title">Partia</h1>
     <p class="hero-tagline">Find teammates &amp; opponents near you</p>
@@ -459,6 +542,39 @@
   </div>
 
   <hr class="hr" />
+
+  <!-- SPORT OF THE DAY GALLERY -->
+  <div class="section">
+    <p class="section-title">Discover</p>
+    <h2 class="section-h2">A glimpse of our sports</h2>
+    <p class="section-sub">A sample from our "Sport of the day" series — from the 36 sports available on Partia.</p>
+    <div class="sportday-grid">
+      <div class="sportday-card"><img src="assets/sport-du-jour/molkky_en.jpg" alt="Mölkky" loading="lazy"></div>
+      <div class="sportday-card"><img src="assets/sport-du-jour/beach_soccer_en.jpg" alt="Beach soccer" loading="lazy"></div>
+      <div class="sportday-card"><img src="assets/sport-du-jour/padel_en.jpg" alt="Padel" loading="lazy"></div>
+      <div class="sportday-card"><img src="assets/sport-du-jour/hyrox_en.jpg" alt="Hyrox" loading="lazy"></div>
+      <div class="sportday-card"><img src="assets/sport-du-jour/floorball_en.jpg" alt="Floorball" loading="lazy"></div>
+      <div class="sportday-card"><img src="assets/sport-du-jour/trail_en.jpg" alt="Trail running" loading="lazy"></div>
+      <div class="sportday-card"><img src="assets/sport-du-jour/sup_en.jpg" alt="Stand up paddle" loading="lazy"></div>
+      <div class="sportday-card"><img src="assets/sport-du-jour/sandball_en.jpg" alt="Sandball" loading="lazy"></div>
+      <div class="sportday-card"><img src="assets/sport-du-jour/palet_breton_en.jpg" alt="Palet breton" loading="lazy"></div>
+      <div class="sportday-card"><img src="assets/sport-du-jour/ultimate_en.jpg" alt="Ultimate frisbee" loading="lazy"></div>
+    </div>
+  </div>
+
+  <hr class="hr" />
+
+  <!-- TESTIMONIALS -- ready to activate, no real quotes yet
+  <div class="section">
+    <p class="section-title">What people say</p>
+    <h2 class="section-h2">What our first testers say</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card"><p class="testimonial-quote">"Quote coming soon"</p><p class="testimonial-author">— First name, city</p></div>
+      <div class="testimonial-card"><p class="testimonial-quote">"Quote coming soon"</p><p class="testimonial-author">— First name, city</p></div>
+      <div class="testimonial-card"><p class="testimonial-quote">"Quote coming soon"</p><p class="testimonial-author">— First name, city</p></div>
+    </div>
+  </div>
+  -->
 
   <div class="section">
     <p class="section-title">Plans and launch pricing</p>
