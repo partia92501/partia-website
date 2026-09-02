@@ -29,11 +29,11 @@ Les identifiants admin restent exclusivement dans les variables Railway. La sess
 
 Le site vitrine peut être prévisualisé en ouvrant `index.html`. Toute fonctionnalité web qui appelle l’API doit avoir son origine exacte ajoutée à `CORS_ORIGINS` sur Railway.
 
-Les pages juridiques principales sont accessibles sans connexion sur Netlify :
+Les pages juridiques principales sont accessibles sans connexion sur GitHub Pages :
 
-- `https://partia-website.netlify.app/privacy.html?lang=fr`
-- `https://partia-website.netlify.app/delete-account.html?lang=fr`
+- `https://partia92501.github.io/partia-website/privacy.html?lang=fr`
+- `https://partia92501.github.io/partia-website/delete-account.html?lang=fr`
 
-Netlify est l'hébergement public principal communiqué aux utilisateurs et à Google Play. GitHub Pages reste une copie de secours.
+GitHub Pages est l'hébergement public principal communiqué aux utilisateurs et à Google Play depuis le 2026-09-01 (bascule décidée après une suspension du site sur le nouveau modèle à crédits mutualisés de Netlify — voir mémoire `partia_netlify_no_build_credit`). Netlify (`partia-website.netlify.app`) n'est plus utilisé.
 
 Ces deux URL doivent être renseignées dans Google Play Console, respectivement pour la politique de confidentialité et la suppression de compte.
