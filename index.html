@@ -99,6 +99,15 @@
     .sportday-card { border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.06); aspect-ratio: 1/1; }
     .sportday-card img { width: 100%; height: 100%; object-fit: cover; display: block; cursor: zoom-in; }
 
+    /* SPORTS CATALOG CAROUSEL (tous les sports) */
+    .catalog-carousel { display: flex; gap: 14px; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x proximity; padding: 4px 4px 14px; margin-top: 8px; -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: var(--primary) rgba(255,255,255,0.08); max-width: 100%; }
+    .catalog-carousel::-webkit-scrollbar { height: 8px; }
+    .catalog-carousel::-webkit-scrollbar-track { background: rgba(255,255,255,0.06); border-radius: 999px; }
+    .catalog-carousel::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 999px; }
+    .cc-card { flex: 0 0 132px; scroll-snap-align: start; }
+    .cc-card img { width: 132px; height: 132px; object-fit: cover; border-radius: 14px; border: 1px solid rgba(255,255,255,0.08); display: block; cursor: zoom-in; }
+    .cc-name { color: #fff; font-weight: 700; font-size: 12.5px; text-align: center; margin-top: 8px; line-height: 1.3; }
+
     /* LIGHTBOX (reuses the already-loaded thumbnail, no extra request) */
     .lightbox-overlay { position: fixed; inset: 0; background: rgba(10,10,20,0.92); display: none; align-items: center; justify-content: center; z-index: 1000; padding: 24px; cursor: zoom-out; }
     .lightbox-overlay.open { display: flex; }
@@ -270,6 +279,51 @@
     </div>
   </div>
 
+  <!-- CATALOGUE COMPLET DES SPORTS -->
+  <div class="section">
+    <p class="section-title">Catalogue</p>
+    <h2 class="section-h2">Catalogue des sports proposés sur Partia</h2>
+    <p class="section-sub">Les 36 sports disponibles sur Partia, un coup d'œil suffit.</p>
+    <div class="catalog-carousel">
+      <div class="cc-card"><img src="assets/sports-catalog/beh.jpg" alt="Course à pied" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Course à pied</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/cyklistika.jpg" alt="Vélo" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Vélo</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/plavanie.jpg" alt="Natation" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Natation</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/turistika.jpg" alt="Randonnée" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Randonnée</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/fitnes.jpg" alt="Fitness" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Fitness</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/jogavonku.jpg" alt="Yoga" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Yoga</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/korculovanie.jpg" alt="Roller" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Roller</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/tenis.jpg" alt="Tennis" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Tennis</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/bedminton.jpg" alt="Badminton" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Badminton</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/squash.jpg" alt="Squash" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Squash</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/stolnytenis.jpg" alt="Tennis de table" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Tennis de table</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/padel.jpg" alt="Padel" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Padel</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/futbal.jpg" alt="Football" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Football</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/futsal.jpg" alt="Futsal" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Futsal</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/basketbal.jpg" alt="Basketball" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Basketball</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/volejbal.jpg" alt="Volleyball" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Volleyball</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/plazovyvolejbal.jpg" alt="Beach Volley" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Beach Volley</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/florbal.jpg" alt="Floorball" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Floorball</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/petanque.jpg" alt="Pétanque" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Pétanque</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/jazdectvo.jpg" alt="Équitation" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Équitation</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/rugby7.jpg" alt="Rugby à 7" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Rugby à 7</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/hadzana.jpg" alt="Handball" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Handball</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/plazovyfutbal.jpg" alt="Beach Soccer" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Beach Soccer</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/vodnepolo.jpg" alt="Water-polo" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Water-polo</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/sandball.jpg" alt="Sandball" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Sandball</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/ultimate.jpg" alt="Ultimate Frisbee" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Ultimate Frisbee</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/trailovybeh.jpg" alt="Trail" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Trail</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/hyrox.jpg" alt="Hyrox" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Hyrox</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/lukostrelba.jpg" alt="Tir à l'arc" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Tir à l'arc</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/surfovanie.jpg" alt="Surf" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Surf</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/paddleboarding.jpg" alt="Stand Up Paddle" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Stand Up Paddle</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/lyzovaniesnowboarding.jpg" alt="Ski / Snowboard" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Ski / Snowboard</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/tanec.jpg" alt="Danse" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Danse</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/molkky.jpg" alt="Molkky" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Molkky</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/paletbreton.jpg" alt="Palet Breton" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Palet Breton</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/sach.jpg" alt="Échecs" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Échecs</div></div>
+    </div>
+  </div>
+
   <hr class="hr" />
 
   <!-- TEMOIGNAGES -- pret a activer, pas encore de vraies citations
@@ -421,6 +475,51 @@
     </div>
   </div>
 
+  <!-- KATALÓG VŠETKÝCH ŠPORTOV -->
+  <div class="section">
+    <p class="section-title">Katalóg</p>
+    <h2 class="section-h2">Katalóg športov na Partia</h2>
+    <p class="section-sub">36 športov dostupných na Partia, stačí jeden pohľad.</p>
+    <div class="catalog-carousel">
+      <div class="cc-card"><img src="assets/sports-catalog/beh.jpg" alt="Beh" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Beh</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/cyklistika.jpg" alt="Cyklistika" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Cyklistika</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/plavanie.jpg" alt="Plávanie" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Plávanie</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/turistika.jpg" alt="Turistika" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Turistika</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/fitnes.jpg" alt="Fitnes" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Fitnes</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/jogavonku.jpg" alt="Joga vonku" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Joga vonku</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/korculovanie.jpg" alt="Korčuľovanie" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Korčuľovanie</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/tenis.jpg" alt="Tenis" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Tenis</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/bedminton.jpg" alt="Bedminton" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Bedminton</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/squash.jpg" alt="Squash" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Squash</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/stolnytenis.jpg" alt="Stolný tenis" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Stolný tenis</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/padel.jpg" alt="Padel" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Padel</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/futbal.jpg" alt="Futbal" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Futbal</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/futsal.jpg" alt="Futsal" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Futsal</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/basketbal.jpg" alt="Basketbal" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Basketbal</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/volejbal.jpg" alt="Volejbal" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Volejbal</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/plazovyvolejbal.jpg" alt="Plážový volejbal" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Plážový volejbal</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/florbal.jpg" alt="Florbal" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Florbal</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/petanque.jpg" alt="Pétanque" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Pétanque</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/jazdectvo.jpg" alt="Jazdectvo" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Jazdectvo</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/rugby7.jpg" alt="Rugby 7" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Rugby 7</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/hadzana.jpg" alt="Hádzaná" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Hádzaná</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/plazovyfutbal.jpg" alt="Plážový futbal" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Plážový futbal</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/vodnepolo.jpg" alt="Vodné pólo" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Vodné pólo</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/sandball.jpg" alt="Sandball" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Sandball</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/ultimate.jpg" alt="Ultimate" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Ultimate</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/trailovybeh.jpg" alt="Trailový beh" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Trailový beh</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/hyrox.jpg" alt="Hyrox" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Hyrox</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/lukostrelba.jpg" alt="Lukostreľba" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Lukostreľba</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/surfovanie.jpg" alt="Surfovanie" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Surfovanie</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/paddleboarding.jpg" alt="Paddleboarding" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Paddleboarding</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/lyzovaniesnowboarding.jpg" alt="Lyžovanie/Snowboarding" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Lyžovanie/Snowboarding</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/tanec.jpg" alt="Tanec" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Tanec</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/molkky.jpg" alt="Mölkky" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Mölkky</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/paletbreton.jpg" alt="Palet Breton" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Palet Breton</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/sach.jpg" alt="Šach" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Šach</div></div>
+    </div>
+  </div>
+
   <hr class="hr" />
 
   <!-- TESTIMONIALS -- pripravene, este bez skutocnych citacii
@@ -565,6 +664,51 @@
       <div class="sportday-card"><img src="assets/sport-du-jour/sandball_en.jpg" alt="Sandball" loading="lazy" onclick="openLightbox(this.src)"></div>
       <div class="sportday-card"><img src="assets/sport-du-jour/palet_breton_en.jpg" alt="Palet breton" loading="lazy" onclick="openLightbox(this.src)"></div>
       <div class="sportday-card"><img src="assets/sport-du-jour/ultimate_en.jpg" alt="Ultimate frisbee" loading="lazy" onclick="openLightbox(this.src)"></div>
+    </div>
+  </div>
+
+  <!-- FULL SPORTS CATALOG -->
+  <div class="section">
+    <p class="section-title">Catalog</p>
+    <h2 class="section-h2">Partia's sports catalog</h2>
+    <p class="section-sub">All 36 sports available on Partia, at a glance.</p>
+    <div class="catalog-carousel">
+      <div class="cc-card"><img src="assets/sports-catalog/beh.jpg" alt="Running" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Running</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/cyklistika.jpg" alt="Cycling" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Cycling</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/plavanie.jpg" alt="Swimming" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Swimming</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/turistika.jpg" alt="Hiking" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Hiking</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/fitnes.jpg" alt="Fitness" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Fitness</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/jogavonku.jpg" alt="Yoga" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Yoga</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/korculovanie.jpg" alt="Roller skating" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Roller skating</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/tenis.jpg" alt="Tennis" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Tennis</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/bedminton.jpg" alt="Badminton" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Badminton</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/squash.jpg" alt="Squash" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Squash</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/stolnytenis.jpg" alt="Table Tennis" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Table Tennis</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/padel.jpg" alt="Padel" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Padel</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/futbal.jpg" alt="Football" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Football</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/futsal.jpg" alt="Futsal" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Futsal</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/basketbal.jpg" alt="Basketball" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Basketball</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/volejbal.jpg" alt="Volleyball" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Volleyball</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/plazovyvolejbal.jpg" alt="Beach Volley" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Beach Volley</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/florbal.jpg" alt="Floorball" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Floorball</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/petanque.jpg" alt="Pétanque" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Pétanque</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/jazdectvo.jpg" alt="Horse riding" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Horse riding</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/rugby7.jpg" alt="Rugby Sevens" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Rugby Sevens</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/hadzana.jpg" alt="Handball" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Handball</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/plazovyfutbal.jpg" alt="Beach Soccer" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Beach Soccer</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/vodnepolo.jpg" alt="Water Polo" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Water Polo</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/sandball.jpg" alt="Sandball" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Sandball</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/ultimate.jpg" alt="Ultimate Frisbee" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Ultimate Frisbee</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/trailovybeh.jpg" alt="Trail running" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Trail running</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/hyrox.jpg" alt="Hyrox" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Hyrox</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/lukostrelba.jpg" alt="Archery" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Archery</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/surfovanie.jpg" alt="Surfing" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Surfing</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/paddleboarding.jpg" alt="Stand Up Paddle" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Stand Up Paddle</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/lyzovaniesnowboarding.jpg" alt="Skiing / Snowboarding" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Skiing / Snowboarding</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/tanec.jpg" alt="Dance" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Dance</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/molkky.jpg" alt="Mölkky" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Mölkky</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/paletbreton.jpg" alt="Palet Breton" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Palet Breton</div></div>
+      <div class="cc-card"><img src="assets/sports-catalog/sach.jpg" alt="Chess" loading="lazy" onclick="openLightbox(this.src)"><div class="cc-name">Chess</div></div>
     </div>
   </div>
 
