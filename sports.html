@@ -42,7 +42,10 @@
     .section-h2 { font-size: 26px; font-weight: 900; color: #fff; margin-bottom: 10px; }
     .section-sub { color: var(--gray); font-size: 15px; max-width: 640px; }
 
-    .sports-grid-lg { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+    .sport-cat { margin-top: 28px; }
+    .sport-cat:first-of-type { margin-top: 18px; }
+    .sport-cat-heading { font-size: 17px; font-weight: 800; color: #fff; margin-bottom: 12px; }
+    .sports-grid-lg { display: flex; flex-wrap: wrap; gap: 12px; }
     .sport-chip-lg { background: var(--card); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 12px 22px; font-size: 16px; color: var(--text); font-weight: 700; display: inline-flex; align-items: center; gap: 10px; }
     .sport-chip-lg img { width: 30px; height: 30px; object-fit: contain; flex-shrink: 0; }
 
@@ -111,8 +114,41 @@
     <p class="section-title">Catalogue</p>
     <h2 class="section-h2">Le catalogue complet</h2>
     <p class="section-sub">D'autres sports seront ajoutés au fil des retours utilisateurs.</p>
-    <div class="sports-grid-lg">
-      <div class="sport-chip-lg"><img src="assets/sport-icons/course.png" alt="">Course</div><div class="sport-chip-lg"><img src="assets/sport-icons/velo.png" alt="">Vélo</div><div class="sport-chip-lg"><img src="assets/sport-icons/natation.png" alt="">Natation</div><div class="sport-chip-lg"><img src="assets/sport-icons/randonnee.png" alt="">Randonnée</div><div class="sport-chip-lg"><img src="assets/sport-icons/fitness.png" alt="">Fitness</div><div class="sport-chip-lg"><img src="assets/sport-icons/yoga.png" alt="">Yoga</div><div class="sport-chip-lg"><img src="assets/sport-icons/roller.png" alt="">Roller</div><div class="sport-chip-lg"><img src="assets/sport-icons/tennis.png" alt="">Tennis</div><div class="sport-chip-lg"><img src="assets/sport-icons/badminton.png" alt="">Badminton</div><div class="sport-chip-lg"><img src="assets/sport-icons/squash.png" alt="">Squash</div><div class="sport-chip-lg">🏓 Tennis de table</div><div class="sport-chip-lg"><img src="assets/sport-icons/padel.png" alt="">Padel</div><div class="sport-chip-lg">⚽ Football</div><div class="sport-chip-lg"><img src="assets/sport-icons/futsal.png" alt="">Futsal</div><div class="sport-chip-lg">🏀 Basketball</div><div class="sport-chip-lg">🏐 Volleyball</div><div class="sport-chip-lg"><img src="assets/sport-icons/beachvolley.png" alt="">Beach Volley</div><div class="sport-chip-lg"><img src="assets/sport-icons/floorball.png" alt="">Floorball</div><div class="sport-chip-lg"><img src="assets/sport-icons/petanque.png" alt="">Pétanque</div><div class="sport-chip-lg">🐎 Équitation</div><div class="sport-chip-lg">🏉 Rugby à 7</div><div class="sport-chip-lg">🤾 Handball</div><div class="sport-chip-lg"><img src="assets/sport-icons/beachsoccer.png" alt="">Beach Soccer</div><div class="sport-chip-lg">🤽 Water-polo</div><div class="sport-chip-lg"><img src="assets/sport-icons/sandball.png" alt="">Sandball</div><div class="sport-chip-lg">🥏 Ultimate Frisbee</div><div class="sport-chip-lg"><img src="assets/sport-icons/trail.png" alt="">Trail</div><div class="sport-chip-lg"><img src="assets/sport-icons/hyrox.png" alt="">Hyrox</div><div class="sport-chip-lg">🏹 Tir à l'arc</div><div class="sport-chip-lg">🏄 Surf</div><div class="sport-chip-lg"><img src="assets/sport-icons/sup.png" alt="">Stand Up Paddle</div><div class="sport-chip-lg">⛷️ Ski / Snowboard</div><div class="sport-chip-lg">💃 Danse</div><div class="sport-chip-lg"><img src="assets/sport-icons/molkky.png" alt="">Molkky</div><div class="sport-chip-lg"><img src="assets/sport-icons/paletbreton.png" alt="">Palet Breton</div><div class="sport-chip-lg"><img src="assets/sport-icons/echecs.png" alt="">Échecs</div>
+    <div class="sport-cat">
+      <div class="sport-cat-heading">🏸 Raquette</div>
+      <div class="sports-grid-lg">
+        <div class="sport-chip-lg"><img src="assets/sport-icons/tennis.png" alt="">Tennis</div><div class="sport-chip-lg"><img src="assets/sport-icons/badminton.png" alt="">Badminton</div><div class="sport-chip-lg"><img src="assets/sport-icons/squash.png" alt="">Squash</div><div class="sport-chip-lg">🏓 Tennis de table</div><div class="sport-chip-lg"><img src="assets/sport-icons/padel.png" alt="">Padel</div>
+      </div>
+    </div>
+    <div class="sport-cat">
+      <div class="sport-cat-heading">⚽ Sports collectifs</div>
+      <div class="sports-grid-lg">
+        <div class="sport-chip-lg">⚽ Football</div><div class="sport-chip-lg"><img src="assets/sport-icons/futsal.png" alt="">Futsal</div><div class="sport-chip-lg">🏀 Basketball</div><div class="sport-chip-lg">🏐 Volleyball</div><div class="sport-chip-lg"><img src="assets/sport-icons/beachvolley.png" alt="">Beach Volley</div><div class="sport-chip-lg"><img src="assets/sport-icons/floorball.png" alt="">Floorball</div><div class="sport-chip-lg">🏉 Rugby à 7</div><div class="sport-chip-lg">🤾 Handball</div><div class="sport-chip-lg"><img src="assets/sport-icons/beachsoccer.png" alt="">Beach Soccer</div><div class="sport-chip-lg">🤽 Water-polo</div><div class="sport-chip-lg"><img src="assets/sport-icons/sandball.png" alt="">Sandball</div><div class="sport-chip-lg">🥏 Ultimate Frisbee</div>
+      </div>
+    </div>
+    <div class="sport-cat">
+      <div class="sport-cat-heading">🎯 Loisirs & détente</div>
+      <div class="sports-grid-lg">
+        <div class="sport-chip-lg"><img src="assets/sport-icons/petanque.png" alt="">Pétanque</div><div class="sport-chip-lg"><img src="assets/sport-icons/molkky.png" alt="">Molkky</div><div class="sport-chip-lg"><img src="assets/sport-icons/paletbreton.png" alt="">Palet Breton</div><div class="sport-chip-lg"><img src="assets/sport-icons/echecs.png" alt="">Échecs</div>
+      </div>
+    </div>
+    <div class="sport-cat">
+      <div class="sport-cat-heading">🏃 Cardio & endurance</div>
+      <div class="sports-grid-lg">
+        <div class="sport-chip-lg"><img src="assets/sport-icons/course.png" alt="">Course</div><div class="sport-chip-lg"><img src="assets/sport-icons/velo.png" alt="">Vélo</div><div class="sport-chip-lg"><img src="assets/sport-icons/natation.png" alt="">Natation</div><div class="sport-chip-lg"><img src="assets/sport-icons/randonnee.png" alt="">Randonnée</div><div class="sport-chip-lg"><img src="assets/sport-icons/trail.png" alt="">Trail</div><div class="sport-chip-lg"><img src="assets/sport-icons/hyrox.png" alt="">Hyrox</div>
+      </div>
+    </div>
+    <div class="sport-cat">
+      <div class="sport-cat-heading">💪 Forme & bien-être</div>
+      <div class="sports-grid-lg">
+        <div class="sport-chip-lg"><img src="assets/sport-icons/fitness.png" alt="">Fitness</div><div class="sport-chip-lg"><img src="assets/sport-icons/yoga.png" alt="">Yoga</div><div class="sport-chip-lg">💃 Danse</div>
+      </div>
+    </div>
+    <div class="sport-cat">
+      <div class="sport-cat-heading">🧭 Aventure & plein air</div>
+      <div class="sports-grid-lg">
+        <div class="sport-chip-lg"><img src="assets/sport-icons/roller.png" alt="">Roller</div><div class="sport-chip-lg">🐎 Équitation</div><div class="sport-chip-lg">🏹 Tir à l'arc</div><div class="sport-chip-lg">🏄 Surf</div><div class="sport-chip-lg"><img src="assets/sport-icons/sup.png" alt="">Stand Up Paddle</div><div class="sport-chip-lg">⛷️ Ski / Snowboard</div>
+      </div>
     </div>
     <div class="suggest-box">Un nouveau sport mériterait d'y être ? Pas de souci, écris-nous ta suggestion à <a href="mailto:info.partia@gmail.com">info.partia@gmail.com</a>.</div>
   </div>
@@ -158,8 +194,41 @@
     <p class="section-title">Katalóg</p>
     <h2 class="section-h2">Kompletný katalóg</h2>
     <p class="section-sub">Ďalšie športy budú pridané podľa spätnej väzby používateľov.</p>
-    <div class="sports-grid-lg">
-      <div class="sport-chip-lg"><img src="assets/sport-icons/course.png" alt="">Beh</div><div class="sport-chip-lg"><img src="assets/sport-icons/velo.png" alt="">Cyklistika</div><div class="sport-chip-lg"><img src="assets/sport-icons/natation.png" alt="">Plávanie</div><div class="sport-chip-lg"><img src="assets/sport-icons/randonnee.png" alt="">Turistika</div><div class="sport-chip-lg"><img src="assets/sport-icons/fitness.png" alt="">Fitness</div><div class="sport-chip-lg"><img src="assets/sport-icons/yoga.png" alt="">Jóga</div><div class="sport-chip-lg"><img src="assets/sport-icons/roller.png" alt="">Korčuľovanie</div><div class="sport-chip-lg"><img src="assets/sport-icons/tennis.png" alt="">Tenis</div><div class="sport-chip-lg"><img src="assets/sport-icons/badminton.png" alt="">Bedminton</div><div class="sport-chip-lg"><img src="assets/sport-icons/squash.png" alt="">Squash</div><div class="sport-chip-lg">🏓 Stolný tenis</div><div class="sport-chip-lg"><img src="assets/sport-icons/padel.png" alt="">Padel</div><div class="sport-chip-lg">⚽ Futbal</div><div class="sport-chip-lg"><img src="assets/sport-icons/futsal.png" alt="">Futsál</div><div class="sport-chip-lg">🏀 Basketbal</div><div class="sport-chip-lg">🏐 Volejbal</div><div class="sport-chip-lg"><img src="assets/sport-icons/beachvolley.png" alt="">Plážový volejbal</div><div class="sport-chip-lg"><img src="assets/sport-icons/floorball.png" alt="">Florbal</div><div class="sport-chip-lg"><img src="assets/sport-icons/petanque.png" alt="">Pétanque</div><div class="sport-chip-lg">🐎 Jazdectvo</div><div class="sport-chip-lg">🏉 Rugby 7</div><div class="sport-chip-lg">🤾 Hádzaná</div><div class="sport-chip-lg"><img src="assets/sport-icons/beachsoccer.png" alt="">Plážový futbal</div><div class="sport-chip-lg">🤽 Vodné pólo</div><div class="sport-chip-lg"><img src="assets/sport-icons/sandball.png" alt="">Sandball</div><div class="sport-chip-lg">🥏 Ultimate</div><div class="sport-chip-lg"><img src="assets/sport-icons/trail.png" alt="">Trailový beh</div><div class="sport-chip-lg"><img src="assets/sport-icons/hyrox.png" alt="">Hyrox</div><div class="sport-chip-lg">🏹 Lukostreľba</div><div class="sport-chip-lg">🏄 Surfovanie</div><div class="sport-chip-lg"><img src="assets/sport-icons/sup.png" alt="">Paddleboarding</div><div class="sport-chip-lg">⛷️ Lyžovanie/Snowboarding</div><div class="sport-chip-lg">💃 Tanec</div><div class="sport-chip-lg"><img src="assets/sport-icons/molkky.png" alt="">Mölkky</div><div class="sport-chip-lg"><img src="assets/sport-icons/paletbreton.png" alt="">Palet Breton</div><div class="sport-chip-lg"><img src="assets/sport-icons/echecs.png" alt="">Šach</div>
+    <div class="sport-cat">
+      <div class="sport-cat-heading">🏸 Raketové športy</div>
+      <div class="sports-grid-lg">
+        <div class="sport-chip-lg"><img src="assets/sport-icons/tennis.png" alt="">Tenis</div><div class="sport-chip-lg"><img src="assets/sport-icons/badminton.png" alt="">Bedminton</div><div class="sport-chip-lg"><img src="assets/sport-icons/squash.png" alt="">Squash</div><div class="sport-chip-lg">🏓 Stolný tenis</div><div class="sport-chip-lg"><img src="assets/sport-icons/padel.png" alt="">Padel</div>
+      </div>
+    </div>
+    <div class="sport-cat">
+      <div class="sport-cat-heading">⚽ Kolektívne športy</div>
+      <div class="sports-grid-lg">
+        <div class="sport-chip-lg">⚽ Futbal</div><div class="sport-chip-lg"><img src="assets/sport-icons/futsal.png" alt="">Futsál</div><div class="sport-chip-lg">🏀 Basketbal</div><div class="sport-chip-lg">🏐 Volejbal</div><div class="sport-chip-lg"><img src="assets/sport-icons/beachvolley.png" alt="">Plážový volejbal</div><div class="sport-chip-lg"><img src="assets/sport-icons/floorball.png" alt="">Florbal</div><div class="sport-chip-lg">🏉 Rugby 7</div><div class="sport-chip-lg">🤾 Hádzaná</div><div class="sport-chip-lg"><img src="assets/sport-icons/beachsoccer.png" alt="">Plážový futbal</div><div class="sport-chip-lg">🤽 Vodné pólo</div><div class="sport-chip-lg"><img src="assets/sport-icons/sandball.png" alt="">Sandball</div><div class="sport-chip-lg">🥏 Ultimate</div>
+      </div>
+    </div>
+    <div class="sport-cat">
+      <div class="sport-cat-heading">🎯 Spoločenské a oddychové športy</div>
+      <div class="sports-grid-lg">
+        <div class="sport-chip-lg"><img src="assets/sport-icons/petanque.png" alt="">Pétanque</div><div class="sport-chip-lg"><img src="assets/sport-icons/molkky.png" alt="">Mölkky</div><div class="sport-chip-lg"><img src="assets/sport-icons/paletbreton.png" alt="">Palet Breton</div><div class="sport-chip-lg"><img src="assets/sport-icons/echecs.png" alt="">Šach</div>
+      </div>
+    </div>
+    <div class="sport-cat">
+      <div class="sport-cat-heading">🏃 Kardio a vytrvalosť</div>
+      <div class="sports-grid-lg">
+        <div class="sport-chip-lg"><img src="assets/sport-icons/course.png" alt="">Beh</div><div class="sport-chip-lg"><img src="assets/sport-icons/velo.png" alt="">Cyklistika</div><div class="sport-chip-lg"><img src="assets/sport-icons/natation.png" alt="">Plávanie</div><div class="sport-chip-lg"><img src="assets/sport-icons/randonnee.png" alt="">Turistika</div><div class="sport-chip-lg"><img src="assets/sport-icons/trail.png" alt="">Trailový beh</div><div class="sport-chip-lg"><img src="assets/sport-icons/hyrox.png" alt="">Hyrox</div>
+      </div>
+    </div>
+    <div class="sport-cat">
+      <div class="sport-cat-heading">💪 Kondícia a wellness</div>
+      <div class="sports-grid-lg">
+        <div class="sport-chip-lg"><img src="assets/sport-icons/fitness.png" alt="">Fitness</div><div class="sport-chip-lg"><img src="assets/sport-icons/yoga.png" alt="">Jóga</div><div class="sport-chip-lg">💃 Tanec</div>
+      </div>
+    </div>
+    <div class="sport-cat">
+      <div class="sport-cat-heading">🧭 Dobrodružstvo a príroda</div>
+      <div class="sports-grid-lg">
+        <div class="sport-chip-lg"><img src="assets/sport-icons/roller.png" alt="">Korčuľovanie</div><div class="sport-chip-lg">🐎 Jazdectvo</div><div class="sport-chip-lg">🏹 Lukostreľba</div><div class="sport-chip-lg">🏄 Surfovanie</div><div class="sport-chip-lg"><img src="assets/sport-icons/sup.png" alt="">Paddleboarding</div><div class="sport-chip-lg">⛷️ Lyžovanie/Snowboarding</div>
+      </div>
     </div>
     <div class="suggest-box">Chýba ti nejaký šport? Žiadny problém, napíš nám svoj návrh na <a href="mailto:info.partia@gmail.com">info.partia@gmail.com</a>.</div>
   </div>
@@ -205,8 +274,41 @@
     <p class="section-title">Catalogue</p>
     <h2 class="section-h2">The full catalogue</h2>
     <p class="section-sub">More sports will be added based on user feedback.</p>
-    <div class="sports-grid-lg">
-      <div class="sport-chip-lg"><img src="assets/sport-icons/course.png" alt="">Running</div><div class="sport-chip-lg"><img src="assets/sport-icons/velo.png" alt="">Cycling</div><div class="sport-chip-lg"><img src="assets/sport-icons/natation.png" alt="">Swimming</div><div class="sport-chip-lg"><img src="assets/sport-icons/randonnee.png" alt="">Hiking</div><div class="sport-chip-lg"><img src="assets/sport-icons/fitness.png" alt="">Fitness</div><div class="sport-chip-lg"><img src="assets/sport-icons/yoga.png" alt="">Yoga</div><div class="sport-chip-lg"><img src="assets/sport-icons/roller.png" alt="">Roller skating</div><div class="sport-chip-lg"><img src="assets/sport-icons/tennis.png" alt="">Tennis</div><div class="sport-chip-lg"><img src="assets/sport-icons/badminton.png" alt="">Badminton</div><div class="sport-chip-lg"><img src="assets/sport-icons/squash.png" alt="">Squash</div><div class="sport-chip-lg">🏓 Table Tennis</div><div class="sport-chip-lg"><img src="assets/sport-icons/padel.png" alt="">Padel</div><div class="sport-chip-lg">⚽ Football</div><div class="sport-chip-lg"><img src="assets/sport-icons/futsal.png" alt="">Futsal</div><div class="sport-chip-lg">🏀 Basketball</div><div class="sport-chip-lg">🏐 Volleyball</div><div class="sport-chip-lg"><img src="assets/sport-icons/beachvolley.png" alt="">Beach Volleyball</div><div class="sport-chip-lg"><img src="assets/sport-icons/floorball.png" alt="">Floorball</div><div class="sport-chip-lg"><img src="assets/sport-icons/petanque.png" alt="">Pétanque</div><div class="sport-chip-lg">🐎 Horse riding</div><div class="sport-chip-lg">🏉 Rugby Sevens</div><div class="sport-chip-lg">🤾 Handball</div><div class="sport-chip-lg"><img src="assets/sport-icons/beachsoccer.png" alt="">Beach Soccer</div><div class="sport-chip-lg">🤽 Water Polo</div><div class="sport-chip-lg"><img src="assets/sport-icons/sandball.png" alt="">Sandball</div><div class="sport-chip-lg">🥏 Ultimate Frisbee</div><div class="sport-chip-lg"><img src="assets/sport-icons/trail.png" alt="">Trail running</div><div class="sport-chip-lg"><img src="assets/sport-icons/hyrox.png" alt="">Hyrox</div><div class="sport-chip-lg">🏹 Archery</div><div class="sport-chip-lg">🏄 Surfing</div><div class="sport-chip-lg"><img src="assets/sport-icons/sup.png" alt="">Stand Up Paddle</div><div class="sport-chip-lg">⛷️ Skiing / Snowboarding</div><div class="sport-chip-lg">💃 Dance</div><div class="sport-chip-lg"><img src="assets/sport-icons/molkky.png" alt="">Mölkky</div><div class="sport-chip-lg"><img src="assets/sport-icons/paletbreton.png" alt="">Palet Breton</div><div class="sport-chip-lg"><img src="assets/sport-icons/echecs.png" alt="">Chess</div>
+    <div class="sport-cat">
+      <div class="sport-cat-heading">🏸 Racket sports</div>
+      <div class="sports-grid-lg">
+        <div class="sport-chip-lg"><img src="assets/sport-icons/tennis.png" alt="">Tennis</div><div class="sport-chip-lg"><img src="assets/sport-icons/badminton.png" alt="">Badminton</div><div class="sport-chip-lg"><img src="assets/sport-icons/squash.png" alt="">Squash</div><div class="sport-chip-lg">🏓 Table Tennis</div><div class="sport-chip-lg"><img src="assets/sport-icons/padel.png" alt="">Padel</div>
+      </div>
+    </div>
+    <div class="sport-cat">
+      <div class="sport-cat-heading">⚽ Team sports</div>
+      <div class="sports-grid-lg">
+        <div class="sport-chip-lg">⚽ Football</div><div class="sport-chip-lg"><img src="assets/sport-icons/futsal.png" alt="">Futsal</div><div class="sport-chip-lg">🏀 Basketball</div><div class="sport-chip-lg">🏐 Volleyball</div><div class="sport-chip-lg"><img src="assets/sport-icons/beachvolley.png" alt="">Beach Volleyball</div><div class="sport-chip-lg"><img src="assets/sport-icons/floorball.png" alt="">Floorball</div><div class="sport-chip-lg">🏉 Rugby Sevens</div><div class="sport-chip-lg">🤾 Handball</div><div class="sport-chip-lg"><img src="assets/sport-icons/beachsoccer.png" alt="">Beach Soccer</div><div class="sport-chip-lg">🤽 Water Polo</div><div class="sport-chip-lg"><img src="assets/sport-icons/sandball.png" alt="">Sandball</div><div class="sport-chip-lg">🥏 Ultimate Frisbee</div>
+      </div>
+    </div>
+    <div class="sport-cat">
+      <div class="sport-cat-heading">🎯 Leisure & relaxation</div>
+      <div class="sports-grid-lg">
+        <div class="sport-chip-lg"><img src="assets/sport-icons/petanque.png" alt="">Pétanque</div><div class="sport-chip-lg"><img src="assets/sport-icons/molkky.png" alt="">Mölkky</div><div class="sport-chip-lg"><img src="assets/sport-icons/paletbreton.png" alt="">Palet Breton</div><div class="sport-chip-lg"><img src="assets/sport-icons/echecs.png" alt="">Chess</div>
+      </div>
+    </div>
+    <div class="sport-cat">
+      <div class="sport-cat-heading">🏃 Cardio & endurance</div>
+      <div class="sports-grid-lg">
+        <div class="sport-chip-lg"><img src="assets/sport-icons/course.png" alt="">Running</div><div class="sport-chip-lg"><img src="assets/sport-icons/velo.png" alt="">Cycling</div><div class="sport-chip-lg"><img src="assets/sport-icons/natation.png" alt="">Swimming</div><div class="sport-chip-lg"><img src="assets/sport-icons/randonnee.png" alt="">Hiking</div><div class="sport-chip-lg"><img src="assets/sport-icons/trail.png" alt="">Trail running</div><div class="sport-chip-lg"><img src="assets/sport-icons/hyrox.png" alt="">Hyrox</div>
+      </div>
+    </div>
+    <div class="sport-cat">
+      <div class="sport-cat-heading">💪 Fitness & wellness</div>
+      <div class="sports-grid-lg">
+        <div class="sport-chip-lg"><img src="assets/sport-icons/fitness.png" alt="">Fitness</div><div class="sport-chip-lg"><img src="assets/sport-icons/yoga.png" alt="">Yoga</div><div class="sport-chip-lg">💃 Dance</div>
+      </div>
+    </div>
+    <div class="sport-cat">
+      <div class="sport-cat-heading">🧭 Adventure & outdoors</div>
+      <div class="sports-grid-lg">
+        <div class="sport-chip-lg"><img src="assets/sport-icons/roller.png" alt="">Roller skating</div><div class="sport-chip-lg">🐎 Horse riding</div><div class="sport-chip-lg">🏹 Archery</div><div class="sport-chip-lg">🏄 Surfing</div><div class="sport-chip-lg"><img src="assets/sport-icons/sup.png" alt="">Stand Up Paddle</div><div class="sport-chip-lg">⛷️ Skiing / Snowboarding</div>
+      </div>
     </div>
     <div class="suggest-box">Think a sport is missing? No problem, send us your suggestion at <a href="mailto:info.partia@gmail.com">info.partia@gmail.com</a>.</div>
   </div>
