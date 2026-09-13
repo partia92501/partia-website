@@ -93,9 +93,9 @@
 
 <nav class="lang-bar">
   <a class="lang-logo" href="index.html"><img class="brand-icon" src="assets/partia-sport-icon-v1.png" alt="">Partia</a>
-  <div class="top-nav" data-lang="fr" style="display:flex"><a href="index.html">Accueil</a><a class="current" href="sports.html">Sports</a><a href="guide.html">Guide</a><a href="offres.html">Offres</a><a href="faq.html">FAQ</a></div>
-  <div class="top-nav" data-lang="sk" style="display:none"><a href="index.html">Domov</a><a class="current" href="sports.html">Športy</a><a href="guide.html">Príručka</a><a href="offres.html">Ponuky</a><a href="faq.html">FAQ</a></div>
-  <div class="top-nav" data-lang="en" style="display:none"><a href="index.html">Home</a><a class="current" href="sports.html">Sports</a><a href="guide.html">Guide</a><a href="offres.html">Plans</a><a href="faq.html">FAQ</a></div>
+  <div class="top-nav" data-lang="fr" style="display:flex"><a href="index.html?lang=fr">Accueil</a><a class="current" href="sports.html?lang=fr">Sports</a><a href="guide.html?lang=fr">Guide</a><a href="offres.html?lang=fr">Offres</a><a href="faq.html?lang=fr">FAQ</a></div>
+  <div class="top-nav" data-lang="sk" style="display:none"><a href="index.html?lang=sk">Domov</a><a class="current" href="sports.html?lang=sk">Športy</a><a href="guide.html?lang=sk">Príručka</a><a href="offres.html?lang=sk">Ponuky</a><a href="faq.html?lang=sk">FAQ</a></div>
+  <div class="top-nav" data-lang="en" style="display:none"><a href="index.html?lang=en">Home</a><a class="current" href="sports.html?lang=en">Sports</a><a href="guide.html?lang=en">Guide</a><a href="offres.html?lang=en">Plans</a><a href="faq.html?lang=en">FAQ</a></div>
   <div class="lang-btns">
     <button class="lang-btn active" data-lang-btn="fr" onclick="setLang('fr')">🇫🇷 FR</button>
     <button class="lang-btn" data-lang-btn="sk" onclick="setLang('sk')">🇸🇰 SK</button>
@@ -106,7 +106,7 @@
 <!-- FRENCH -->
 <div data-lang="fr" class="visible">
   <div class="page-header">
-    <a class="back-link" href="index.html">← Retour à l'accueil</a>
+    <a class="back-link" href="index.html?lang=fr">← Retour à l'accueil</a>
     <h1 class="page-title">36 sports disponibles</h1>
     <p class="page-sub">Du foot au Mölkky en passant par le Hyrox — le catalogue complet, et un petit rappel des règles pour les moins connus.</p>
   </div>
@@ -186,7 +186,7 @@
 <!-- SLOVAK -->
 <div data-lang="sk">
   <div class="page-header">
-    <a class="back-link" href="index.html">← Späť na domovskú stránku</a>
+    <a class="back-link" href="index.html?lang=sk">← Späť na domovskú stránku</a>
     <h1 class="page-title">36 dostupných športov</h1>
     <p class="page-sub">Od futbalu po Mölkky a Hyrox — kompletný katalóg a krátke pripomenutie pravidiel pre tie menej známe.</p>
   </div>
@@ -266,7 +266,7 @@
 <!-- ENGLISH -->
 <div data-lang="en">
   <div class="page-header">
-    <a class="back-link" href="index.html">← Back to home</a>
+    <a class="back-link" href="index.html?lang=en">← Back to home</a>
     <h1 class="page-title">36 sports available</h1>
     <p class="page-sub">From football to Mölkky and Hyrox — the full catalogue, plus a quick rules reminder for the less obvious ones.</p>
   </div>
@@ -481,6 +481,8 @@
       btn.classList.toggle('active', btn.getAttribute('data-lang-btn') === lang);
     });
     document.documentElement.lang = lang;
+    var logoLink = document.querySelector('.lang-logo');
+    if (logoLink && logoLink.tagName === 'A') { logoLink.href = 'index.html?lang=' + lang; }
     var nextUrl = new URL(window.location.href);
     nextUrl.searchParams.set('lang', lang);
     if (window.location.protocol !== 'file:') {

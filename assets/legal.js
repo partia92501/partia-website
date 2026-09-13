@@ -19,6 +19,8 @@
       button.classList.toggle('active', active);
       button.setAttribute('aria-pressed', active ? 'true' : 'false');
     });
+    var homeLink = document.querySelector('a.brand[href^="index.html"]');
+    if (homeLink) { homeLink.href = 'index.html?lang=' + language; }
     var nextUrl = new URL(window.location.href);
     nextUrl.searchParams.set('lang', language);
     if (window.location.protocol !== 'file:') {
