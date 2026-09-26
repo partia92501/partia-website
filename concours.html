@@ -45,7 +45,17 @@
     .note { color: var(--gray); font-size: 13px; text-align: center; margin-top: 14px; }
 
     .zone-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin-top: 4px; }
-    .zone-card { background: var(--card); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 14px 16px; font-weight: 700; font-size: 14px; display: flex; align-items: center; gap: 8px; }
+    .zone-card { background: var(--card); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 12px 14px; display: flex; align-items: center; gap: 10px; }
+    .zc-flag { width: 36px; height: 24px; border-radius: 5px; object-fit: cover; flex-shrink: 0; border: 1px solid rgba(0,0,0,0.35); box-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+    .zc-body { display: flex; flex-direction: column; }
+    .zc-city { font-weight: 800; font-size: 14.5px; color: #fff; }
+    .zc-dist { display: flex; align-items: center; gap: 4px; font-size: 12px; color: var(--gray); font-weight: 600; margin-top: 2px; }
+    .zc-dist svg { width: 13px; height: 13px; flex-shrink: 0; color: var(--primary); }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+      .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    }
 
     .step-list { list-style: none; counter-reset: step; margin-top: 4px; }
     .step-item { counter-increment: step; background: var(--card); border-radius: 14px; padding: 16px 18px; margin-bottom: 10px; display: flex; gap: 14px; align-items: flex-start; border: 1px solid rgba(255,255,255,0.06); }
@@ -112,12 +122,12 @@
       <p>Pour fêter le lancement de Partia, nous mettons en jeu <strong>6 abonnements Premium+ de 6 mois</strong> !<br>🏆 Un gagnant dans chacune de ces six zones.</p>
     </div>
     <div class="zone-grid">
-      <div class="zone-card">📍 25 km autour de Galanta</div>
-      <div class="zone-card">📍 25 km autour de Bratislava</div>
-      <div class="zone-card">📍 25 km autour de Lyon</div>
-      <div class="zone-card">📍 25 km autour de Bordeaux</div>
-      <div class="zone-card">📍 25 km autour d'Orange</div>
-      <div class="zone-card">📍 25 km autour de Rochefort</div>
+      <div class="zone-card"><img class="zc-flag" src="assets/flag_sk.png" alt="SK"><div class="zc-body"><span class="zc-city">Galanta</span><span class="zc-dist"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="2" fill="currentColor"/><circle cx="10" cy="10" r="6" stroke="currentColor" stroke-width="1.4" opacity="0.65"/><circle cx="10" cy="10" r="9.2" stroke="currentColor" stroke-width="1.2" opacity="0.4"/></svg>25 km autour</span></div></div>
+      <div class="zone-card"><img class="zc-flag" src="assets/flag_sk.png" alt="SK"><div class="zc-body"><span class="zc-city">Bratislava</span><span class="zc-dist"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="2" fill="currentColor"/><circle cx="10" cy="10" r="6" stroke="currentColor" stroke-width="1.4" opacity="0.65"/><circle cx="10" cy="10" r="9.2" stroke="currentColor" stroke-width="1.2" opacity="0.4"/></svg>25 km autour</span></div></div>
+      <div class="zone-card"><img class="zc-flag" src="assets/flag_fr.png" alt="FR"><div class="zc-body"><span class="zc-city">Lyon</span><span class="zc-dist"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="2" fill="currentColor"/><circle cx="10" cy="10" r="6" stroke="currentColor" stroke-width="1.4" opacity="0.65"/><circle cx="10" cy="10" r="9.2" stroke="currentColor" stroke-width="1.2" opacity="0.4"/></svg>25 km autour</span></div></div>
+      <div class="zone-card"><img class="zc-flag" src="assets/flag_fr.png" alt="FR"><div class="zc-body"><span class="zc-city">Bordeaux</span><span class="zc-dist"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="2" fill="currentColor"/><circle cx="10" cy="10" r="6" stroke="currentColor" stroke-width="1.4" opacity="0.65"/><circle cx="10" cy="10" r="9.2" stroke="currentColor" stroke-width="1.2" opacity="0.4"/></svg>25 km autour</span></div></div>
+      <div class="zone-card"><img class="zc-flag" src="assets/flag_fr.png" alt="FR"><div class="zc-body"><span class="zc-city">Orange</span><span class="zc-dist"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="2" fill="currentColor"/><circle cx="10" cy="10" r="6" stroke="currentColor" stroke-width="1.4" opacity="0.65"/><circle cx="10" cy="10" r="9.2" stroke="currentColor" stroke-width="1.2" opacity="0.4"/></svg>25 km autour</span></div></div>
+      <div class="zone-card"><img class="zc-flag" src="assets/flag_fr.png" alt="FR"><div class="zc-body"><span class="zc-city">Rochefort</span><span class="zc-dist"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="2" fill="currentColor"/><circle cx="10" cy="10" r="6" stroke="currentColor" stroke-width="1.4" opacity="0.65"/><circle cx="10" cy="10" r="9.2" stroke="currentColor" stroke-width="1.2" opacity="0.4"/></svg>25 km autour</span></div></div>
     </div>
     <p class="note">Pas besoin d'organiser la rencontre en plein centre-ville : une commune ou un village situé dans le rayon de 25 km compte aussi ! 😉</p>
   </div>
@@ -183,12 +193,12 @@
       <p>Pri príležitosti spustenia Partie rozdávame <strong>6 predplatných Premium+ na 6 mesiacov</strong>!<br>🏆 Jeden výherca v každej z týchto šiestich zón.</p>
     </div>
     <div class="zone-grid">
-      <div class="zone-card">📍 25 km okolo Galanty</div>
-      <div class="zone-card">📍 25 km okolo Bratislavy</div>
-      <div class="zone-card">📍 25 km okolo Lyonu</div>
-      <div class="zone-card">📍 25 km okolo Bordeaux</div>
-      <div class="zone-card">📍 25 km okolo Orange</div>
-      <div class="zone-card">📍 25 km okolo Rochefortu</div>
+      <div class="zone-card"><img class="zc-flag" src="assets/flag_sk.png" alt="SK"><div class="zc-body"><span class="zc-city">Galanta</span><span class="zc-dist"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="2" fill="currentColor"/><circle cx="10" cy="10" r="6" stroke="currentColor" stroke-width="1.4" opacity="0.65"/><circle cx="10" cy="10" r="9.2" stroke="currentColor" stroke-width="1.2" opacity="0.4"/></svg>25 km okolo</span></div></div>
+      <div class="zone-card"><img class="zc-flag" src="assets/flag_sk.png" alt="SK"><div class="zc-body"><span class="zc-city">Bratislava</span><span class="zc-dist"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="2" fill="currentColor"/><circle cx="10" cy="10" r="6" stroke="currentColor" stroke-width="1.4" opacity="0.65"/><circle cx="10" cy="10" r="9.2" stroke="currentColor" stroke-width="1.2" opacity="0.4"/></svg>25 km okolo</span></div></div>
+      <div class="zone-card"><img class="zc-flag" src="assets/flag_fr.png" alt="FR"><div class="zc-body"><span class="zc-city">Lyon</span><span class="zc-dist"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="2" fill="currentColor"/><circle cx="10" cy="10" r="6" stroke="currentColor" stroke-width="1.4" opacity="0.65"/><circle cx="10" cy="10" r="9.2" stroke="currentColor" stroke-width="1.2" opacity="0.4"/></svg>25 km okolo</span></div></div>
+      <div class="zone-card"><img class="zc-flag" src="assets/flag_fr.png" alt="FR"><div class="zc-body"><span class="zc-city">Bordeaux</span><span class="zc-dist"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="2" fill="currentColor"/><circle cx="10" cy="10" r="6" stroke="currentColor" stroke-width="1.4" opacity="0.65"/><circle cx="10" cy="10" r="9.2" stroke="currentColor" stroke-width="1.2" opacity="0.4"/></svg>25 km okolo</span></div></div>
+      <div class="zone-card"><img class="zc-flag" src="assets/flag_fr.png" alt="FR"><div class="zc-body"><span class="zc-city">Orange</span><span class="zc-dist"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="2" fill="currentColor"/><circle cx="10" cy="10" r="6" stroke="currentColor" stroke-width="1.4" opacity="0.65"/><circle cx="10" cy="10" r="9.2" stroke="currentColor" stroke-width="1.2" opacity="0.4"/></svg>25 km okolo</span></div></div>
+      <div class="zone-card"><img class="zc-flag" src="assets/flag_fr.png" alt="FR"><div class="zc-body"><span class="zc-city">Rochefort</span><span class="zc-dist"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="2" fill="currentColor"/><circle cx="10" cy="10" r="6" stroke="currentColor" stroke-width="1.4" opacity="0.65"/><circle cx="10" cy="10" r="9.2" stroke="currentColor" stroke-width="1.2" opacity="0.4"/></svg>25 km okolo</span></div></div>
     </div>
     <p class="note">Nemusíš organizovať stretnutie priamo v centre mesta — obec alebo dedina v okruhu 25 km sa tiež počíta! 😉</p>
   </div>
@@ -254,12 +264,12 @@
       <p>To celebrate Partia's launch, we're giving away <strong>6 Premium+ subscriptions for 6 months</strong>!<br>🏆 One winner in each of these six zones.</p>
     </div>
     <div class="zone-grid">
-      <div class="zone-card">📍 25 km around Galanta</div>
-      <div class="zone-card">📍 25 km around Bratislava</div>
-      <div class="zone-card">📍 25 km around Lyon</div>
-      <div class="zone-card">📍 25 km around Bordeaux</div>
-      <div class="zone-card">📍 25 km around Orange</div>
-      <div class="zone-card">📍 25 km around Rochefort</div>
+      <div class="zone-card"><img class="zc-flag" src="assets/flag_sk.png" alt="SK"><div class="zc-body"><span class="zc-city">Galanta</span><span class="zc-dist"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="2" fill="currentColor"/><circle cx="10" cy="10" r="6" stroke="currentColor" stroke-width="1.4" opacity="0.65"/><circle cx="10" cy="10" r="9.2" stroke="currentColor" stroke-width="1.2" opacity="0.4"/></svg>25 km around</span></div></div>
+      <div class="zone-card"><img class="zc-flag" src="assets/flag_sk.png" alt="SK"><div class="zc-body"><span class="zc-city">Bratislava</span><span class="zc-dist"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="2" fill="currentColor"/><circle cx="10" cy="10" r="6" stroke="currentColor" stroke-width="1.4" opacity="0.65"/><circle cx="10" cy="10" r="9.2" stroke="currentColor" stroke-width="1.2" opacity="0.4"/></svg>25 km around</span></div></div>
+      <div class="zone-card"><img class="zc-flag" src="assets/flag_fr.png" alt="FR"><div class="zc-body"><span class="zc-city">Lyon</span><span class="zc-dist"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="2" fill="currentColor"/><circle cx="10" cy="10" r="6" stroke="currentColor" stroke-width="1.4" opacity="0.65"/><circle cx="10" cy="10" r="9.2" stroke="currentColor" stroke-width="1.2" opacity="0.4"/></svg>25 km around</span></div></div>
+      <div class="zone-card"><img class="zc-flag" src="assets/flag_fr.png" alt="FR"><div class="zc-body"><span class="zc-city">Bordeaux</span><span class="zc-dist"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="2" fill="currentColor"/><circle cx="10" cy="10" r="6" stroke="currentColor" stroke-width="1.4" opacity="0.65"/><circle cx="10" cy="10" r="9.2" stroke="currentColor" stroke-width="1.2" opacity="0.4"/></svg>25 km around</span></div></div>
+      <div class="zone-card"><img class="zc-flag" src="assets/flag_fr.png" alt="FR"><div class="zc-body"><span class="zc-city">Orange</span><span class="zc-dist"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="2" fill="currentColor"/><circle cx="10" cy="10" r="6" stroke="currentColor" stroke-width="1.4" opacity="0.65"/><circle cx="10" cy="10" r="9.2" stroke="currentColor" stroke-width="1.2" opacity="0.4"/></svg>25 km around</span></div></div>
+      <div class="zone-card"><img class="zc-flag" src="assets/flag_fr.png" alt="FR"><div class="zc-body"><span class="zc-city">Rochefort</span><span class="zc-dist"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="2" fill="currentColor"/><circle cx="10" cy="10" r="6" stroke="currentColor" stroke-width="1.4" opacity="0.65"/><circle cx="10" cy="10" r="9.2" stroke="currentColor" stroke-width="1.2" opacity="0.4"/></svg>25 km around</span></div></div>
     </div>
     <p class="note">No need to organize the meetup right in the city center — a town or village within the 25 km radius counts too! 😉</p>
   </div>
@@ -357,6 +367,23 @@
     var requested = new URLSearchParams(window.location.search).get('lang');
     setLang(['fr', 'sk', 'en'].indexOf(requested) >= 0 ? requested : 'fr');
   });
+
+  // SCROLL REVEAL
+  if (!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+    document.addEventListener('DOMContentLoaded', function () {
+      var targets = document.querySelectorAll('.zone-card, .step-item, .intro-card, .win-banner, .rules-box, .perk-list');
+      targets.forEach(function (el) { el.classList.add('reveal'); });
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      targets.forEach(function (el) { io.observe(el); });
+    });
+  }
 </script>
 
 </body>
