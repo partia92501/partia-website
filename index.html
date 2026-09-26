@@ -57,6 +57,11 @@
     .hero-badge span { color: var(--primary); }
     .dl-btn { display: inline-block; background: var(--primary); color: #fff; font-size: 17px; font-weight: 900; padding: 18px 42px; border-radius: 999px; text-decoration: none; margin-top: 32px; box-shadow: 0 4px 32px rgba(255,96,53,0.45); position: relative; }
 
+    /* HERO PHONE MOCKUP */
+    .hero-phone { max-width: 230px; margin: 40px auto 0; position: relative; }
+    .hero-phone-frame { background: #0d1424; border: 7px solid #2a3355; border-radius: 32px; padding: 8px; box-shadow: 0 20px 60px rgba(0,0,0,0.55); }
+    .hero-phone-frame img { width: 100%; border-radius: 22px; display: block; }
+
     /* DEMO VIDEO */
     .demo-video { max-width: 640px; margin: 36px auto 0; position: relative; }
     .demo-video video { width: 100%; display: block; border-radius: 20px; box-shadow: 0 8px 48px rgba(0,0,0,0.5); }
@@ -76,9 +81,20 @@
     .section-sub { font-size: 15px; color: var(--gray); margin-bottom: 36px; line-height: 1.7; }
 
     /* PITCH CARDS */
-    .pitch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 8px; }
+    .pitch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; margin-top: 8px; }
     .pitch-card { background: var(--card); border-radius: 18px; padding: 22px 18px; border: 1px solid rgba(255,255,255,0.06); }
+    .pitch-card.featured { grid-column: 1 / -1; display: flex; align-items: center; gap: 18px; background: linear-gradient(120deg, rgba(255,96,53,0.12), rgba(34,211,238,0.08)); border-color: rgba(255,96,53,0.3); }
+    .pitch-card.featured .pitch-icon-badge { margin-bottom: 0; flex-shrink: 0; }
+    .pitch-card.featured .pitch-text { text-align: left; }
     .pitch-icon { font-size: 36px; margin-bottom: 12px; display: block; }
+    .pitch-icon-badge { width: 52px; height: 52px; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; color: #fff; box-shadow: 0 5px 14px rgba(0,0,0,0.3); }
+    .pib-cyan { background: #22D3EE; transform: rotate(-4deg); }
+    .pib-purple { background: #A855F7; transform: rotate(3deg); }
+    .pib-pink { background: #FF6FA5; transform: rotate(-3deg); }
+    .pib-teal { background: #5CE1E6; transform: rotate(4deg); }
+    .pib-gold { background: #FFC72C; color: #12162b; transform: rotate(-3deg); }
+    .pib-coral { background: #F15A29; transform: rotate(3deg); }
+    .pitch-icon-badge svg { width: 26px; height: 26px; }
     .pitch-name { color: #fff; font-weight: 800; font-size: 15px; margin-bottom: 6px; }
     .pitch-desc { color: var(--gray); font-size: 13px; line-height: 1.5; }
     .concept-hook { color: var(--text); font-size: 16px; font-weight: 700; margin-bottom: 14px; max-width: 640px; }
@@ -128,8 +144,9 @@
     /* FUTURE PLANS */
     .plan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
     .plan-card { background: var(--card); border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; padding: 22px 18px; }
-    .plan-card.premium { border-color: rgba(255,140,90,0.45); }
+    .plan-card.premium { border-color: rgba(255,140,90,0.6); position: relative; transform: scale(1.05); box-shadow: 0 12px 32px rgba(255,96,53,0.2); z-index: 1; }
     .plan-card.plus { border-color: rgba(168,85,247,0.5); }
+    .plan-badge { position: absolute; top: -11px; left: 50%; transform: translateX(-50%); background: var(--primary); color: #fff; font-size: 11px; font-weight: 800; padding: 4px 14px; border-radius: 999px; letter-spacing: 0.5px; white-space: nowrap; }
     .plan-name { font-size: 20px; font-weight: 900; color: #fff; margin-bottom: 4px; }
     .plan-kicker { color: var(--primary); font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px; }
     .plan-list { list-style: none; color: var(--gray); font-size: 14px; }
@@ -187,6 +204,12 @@
     /* SITE-WIDE SPORT EMOJI BACKGROUND — discret, visible entre les blocs opaques */
     .sport-bg { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
     .sport-bg span { position: absolute; }
+
+    /* SCROLL REVEAL */
+    @media (prefers-reduced-motion: no-preference) {
+      .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.6s ease, transform 0.6s ease; }
+      .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
@@ -228,6 +251,7 @@
       <div class="hero-badge">Réservée aux <span>adultes</span></div>
     </div>
     <a class="dl-btn" href="https://play.google.com/store/apps/details?id=app.partia.mobile">📲 Télécharger sur Google Play</a>
+    <div class="hero-phone"><div class="hero-phone-frame"><img src="assets/videos/create_slot_fr_poster.jpg" alt="Aperçu de l'app Partia"></div></div>
   </div>
 
   <!-- PITCH -->
@@ -242,12 +266,12 @@
       <li>Tu peux aussi créer tes propres créneaux et les booster (quotas selon ton offre).</li>
     </ul>
     <div class="pitch-grid">
-      <div class="pitch-card"><span class="pitch-icon">📍</span><div class="pitch-name">Proche de toi</div><div class="pitch-desc">Filtrage GPS par distance. Vois uniquement les créneaux dans ton rayon.</div></div>
-      <div class="pitch-card"><span class="pitch-icon">🔒</span><div class="pitch-name">Créneaux privés</div><div class="pitch-desc">Crée un créneau réservé à tes amis via un code à partager — il n'apparaît pas dans les résultats publics.</div></div>
-      <div class="pitch-card"><span class="pitch-icon">👨‍👩‍👧‍👦</span><div class="pitch-name">Adultes &amp; familles</div><div class="pitch-desc">L’adulte utilise Partia. Un parent peut organiser une activité au nom de son enfant et reste responsable des inscriptions, du chat et de la supervision.</div></div>
-      <div class="pitch-card"><span class="pitch-icon">💬</span><div class="pitch-name">Chat par créneau</div><div class="pitch-desc">Chaque créneau actif a son groupe de discussion. Coordination sans quitter l'app.</div></div>
-      <div class="pitch-card"><span class="pitch-icon">⭐</span><div class="pitch-name">Réputation</div><div class="pitch-desc">Après chaque session, attribue jusqu'à 5 badges — tous positifs, aucune note négative : Ponctuel, Fiable, Bon joueur, Cool, Fair-play.</div></div>
-      <div class="pitch-card"><span class="pitch-icon">🛡️</span><div class="pitch-name">Signalement &amp; blocage</div><div class="pitch-desc">Un comportement qui cloche ? Signale-le en un tap ou bloque la personne direct — elle ne pourra plus te voir ni te contacter.</div></div>
+      <div class="pitch-card featured"><div class="pitch-icon-badge pib-cyan"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="2.2" fill="currentColor"/><circle cx="12" cy="12" r="6.5" stroke="currentColor" stroke-width="1.6" opacity="0.65"/><circle cx="12" cy="12" r="10.2" stroke="currentColor" stroke-width="1.4" opacity="0.4"/></svg></div><div class="pitch-text"><div class="pitch-name">Proche de toi</div><div class="pitch-desc">Filtrage GPS par distance. Vois uniquement les créneaux dans ton rayon.</div></div></div>
+      <div class="pitch-card"><div class="pitch-icon-badge pib-purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7.5a4 4 0 0 1 8 0V11"/></svg></div><div class="pitch-name">Créneaux privés</div><div class="pitch-desc">Crée un créneau réservé à tes amis via un code à partager — il n'apparaît pas dans les résultats publics.</div></div>
+      <div class="pitch-card"><div class="pitch-icon-badge pib-pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="2.6"/><path d="M4 19c0-3 2.2-5 5-5s5 2 5 5"/><circle cx="17.5" cy="9.5" r="1.9"/><path d="M14.7 19c.2-2.2 1.5-3.8 3.3-3.8s3 1.6 3.3 3.8"/></svg></div><div class="pitch-name">Adultes &amp; familles</div><div class="pitch-desc">L’adulte utilise Partia. Un parent peut organiser une activité au nom de son enfant et reste responsable des inscriptions, du chat et de la supervision.</div></div>
+      <div class="pitch-card"><div class="pitch-icon-badge pib-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v7A2.5 2.5 0 0 1 17.5 16H10l-4.5 4v-4H6.5A2.5 2.5 0 0 1 4 13.5v-7Z"/><circle cx="9" cy="10" r="0.9" fill="currentColor" stroke="none"/><circle cx="12" cy="10" r="0.9" fill="currentColor" stroke="none"/><circle cx="15" cy="10" r="0.9" fill="currentColor" stroke="none"/></svg></div><div class="pitch-name">Chat par créneau</div><div class="pitch-desc">Chaque créneau actif a son groupe de discussion. Coordination sans quitter l'app.</div></div>
+      <div class="pitch-card"><div class="pitch-icon-badge pib-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 3.5l2.47 5.18 5.53.68-4.06 3.87 1.08 5.6L12 16.9l-4.02 2.93 1.08-5.6-4.06-3.87 5.53-.68L12 3.5Z"/></svg></div><div class="pitch-name">Réputation</div><div class="pitch-desc">Après chaque session, attribue jusqu'à 5 badges — tous positifs, aucune note négative : Ponctuel, Fiable, Bon joueur, Cool, Fair-play.</div></div>
+      <div class="pitch-card"><div class="pitch-icon-badge pib-coral"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l7 3v5.2c0 4.4-3 7.6-7 8.8-4-1.2-7-4.4-7-8.8V6.5l7-3Z"/><path d="M12 9v4"/><circle cx="12" cy="15.6" r="0.9" fill="currentColor" stroke="none"/></svg></div><div class="pitch-name">Signalement &amp; blocage</div><div class="pitch-desc">Un comportement qui cloche ? Signale-le en un tap ou bloque la personne direct — elle ne pourra plus te voir ni te contacter.</div></div>
     </div>
   </div>
 
@@ -350,7 +374,7 @@
     <p class="section-sub">Chaque nouveau compte profite de Premium Découverte pendant 30 jours, sans carte bancaire — le compte à rebours démarre dès ton premier créneau créé ou rejoint, pas à l'inscription. Ensuite, il peut rester en Free ou choisir un abonnement <a href="offres.html?lang=fr#premium-fr" style="color:var(--primary);font-weight:700;">Premium</a> géré par Google Play.</p>
     <div class="plan-grid">
       <div class="plan-card"><div class="plan-name">🆓 Free</div><div class="plan-kicker">Après les 30 jours offerts</div></div>
-      <div class="plan-card premium"><div class="plan-name">⭐ Premium</div><div class="plan-kicker">2,99 €/mois</div></div>
+      <div class="plan-card premium"><div class="plan-badge">RECOMMANDÉ</div><div class="plan-name">⭐ Premium</div><div class="plan-kicker">2,99 €/mois</div></div>
       <div class="plan-card plus"><div class="plan-name">🚀 Premium+</div><div class="plan-kicker">4,99 €/mois</div></div>
     </div>
     <a class="teaser-link" href="offres.html?lang=fr">Voir le détail des offres et des boosts →</a>
@@ -423,6 +447,7 @@
       <div class="hero-badge">Len pre <span>dospelých</span></div>
     </div>
     <a class="dl-btn" href="https://play.google.com/store/apps/details?id=app.partia.mobile">📲 Stiahnuť na Google Play</a>
+    <div class="hero-phone"><div class="hero-phone-frame"><img src="assets/videos/create_slot_sk_poster.jpg" alt="Ukážka appky Partia"></div></div>
   </div>
 
   <div class="section">
@@ -436,12 +461,12 @@
       <li>Môžeš si tiež vytvárať vlastné termíny a boostovať ich (kvóty podľa ponuky).</li>
     </ul>
     <div class="pitch-grid">
-      <div class="pitch-card"><span class="pitch-icon">📍</span><div class="pitch-name">Blízko teba</div><div class="pitch-desc">GPS filtrovanie podľa vzdialenosti. Vidíš len termíny vo svojom okruhu.</div></div>
-      <div class="pitch-card"><span class="pitch-icon">🔒</span><div class="pitch-name">Súkromné termíny</div><div class="pitch-desc">Vytvor termín len pre tvojich kamarátov cez kód na zdieľanie — nezobrazí sa vo verejných výsledkoch.</div></div>
-      <div class="pitch-card"><span class="pitch-icon">👨‍👩‍👧‍👦</span><div class="pitch-name">Dospelí a rodiny</div><div class="pitch-desc">Partiu používa dospelý. Rodič môže organizovať aktivitu v mene dieťaťa a zodpovedá za prihlásenie, chat aj dohľad.</div></div>
-      <div class="pitch-card"><span class="pitch-icon">💬</span><div class="pitch-name">Chat na termín</div><div class="pitch-desc">Každý aktívny termín má vlastnú skupinu. Koordinácia bez opustenia appky.</div></div>
-      <div class="pitch-card"><span class="pitch-icon">⭐</span><div class="pitch-name">Reputácia</div><div class="pitch-desc">Po každej session udeľ až 5 odznakov — všetky pozitívne, žiadne záporné hodnotenie: Dochvíľny, Spoľahlivý, Dobrý hráč, Cool, Fair play.</div></div>
-      <div class="pitch-card"><span class="pitch-icon">🛡️</span><div class="pitch-name">Nahlásenie a blokovanie</div><div class="pitch-desc">Niečo ti nesedí? Nahlás to na jeden ťuk alebo rovno zablokuj danú osobu — už ťa nebude vidieť ani kontaktovať.</div></div>
+      <div class="pitch-card featured"><div class="pitch-icon-badge pib-cyan"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="2.2" fill="currentColor"/><circle cx="12" cy="12" r="6.5" stroke="currentColor" stroke-width="1.6" opacity="0.65"/><circle cx="12" cy="12" r="10.2" stroke="currentColor" stroke-width="1.4" opacity="0.4"/></svg></div><div class="pitch-text"><div class="pitch-name">Blízko teba</div><div class="pitch-desc">GPS filtrovanie podľa vzdialenosti. Vidíš len termíny vo svojom okruhu.</div></div></div>
+      <div class="pitch-card"><div class="pitch-icon-badge pib-purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7.5a4 4 0 0 1 8 0V11"/></svg></div><div class="pitch-name">Súkromné termíny</div><div class="pitch-desc">Vytvor termín len pre tvojich kamarátov cez kód na zdieľanie — nezobrazí sa vo verejných výsledkoch.</div></div>
+      <div class="pitch-card"><div class="pitch-icon-badge pib-pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="2.6"/><path d="M4 19c0-3 2.2-5 5-5s5 2 5 5"/><circle cx="17.5" cy="9.5" r="1.9"/><path d="M14.7 19c.2-2.2 1.5-3.8 3.3-3.8s3 1.6 3.3 3.8"/></svg></div><div class="pitch-name">Dospelí a rodiny</div><div class="pitch-desc">Partiu používa dospelý. Rodič môže organizovať aktivitu v mene dieťaťa a zodpovedá za prihlásenie, chat aj dohľad.</div></div>
+      <div class="pitch-card"><div class="pitch-icon-badge pib-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v7A2.5 2.5 0 0 1 17.5 16H10l-4.5 4v-4H6.5A2.5 2.5 0 0 1 4 13.5v-7Z"/><circle cx="9" cy="10" r="0.9" fill="currentColor" stroke="none"/><circle cx="12" cy="10" r="0.9" fill="currentColor" stroke="none"/><circle cx="15" cy="10" r="0.9" fill="currentColor" stroke="none"/></svg></div><div class="pitch-name">Chat na termín</div><div class="pitch-desc">Každý aktívny termín má vlastnú skupinu. Koordinácia bez opustenia appky.</div></div>
+      <div class="pitch-card"><div class="pitch-icon-badge pib-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 3.5l2.47 5.18 5.53.68-4.06 3.87 1.08 5.6L12 16.9l-4.02 2.93 1.08-5.6-4.06-3.87 5.53-.68L12 3.5Z"/></svg></div><div class="pitch-name">Reputácia</div><div class="pitch-desc">Po každej session udeľ až 5 odznakov — všetky pozitívne, žiadne záporné hodnotenie: Dochvíľny, Spoľahlivý, Dobrý hráč, Cool, Fair play.</div></div>
+      <div class="pitch-card"><div class="pitch-icon-badge pib-coral"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l7 3v5.2c0 4.4-3 7.6-7 8.8-4-1.2-7-4.4-7-8.8V6.5l7-3Z"/><path d="M12 9v4"/><circle cx="12" cy="15.6" r="0.9" fill="currentColor" stroke="none"/></svg></div><div class="pitch-name">Nahlásenie a blokovanie</div><div class="pitch-desc">Niečo ti nesedí? Nahlás to na jeden ťuk alebo rovno zablokuj danú osobu — už ťa nebude vidieť ani kontaktovať.</div></div>
     </div>
   </div>
 
@@ -544,7 +569,7 @@
     <p class="section-sub">Každý nový účet získa Premium na vyskúšanie na 30 dní bez platobnej karty — odpočítavanie sa spustí až po vytvorení alebo pripojení k tvojmu prvému termínu, nie pri registrácii. Potom môže zostať na Free alebo si zvoliť predplatné <a href="offres.html?lang=sk#premium-sk" style="color:var(--primary);font-weight:700;">Premium</a> spravované cez Google Play.</p>
     <div class="plan-grid">
       <div class="plan-card"><div class="plan-name">🆓 Free</div><div class="plan-kicker">Po 30 bezplatných dňoch</div></div>
-      <div class="plan-card premium"><div class="plan-name">⭐ Premium</div><div class="plan-kicker">2,99 €/mesiac</div></div>
+      <div class="plan-card premium"><div class="plan-badge">ODPORÚČANÉ</div><div class="plan-name">⭐ Premium</div><div class="plan-kicker">2,99 €/mesiac</div></div>
       <div class="plan-card plus"><div class="plan-name">🚀 Premium+</div><div class="plan-kicker">4,99 €/mesiac</div></div>
     </div>
     <a class="teaser-link" href="offres.html?lang=sk">Pozri si podrobnosti ponúk a boostov →</a>
@@ -613,6 +638,7 @@
       <div class="hero-badge"><span>Adults</span> only</div>
     </div>
     <a class="dl-btn" href="https://play.google.com/store/apps/details?id=app.partia.mobile">📲 Download on Google Play</a>
+    <div class="hero-phone"><div class="hero-phone-frame"><img src="assets/videos/create_slot_en_poster.jpg" alt="Partia app preview"></div></div>
   </div>
 
   <div class="section">
@@ -626,12 +652,12 @@
       <li>You can also create your own slots and boost them (quotas depend on your plan).</li>
     </ul>
     <div class="pitch-grid">
-      <div class="pitch-card"><span class="pitch-icon">📍</span><div class="pitch-name">Near you</div><div class="pitch-desc">GPS-based distance filtering. See only slots within your chosen radius.</div></div>
-      <div class="pitch-card"><span class="pitch-icon">🔒</span><div class="pitch-name">Private slots</div><div class="pitch-desc">Create a slot just for your friends with a shareable code — it won't appear in public results.</div></div>
-      <div class="pitch-card"><span class="pitch-icon">👨‍👩‍👧‍👦</span><div class="pitch-name">Adults &amp; families</div><div class="pitch-desc">The adult uses Partia. A parent may organize an activity on behalf of a child and remains responsible for registration, chat and supervision.</div></div>
-      <div class="pitch-card"><span class="pitch-icon">💬</span><div class="pitch-name">Chat per slot</div><div class="pitch-desc">Every active slot has its own group chat. Coordinate without leaving the app.</div></div>
-      <div class="pitch-card"><span class="pitch-icon">⭐</span><div class="pitch-name">Reputation</div><div class="pitch-desc">After each session, award up to 5 badges — all positive, no negative ratings: Punctual, Reliable, Good player, Cool, Fair play.</div></div>
-      <div class="pitch-card"><span class="pitch-icon">🛡️</span><div class="pitch-name">Reporting &amp; blocking</div><div class="pitch-desc">Something feels off? Report it in one tap or block the person directly — they won't be able to see or contact you anymore.</div></div>
+      <div class="pitch-card featured"><div class="pitch-icon-badge pib-cyan"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="2.2" fill="currentColor"/><circle cx="12" cy="12" r="6.5" stroke="currentColor" stroke-width="1.6" opacity="0.65"/><circle cx="12" cy="12" r="10.2" stroke="currentColor" stroke-width="1.4" opacity="0.4"/></svg></div><div class="pitch-text"><div class="pitch-name">Near you</div><div class="pitch-desc">GPS-based distance filtering. See only slots within your chosen radius.</div></div></div>
+      <div class="pitch-card"><div class="pitch-icon-badge pib-purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7.5a4 4 0 0 1 8 0V11"/></svg></div><div class="pitch-name">Private slots</div><div class="pitch-desc">Create a slot just for your friends with a shareable code — it won't appear in public results.</div></div>
+      <div class="pitch-card"><div class="pitch-icon-badge pib-pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="2.6"/><path d="M4 19c0-3 2.2-5 5-5s5 2 5 5"/><circle cx="17.5" cy="9.5" r="1.9"/><path d="M14.7 19c.2-2.2 1.5-3.8 3.3-3.8s3 1.6 3.3 3.8"/></svg></div><div class="pitch-name">Adults &amp; families</div><div class="pitch-desc">The adult uses Partia. A parent may organize an activity on behalf of a child and remains responsible for registration, chat and supervision.</div></div>
+      <div class="pitch-card"><div class="pitch-icon-badge pib-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v7A2.5 2.5 0 0 1 17.5 16H10l-4.5 4v-4H6.5A2.5 2.5 0 0 1 4 13.5v-7Z"/><circle cx="9" cy="10" r="0.9" fill="currentColor" stroke="none"/><circle cx="12" cy="10" r="0.9" fill="currentColor" stroke="none"/><circle cx="15" cy="10" r="0.9" fill="currentColor" stroke="none"/></svg></div><div class="pitch-name">Chat per slot</div><div class="pitch-desc">Every active slot has its own group chat. Coordinate without leaving the app.</div></div>
+      <div class="pitch-card"><div class="pitch-icon-badge pib-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 3.5l2.47 5.18 5.53.68-4.06 3.87 1.08 5.6L12 16.9l-4.02 2.93 1.08-5.6-4.06-3.87 5.53-.68L12 3.5Z"/></svg></div><div class="pitch-name">Reputation</div><div class="pitch-desc">After each session, award up to 5 badges — all positive, no negative ratings: Punctual, Reliable, Good player, Cool, Fair play.</div></div>
+      <div class="pitch-card"><div class="pitch-icon-badge pib-coral"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l7 3v5.2c0 4.4-3 7.6-7 8.8-4-1.2-7-4.4-7-8.8V6.5l7-3Z"/><path d="M12 9v4"/><circle cx="12" cy="15.6" r="0.9" fill="currentColor" stroke="none"/></svg></div><div class="pitch-name">Reporting &amp; blocking</div><div class="pitch-desc">Something feels off? Report it in one tap or block the person directly — they won't be able to see or contact you anymore.</div></div>
     </div>
   </div>
 
@@ -734,7 +760,7 @@
     <p class="section-sub">Every new account gets Premium Discovery for 30 days with no payment card — the countdown only starts once you create or join your first slot, not at signup. It can then stay on Free or choose a <a href="offres.html?lang=en#premium-en" style="color:var(--primary);font-weight:700;">Premium</a> subscription managed by Google Play.</p>
     <div class="plan-grid">
       <div class="plan-card"><div class="plan-name">🆓 Free</div><div class="plan-kicker">After the 30 free days</div></div>
-      <div class="plan-card premium"><div class="plan-name">⭐ Premium</div><div class="plan-kicker">€2.99/month</div></div>
+      <div class="plan-card premium"><div class="plan-badge">RECOMMENDED</div><div class="plan-name">⭐ Premium</div><div class="plan-kicker">€2.99/month</div></div>
       <div class="plan-card plus"><div class="plan-name">🚀 Premium+</div><div class="plan-kicker">€4.99/month</div></div>
     </div>
     <a class="teaser-link" href="offres.html?lang=en">See full plan and boost details →</a>
@@ -983,6 +1009,23 @@
     var requested = new URLSearchParams(window.location.search).get('lang');
     setLang(['fr', 'sk', 'en'].indexOf(requested) >= 0 ? requested : 'fr');
   });
+
+  // SCROLL REVEAL
+  if (!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+    document.addEventListener('DOMContentLoaded', function () {
+      var targets = document.querySelectorAll('.pitch-card, .testimonial-card, .plan-card, .video-card, .faq-item, .sportday-card, .section-h2, .section-sub');
+      targets.forEach(function (el) { el.classList.add('reveal'); });
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      targets.forEach(function (el) { io.observe(el); });
+    });
+  }
 </script>
 
 </body>
