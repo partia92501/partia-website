@@ -831,7 +831,6 @@
   </div>
 </div>
 
-<audio id="demo-bgm" src="assets/audio/demo-bgm.mp3" preload="none"></audio>
 
 <!-- Lightbox : reutilise l'image deja chargee pour la vignette, aucune requete supplementaire -->
 <div class="lightbox-overlay" id="lightbox-overlay" onclick="closeLightbox()">
@@ -970,21 +969,15 @@
 </script>
 
 <script>
-  // Musique de fond synchronisée sur les vidéos démo — un seul fichier audio
-  // partagé, redémarré à chaque lecture, sans jamais retoucher les .mp4.
+  // Vidéos démo : sans aucune musique ni son (pistes audio retirées des .mp4,
+  // plus de musique de fond). Une seule vidéo joue à la fois.
   (function () {
     document.addEventListener('DOMContentLoaded', function () {
-      var bgm = document.getElementById('demo-bgm');
-      if (!bgm) return;
       var videos = document.querySelectorAll('.video-card video');
       videos.forEach(function (v) {
         v.addEventListener('play', function () {
           videos.forEach(function (other) { if (other !== v) other.pause(); });
-          bgm.currentTime = 0;
-          bgm.play().catch(function () {});
         });
-        v.addEventListener('pause', function () { bgm.pause(); });
-        v.addEventListener('ended', function () { bgm.pause(); });
       });
     });
   })();
